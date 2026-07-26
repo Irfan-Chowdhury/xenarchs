@@ -2446,9 +2446,10 @@ textarea:focus-visible {
 }
 
 .contact-container {
-  max-width: 1240px;
+  width: 100%;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 1.5rem clamp(5rem, 8vw, 7rem);
+  padding: 0 clamp(1.5rem, 4vw, 4.5rem) clamp(5rem, 8vw, 7rem);
 }
 
 .contact-card {
