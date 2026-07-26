@@ -152,17 +152,17 @@ textarea:focus-visible {
 
 .fixed-top {
   position: fixed;
-  top: 0;
+  top: 20px;
   right: 0;
   left: 0;
 }
 
 .site-header.header-scrolled,
 .site-header.menu-open {
-  border-color: var(--color-border);
-  background: rgba(2, 9, 13, 0.78);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(18px);
+  border-color: transparent;
+  background: rgba(2, 9, 13, 0.58);
+  box-shadow: 0 14px 42px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(14px);
 }
 
 .site-header .navbar {
@@ -234,7 +234,7 @@ textarea:focus-visible {
 .main-menu .nav-list {
   display: flex;
   flex-direction: row;
-  gap: clamp(0.35rem, 1.7vw, 1.3rem);
+  gap: clamp(0.7rem, 1.4vw, 1.35rem);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -242,10 +242,10 @@ textarea:focus-visible {
 
 .main-menu .nav-link {
   position: relative;
-  padding: 0.35rem 0;
-  color: rgba(245, 247, 247, 0.78);
-  font-size: 0.9rem;
-  font-weight: 700;
+  padding: 0.4rem 0;
+  color: rgba(246, 241, 235, 0.82);
+  font-size: clamp(0.93rem, 1vw, 1rem);
+  font-weight: 600;
   transition: color 180ms ease;
 }
 
@@ -265,7 +265,7 @@ textarea:focus-visible {
 .main-menu .nav-link:hover,
 .main-menu .nav-link:focus,
 .main-menu .nav-link.active {
-  color: var(--color-text);
+  color: var(--color-accent);
 }
 
 .main-menu .nav-link:hover::after,
@@ -279,22 +279,39 @@ textarea:focus-visible {
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  min-height: 46px;
-  padding: 0.78rem 1.1rem;
-  border: 1px solid rgba(25, 213, 209, 0.5);
+  min-height: 43px;
+  padding: 0.66rem 1rem;
+  border: 1px solid rgba(25, 213, 209, 0.58);
   border-radius: 10px;
-  color: var(--color-text);
-  font-size: 0.88rem;
-  font-weight: 800;
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  gap: 0.58rem;
+  white-space: nowrap;
+  box-shadow: 0 0 18px rgba(25, 213, 209, 0.14);
+  transition: filter 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.btn-header img {
+  display: block;
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
 }
 
 .btn-header:hover,
-.btn-header:focus {
+.btn-header:focus,
+.btn-header:active {
   border-color: var(--color-accent);
-  background: rgba(25, 213, 209, 0.12);
-  color: var(--color-accent-hover);
+  color: #fff;
+  filter: brightness(1.07);
+  box-shadow: 0 0 22px rgba(25, 213, 209, 0.24);
   transform: translateY(-1px);
+}
+
+.btn-header:visited {
+  color: #fff;
 }
 
 .menu-toggle {
@@ -313,21 +330,82 @@ textarea:focus-visible {
 }
 
 @media (min-width: 992px) {
-  .main-menu {
-    display: grid !important;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    gap: 1.5rem;
+  .header-container {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .main-menu .nav-list {
-    grid-column: 2;
-    justify-content: center;
+  .main-menu {
+    position: relative;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    width: 100%;
+    min-height: 56px;
+    padding: 0.37rem clamp(0.7rem, 1.35vw, 1rem);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      #010b12 0%,
+      #011923 15%,
+      #012f40 32%,
+      #02485f 50%,
+      #012f40 68%,
+      #011923 85%,
+      #010b12 100%
+    );
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22), 0 0 24px rgba(25, 213, 209, 0.07);
+    backdrop-filter: blur(18px);
+    gap: clamp(0.7rem, 1.5vw, 1.25rem);
+  }
+
+  .main-menu::before {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    padding: 1px;
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+    background: conic-gradient(
+      from var(--nav-border-angle, 0deg),
+      rgba(25, 213, 209, 0.7),
+      rgba(44, 123, 229, 0.54),
+      rgba(129, 87, 217, 0.64),
+      rgba(89, 59, 196, 0.48),
+      rgba(25, 213, 209, 0.7)
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    mask-composite: exclude;
+    animation: navBorderRotate 12s linear infinite;
+  }
+
+  .main-menu > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .main-menu .nav-list-left {
+    grid-column: 1;
+    justify-content: flex-end;
+  }
+
+  .main-menu .nav-list-right {
+    grid-column: 3;
+    justify-content: flex-start;
   }
 
   .header-cta {
-    grid-column: 3;
-    justify-self: end;
+    grid-column: 2;
+    justify-self: center;
     display: inline-flex;
   }
 }
@@ -2820,6 +2898,18 @@ textarea.form-control {
   }
 }
 
+@property --nav-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes navBorderRotate {
+  to {
+    --nav-border-angle: 360deg;
+  }
+}
+
 @media (max-width: 991.98px) {
   :root {
     --header-height: 74px;
@@ -2844,10 +2934,12 @@ textarea.form-control {
     width: 100%;
     margin: 0.75rem 0 0;
     padding: 1rem;
-    border: 1px solid var(--color-border);
-    border-radius: 0 0 14px 14px;
-    background: rgba(2, 9, 13, 0.94);
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background:
+      linear-gradient(rgba(2, 9, 13, 0.94), rgba(2, 9, 13, 0.94)) padding-box,
+      linear-gradient(90deg, rgba(25, 213, 209, 0.64), rgba(129, 87, 217, 0.58)) border-box;
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(18px);
   }
 
@@ -2866,8 +2958,12 @@ textarea.form-control {
     gap: 0.15rem;
   }
 
+  .main-menu .nav-list-right {
+    margin-top: 0.15rem;
+  }
+
   .main-menu .nav-link {
-    padding: 0.9rem 0.25rem;
+    padding: 0.78rem 0.25rem;
     font-size: 1rem;
   }
 
@@ -2879,7 +2975,7 @@ textarea.form-control {
   .header-cta {
     display: inline-flex;
     width: 100%;
-    margin-top: 0.75rem;
+    margin: 0.72rem 0 0.28rem;
   }
 
   .hero-section {
@@ -3501,6 +3597,11 @@ textarea.form-control {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .main-menu::before {
+    --nav-border-angle: 135deg;
+    animation: none;
   }
 
   .hero-video-background {

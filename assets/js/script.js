@@ -207,7 +207,7 @@
           link.classList.toggle("active", isActive);
 
           if (isActive) {
-            link.setAttribute("aria-current", "page");
+            link.setAttribute("aria-current", "location");
           } else {
             link.removeAttribute("aria-current");
           }
