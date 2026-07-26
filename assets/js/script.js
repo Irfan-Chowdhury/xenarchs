@@ -6,6 +6,7 @@
   var header = document.getElementById("siteHeader");
   var menu = document.getElementById("mainNavigation");
   var toggle = document.querySelector(".menu-toggle");
+  var heroSection = document.getElementById("home");
   var navLinks = document.querySelectorAll(".nav-link");
   var anchorLinks = document.querySelectorAll('a[href^="#"]');
   var year = document.getElementById("currentYear");
@@ -13,6 +14,7 @@
   var contactStatus = document.getElementById("contactFormStatus");
   var contactSubmit = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
   var isContactSubmitting = false;
+  var isHeroVisible = true;
 
   document.documentElement.classList.add("has-scroll-reveal");
 
@@ -36,6 +38,7 @@
     toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
     toggle.setAttribute("aria-label", isOpen ? "Close main navigation" : "Open main navigation");
     header.classList.toggle("menu-open", isOpen);
+    updateNavigationDock();
   }
 
   function closeMobileMenu() {
@@ -48,6 +51,40 @@
 
   function prefersReducedMotion() {
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  function updateNavigationDock() {
+    if (!header) {
+      return;
+    }
+
+    header.classList.toggle("nav-docked", !isHeroVisible && !header.classList.contains("menu-open"));
+  }
+
+  function syncNavigationDockWithHero() {
+    if (!heroSection) {
+      return;
+    }
+
+    var heroRect = heroSection.getBoundingClientRect();
+    isHeroVisible = heroRect.bottom > 0 && heroRect.top < window.innerHeight;
+    updateNavigationDock();
+  }
+
+  if (heroSection) {
+    if ("IntersectionObserver" in window) {
+      var heroDockObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          isHeroVisible = entry.isIntersecting;
+          updateNavigationDock();
+        });
+      }, { threshold: 0.01 });
+
+      heroDockObserver.observe(heroSection);
+    }
+
+    window.requestAnimationFrame(syncNavigationDockWithHero);
+    window.addEventListener("load", syncNavigationDockWithHero);
   }
 
   var backgroundVideos = [
