@@ -68,13 +68,29 @@
 
     <main>
       <section class="hero-section" id="home" aria-labelledby="hero-title">
-        <div class="hero-bg" aria-hidden="true">
-          <span class="glow glow-one"></span>
-          <span class="glow glow-two"></span>
-          <span class="orbital-shape orbital-one"></span>
-          <span class="orbital-shape orbital-two"></span>
-          <span class="edge-mark edge-mark-left"></span>
-          <span class="edge-mark edge-mark-right"></span>
+        <div class="hero-video-background" aria-hidden="true">
+          <video
+            class="hero-background-video"
+            id="heroBackgroundVideo"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/images/dark-veil.png"
+            tabindex="-1"
+          >
+            <source
+              src="assets/videos/dark-veil.webm"
+              type="video/webm"
+            >
+            <source
+              src="assets/videos/dark-veil.mp4"
+              type="video/mp4"
+            >
+          </video>
+
+          <div class="hero-video-overlay"></div>
         </div>
 
         <div class="container-xl hero-container">
@@ -847,6 +863,31 @@
     </main>
 
     <footer class="site-footer" id="footer">
+      <div class="footer-video-background" aria-hidden="true">
+        <video
+          class="footer-background-video"
+          id="footerBackgroundVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          poster="assets/images/dark-veil.png"
+          tabindex="-1"
+        >
+          <source
+            src="assets/videos/dark-veil.webm"
+            type="video/webm"
+          >
+          <source
+            src="assets/videos/dark-veil.mp4"
+            type="video/mp4"
+          >
+        </video>
+
+        <div class="footer-video-overlay"></div>
+      </div>
+
       <div class="container-xl footer-container">
         <div class="row g-5 footer-main">
           <div class="col-lg-5">
