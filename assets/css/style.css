@@ -314,6 +314,49 @@ textarea:focus-visible {
   color: #fff;
 }
 
+.nav-start-project {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.nav-start-project::before {
+  position: absolute;
+  inset: -60%;
+  z-index: 1;
+  border-radius: 999px;
+  content: "";
+  pointer-events: none;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 150deg,
+    rgba(255, 255, 255, 0.12) 185deg,
+    rgba(255, 255, 255, 0.42) 225deg,
+    #fff 275deg,
+    rgba(255, 255, 255, 0.58) 325deg,
+    rgba(255, 255, 255, 0.16) 345deg,
+    transparent 360deg
+  );
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.72));
+  transform-origin: center;
+  animation: start-project-border-run 4s linear infinite;
+}
+
+.nav-start-project::after {
+  position: absolute;
+  inset: 2px;
+  z-index: 2;
+  border-radius: calc(10px - 2px);
+  content: "";
+  pointer-events: none;
+  background: var(--color-accent);
+}
+
+.nav-start-project > * {
+  position: relative;
+  z-index: 4;
+}
+
 .menu-toggle {
   display: none;
   flex: 0 0 auto;
@@ -3040,6 +3083,12 @@ textarea.form-control {
   }
 }
 
+@keyframes start-project-border-run {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes navDockIn {
   from {
     opacity: 0;
@@ -3771,6 +3820,10 @@ textarea.form-control {
 
   .main-menu::before {
     --nav-border-angle: 135deg;
+    animation: none;
+  }
+
+  .nav-start-project::before {
     animation: none;
   }
 
