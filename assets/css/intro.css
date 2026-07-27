@@ -1,0 +1,88 @@
+/* Intro */
+.intro-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(25, 213, 209, 0.1), transparent 26rem),
+    linear-gradient(180deg, #efe7de 0%, var(--color-paper) 18%, var(--color-paper) 100%);
+  color: var(--color-ink);
+}
+
+.intro-section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(25, 213, 209, 0.5), transparent);
+}
+
+.intro-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(5rem, 9vw, 8.5rem) 1.5rem clamp(4.75rem, 7vw, 6.5rem);
+}
+
+.section-label {
+  margin: 0 0 1.1rem;
+  color: #1a7776;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.intro-title {
+  max-width: 850px;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(2.625rem, 5.25vw, 4.75rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.intro-title span {
+  color: var(--color-accent-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.08em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.intro-lead {
+  max-width: 420px;
+  margin: 0 0 0 auto;
+  color: var(--color-ink-muted);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.client-logo-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(3.5rem, 6vw, 5rem);
+  padding: 1.65rem 0;
+  border-top: 1px solid rgba(13, 23, 25, 0.13);
+  border-bottom: 1px solid rgba(13, 23, 25, 0.13);
+}
+
+.client-logo-strip span {
+  display: inline-flex;
+  justify-content: center;
+  color: #798486;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.client-logo-strip span:hover {
+  color: var(--color-accent-dark);
+  transform: translateY(-1px);
+}

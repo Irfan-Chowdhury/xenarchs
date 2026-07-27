@@ -1,0 +1,64 @@
+/* FAQ */
+.faq-container {
+  padding-top: 0;
+}
+
+.accordion-collapse.collapse:not(.show) {
+  display: none;
+}
+
+.accordion-collapse.collapse.show {
+  display: block;
+}
+
+.custom-accordion {
+  border-top: 1px solid rgba(13, 23, 25, 0.14);
+}
+
+.accordion-item {
+  border: 0;
+  border-bottom: 1px solid rgba(13, 23, 25, 0.14);
+  background: transparent;
+}
+
+.accordion-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1.6rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-ink);
+  box-shadow: none;
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+  font-weight: 800;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--color-accent-dark);
+  background: transparent;
+}
+
+.accordion-button::after {
+  flex: 0 0 auto;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 1rem;
+  content: "+";
+  color: var(--color-accent-dark);
+  font-weight: 800;
+}
+
+.accordion-button:not(.collapsed)::after {
+  content: "−";
+}
+
+.accordion-body {
+  max-width: 760px;
+  padding: 0 2.8rem 1.7rem 0;
+  color: #607073;
+  line-height: 1.75;
+}

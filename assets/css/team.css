@@ -1,0 +1,169 @@
+/* Team */
+.team-section {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+.team-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem clamp(5rem, 9vw, 8rem);
+}
+
+.team-heading {
+  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.team-title,
+.insights-title,
+.faq-title {
+  max-width: 850px;
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(2.5rem, 5.1vw, 4.65rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.team-title span,
+.insights-title span,
+.faq-title span {
+  color: var(--color-accent-dark);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.08em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.team-lead,
+.testimonials-lead {
+  max-width: 420px;
+  margin: 0 0 0 auto;
+  color: var(--color-ink-muted);
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+
+.team-grid,
+.testimonial-grid,
+.insight-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.team-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-card {
+  min-width: 0;
+}
+
+.portrait {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #dae6e5;
+}
+
+.portrait::before,
+.portrait::after {
+  position: absolute;
+  content: "";
+  border-radius: 999px;
+}
+
+.portrait::before {
+  width: 78%;
+  height: 72%;
+  background: rgba(255, 255, 255, 0.28);
+  transform: translateY(18%) rotate(-16deg);
+}
+
+.portrait::after {
+  right: -12%;
+  bottom: -8%;
+  width: 62%;
+  height: 38%;
+  background: rgba(25, 213, 209, 0.22);
+  filter: blur(16px);
+}
+
+.portrait-one { background: linear-gradient(145deg, #d7eee8, #b7d9d6); }
+.portrait-two { background: linear-gradient(145deg, #e7dff3, #cfc3e7); }
+.portrait-three { background: linear-gradient(145deg, #e6ecd1, #cddbb3); }
+.portrait-four { background: linear-gradient(145deg, #ecd9df, #d6bec9); }
+
+.portrait-head {
+  position: absolute;
+  top: 22%;
+  width: 28%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #122c30;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+  z-index: 1;
+}
+
+.portrait-body {
+  position: absolute;
+  bottom: 12%;
+  width: 58%;
+  height: 42%;
+  border-radius: 44% 44% 18px 18px;
+  background: linear-gradient(145deg, #16373b, #0b191c);
+  z-index: 1;
+}
+
+.portrait-line {
+  position: absolute;
+  top: 54%;
+  width: 72%;
+  height: 1px;
+  background: rgba(13, 23, 25, 0.18);
+  transform: rotate(-18deg);
+  z-index: 2;
+}
+
+.team-card .portrait a {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(2, 9, 13, 0.72);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  transition: color 180ms ease, background-color 180ms ease, transform 180ms ease;
+  z-index: 3;
+}
+
+.team-card .portrait a:hover,
+.team-card .portrait a:focus {
+  background: var(--color-accent);
+  color: #071113;
+  transform: translateY(-2px);
+}
+
+.team-card h3 {
+  margin: 1rem 0 0.25rem;
+  color: var(--color-ink);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.team-card p {
+  margin: 0;
+  color: #718083;
+  font-size: 0.85rem;
+  font-weight: 700;
+}

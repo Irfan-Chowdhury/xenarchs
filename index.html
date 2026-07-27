@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
+    <!-- Header / Navigation -->
     <header class="site-header fixed-top" id="siteHeader">
       <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
         <div class="container-xl header-container">
@@ -67,6 +68,7 @@
     </header>
 
     <main>
+      <!-- Hero Section -->
       <section class="hero-section" id="home" aria-labelledby="hero-title">
         <div class="hero-video-background" aria-hidden="true">
           <video
@@ -116,6 +118,7 @@
         </div>
       </section>
 
+      <!-- Intro Section -->
       <section class="intro-section" id="intro" aria-labelledby="intro-title">
         <div class="container-xl intro-container">
           <div class="row align-items-end g-4 g-lg-5 intro-copy-row scroll-reveal">
@@ -144,6 +147,7 @@
         </div>
       </section>
 
+      <!-- Services Section -->
       <section class="services-section" id="services" aria-labelledby="services-title">
         <div class="container-xl services-container">
           <div class="row align-items-end g-4 g-lg-5 services-heading scroll-reveal">
@@ -369,6 +373,7 @@
         </div>
       </section>
 
+      <!-- Work Section -->
       <section class="work-section" id="work" aria-labelledby="work-title">
         <div class="work-bg" aria-hidden="true"></div>
         <div class="container-xl work-container">
@@ -486,6 +491,7 @@
         </div>
       </section>
 
+      <!-- Process Section -->
       <section class="process-section" id="process" aria-labelledby="process-title">
         <div class="container-xl process-container">
           <div class="row g-5">
@@ -539,6 +545,7 @@
         </div>
       </section>
 
+      <!-- About Section -->
       <section class="about-section" id="about" aria-labelledby="about-title">
         <div class="container-xl about-container">
           <div class="about-card scroll-reveal">
@@ -567,6 +574,7 @@
         </div>
       </section>
 
+      <!-- Team Section -->
       <section class="team-section" aria-labelledby="team-title">
         <div class="container-xl team-container">
           <div class="row align-items-end g-4 g-lg-5 team-heading scroll-reveal">
@@ -623,6 +631,7 @@
         </div>
       </section>
 
+      <!-- Testimonials Section -->
       <section class="testimonials-section" aria-labelledby="testimonials-title">
         <div class="testimonials-bg" aria-hidden="true"></div>
         <div class="container-xl testimonials-container">
@@ -660,6 +669,7 @@
         </div>
       </section>
 
+      <!-- Insights Section -->
       <section class="insights-section" id="insights" aria-labelledby="insights-title">
         <div class="container-xl insights-container">
           <div class="row align-items-end g-4 g-lg-5 insights-heading scroll-reveal">
@@ -708,6 +718,7 @@
         </div>
       </section>
 
+      <!-- FAQ Section -->
       <section class="faq-section" id="faq" aria-labelledby="faq-title">
         <div class="container-xl faq-container">
           <div class="row g-5">
@@ -769,6 +780,7 @@
         </div>
       </section>
 
+      <!-- Contact Section -->
       <section class="contact-section" id="contact" aria-labelledby="contact-title">
         <div class="container-xl contact-container">
           <div class="contact-card">
@@ -881,6 +893,7 @@
       </section>
     </main>
 
+    <!-- Footer Section -->
     <footer class="site-footer" id="footer">
       <div class="footer-video-background" aria-hidden="true">
         <video
@@ -917,10 +930,10 @@
               Independent creative studio building brands, digital products and experiences that feel ahead of their time.
             </p>
             <div class="social-row" aria-label="Social links">
-              <a href="#footer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
-              <a href="#footer" aria-label="Behance"><i class="bi bi-behance" aria-hidden="true"></i></a>
-              <a href="#footer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
-              <a href="#footer" aria-label="Dribbble"><i class="bi bi-dribbble" aria-hidden="true"></i></a>
+              <a class="footer-social-link" href="#footer" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+              <a class="footer-social-link" href="#footer" aria-label="Behance"><i class="bi bi-behance" aria-hidden="true"></i></a>
+              <a class="footer-social-link" href="#footer" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+              <a class="footer-social-link" href="#footer" aria-label="Dribbble"><i class="bi bi-dribbble" aria-hidden="true"></i></a>
             </div>
           </div>
 
@@ -972,7 +985,7 @@
                   required
                   aria-describedby="newsletterStatus"
                 >
-                <button type="submit" aria-label="Subscribe to newsletter">
+                <button class="newsletter-submit" type="submit" aria-label="Subscribe to newsletter">
                   <i class="bi bi-send" aria-hidden="true"></i>
                 </button>
               </div>
@@ -984,11 +997,19 @@
       </div>
     </footer>
 
+    <!-- Vendor Scripts -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Site Scripts -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/background-video.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/newsletter-form.js"></script>
   </body>
 </html>
