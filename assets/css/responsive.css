@@ -97,13 +97,8 @@
     row-gap: 1.5rem;
   }
 
-  .services-heading {
-    align-items: flex-start;
-  }
-
-  .services-lead {
-    max-width: 620px;
-    margin-left: 0;
+  .services-section-heading {
+    align-items: center;
   }
 
   .service-panel {
@@ -376,9 +371,9 @@
     padding-left: 1.25rem;
   }
 
-  .services-title {
-    font-size: clamp(2.55rem, 11.5vw, 3.45rem);
-    line-height: 1.02;
+  .services-section-title {
+    font-size: clamp(2.2rem, 9vw, 3.2rem);
+    line-height: 1.08;
   }
 
   .service-panel {
