@@ -198,12 +198,10 @@
   }
 
   .hero-background-video {
-    transform: translate(-50%, -50%) scale(1.08);
     filter: brightness(0.6) contrast(1.08) saturate(0.9);
   }
 
   .footer-background-video {
-    transform: translate(-50%, -50%) scale(1.08);
     filter: brightness(0.44) contrast(1.08) saturate(0.82);
   }
 
