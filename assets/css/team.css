@@ -167,3 +167,193 @@
   font-size: 0.85rem;
   font-weight: 700;
 }
+
+.people-showcase {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.people-showcase__container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(4.75rem, 8vw, 7rem) clamp(1.5rem, 4vw, 4.5rem) clamp(5rem, 8vw, 7rem);
+}
+
+.people-showcase__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1020px;
+  margin: 0 auto clamp(2.25rem, 4.5vw, 3.75rem);
+  text-align: center;
+}
+
+.people-showcase__label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  margin: 0 0 clamp(1rem, 1.8vw, 1.35rem);
+  padding: 0.48rem 1.22rem;
+  border: 1px solid rgba(25, 213, 209, 0.78);
+  border-radius: 999px;
+  color: #0e8f8b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.people-showcase__title {
+  max-width: 980px;
+  margin: 0;
+  color: #061314;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.35rem, 4vw, 2.65rem);
+  font-weight: 800;
+  letter-spacing: -0.052em;
+  line-height: 1.02;
+}
+
+.people-showcase__title span {
+  color: #061314;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.08em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.people-showcase__subtitle {
+  max-width: 100%;
+  margin: clamp(1rem, 1.8vw, 1.35rem) auto 0;
+  color: #516063;
+  font-size: clamp(0.92rem, 1vw, 2.02rem);
+  font-weight: 500;
+  line-height: 1.75;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  .people-showcase__subtitle {
+    white-space: nowrap;
+  }
+}
+
+.people-showcase__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.35rem);
+}
+
+.people-showcase__card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-accent);
+  border-radius: 30px;
+  background: #0d181b;
+  aspect-ratio: 0.78 / 1;
+  box-shadow: 10px 10px 0 #7d57d8;
+  isolation: isolate;
+}
+
+.people-showcase__card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 520ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.people-showcase__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.1rem, 2vw, 1.5rem);
+  background: linear-gradient(180deg, rgba(2, 9, 13, 0) 42%, rgba(2, 9, 13, 0.86) 100%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 240ms ease;
+}
+
+.people-showcase__overlay h3,
+.people-showcase__overlay p {
+  transform: translateY(16px);
+  opacity: 0;
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.people-showcase__overlay h3 {
+  margin: 0 0 0.32rem;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.18rem, 1.8vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.people-showcase__overlay p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.3;
+  transition-delay: 45ms;
+}
+
+.people-showcase__card:hover img,
+.people-showcase__card:focus-within img {
+  transform: scale(1.055);
+}
+
+.people-showcase__card:hover .people-showcase__overlay,
+.people-showcase__card:focus-within .people-showcase__overlay {
+  opacity: 1;
+}
+
+.people-showcase__card:hover .people-showcase__overlay h3,
+.people-showcase__card:hover .people-showcase__overlay p,
+.people-showcase__card:focus-within .people-showcase__overlay h3,
+.people-showcase__card:focus-within .people-showcase__overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .people-showcase__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .people-showcase__title {
+    font-size: clamp(2.15rem, 6vw, 3.35rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .people-showcase__container {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+
+  .people-showcase__title {
+    font-size: clamp(2rem, 10vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .people-showcase__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .people-showcase__card {
+    border-radius: 24px;
+    box-shadow: 7px 7px 0 #7d57d8;
+    aspect-ratio: 0.88 / 1;
+  }
+}
