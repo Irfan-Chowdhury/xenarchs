@@ -59,7 +59,7 @@
 
             <ul class="navbar-nav nav-list nav-list-right align-items-lg-center">
               <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonial</a></li>
               <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
             </ul>
           </div>
@@ -75,11 +75,9 @@
             class="hero-background-video"
             id="heroBackgroundVideo"
             autoplay
-            muted
             loop
             playsinline
             preload="metadata"
-            poster="assets/images/dark-veil.png"
             tabindex="-1"
           >
             <source
@@ -534,11 +532,9 @@
               class="fp-showcase__video"
               id="featuredProjectsBackgroundVideo"
               autoplay
-              muted
               loop
               playsinline
               preload="metadata"
-              poster="assets/images/dark-veil.png"
               tabindex="-1"
             >
               <source
@@ -946,6 +942,116 @@
             <button class="people-showcase__arrow people-showcase__arrow--next" type="button" aria-label="Show next team member" data-people-scroll="next">
               <i class="bi bi-arrow-right" aria-hidden="true"></i>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Client Stories Section -->
+      <section class="client-stories" id="testimonials" aria-labelledby="client-stories-title">
+        <div class="client-stories__glow" aria-hidden="true"></div>
+        <div class="client-stories__container">
+          <div class="client-stories__heading scroll-reveal">
+            <p class="client-stories__label">Client Stories</p>
+            <h2 class="client-stories__title" id="client-stories-title">
+              Hear From the <span>Clients</span> Who Matter Most
+            </h2>
+            <p class="client-stories__subtitle">
+              Real <span>Experiences</span> From Brands We&rsquo;ve Helped <span>Build, Grow, and Elevate</span>
+            </p>
+          </div>
+
+          <div class="client-stories__grid">
+            <article class="client-stories__card scroll-reveal">
+              <div class="client-stories__media">
+                <video
+                  class="client-stories__video"
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Austin_DM.mp4" type="video/mp4">
+                </video>
+                <button class="client-stories__play" type="button" aria-label="Play client story">
+                  <i class="bi bi-play-fill" aria-hidden="true"></i>
+                </button>
+                <button class="client-stories__mute" type="button" aria-label="Mute client story" aria-pressed="false">
+                  <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+              <footer class="client-stories__footer">
+                <h3>Sebastian Hale</h3>
+                <p>Founder @ Salesgo</p>
+              </footer>
+            </article>
+
+            <article class="client-stories__card scroll-reveal">
+              <div class="client-stories__media">
+                <video
+                  class="client-stories__video"
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Emran_DM.mp4" type="video/mp4">
+                </video>
+                <button class="client-stories__play" type="button" aria-label="Play client story">
+                  <i class="bi bi-play-fill" aria-hidden="true"></i>
+                </button>
+                <button class="client-stories__mute" type="button" aria-label="Mute client story" aria-pressed="false">
+                  <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+              <footer class="client-stories__footer">
+                <h3>David Morgan</h3>
+                <p>CEO @ Externalize It</p>
+              </footer>
+            </article>
+
+            <article class="client-stories__card scroll-reveal">
+              <div class="client-stories__media">
+                <video
+                  class="client-stories__video"
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Radif%20DM.mp4" type="video/mp4">
+                </video>
+                <button class="client-stories__play" type="button" aria-label="Play client story">
+                  <i class="bi bi-play-fill" aria-hidden="true"></i>
+                </button>
+                <button class="client-stories__mute" type="button" aria-label="Mute client story" aria-pressed="false">
+                  <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+              <footer class="client-stories__footer">
+                <h3>Jenna Carvalho</h3>
+                <p>Principal @ Guardian Estate</p>
+              </footer>
+            </article>
+
+            <article class="client-stories__card scroll-reveal">
+              <div class="client-stories__media">
+                <video
+                  class="client-stories__video"
+                  loop
+                  playsinline
+                  preload="metadata"
+                >
+                  <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Arvin_DM.mp4" type="video/mp4">
+                </video>
+                <button class="client-stories__play" type="button" aria-label="Play client story">
+                  <i class="bi bi-play-fill" aria-hidden="true"></i>
+                </button>
+                <button class="client-stories__mute" type="button" aria-label="Mute client story" aria-pressed="false">
+                  <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                </button>
+              </div>
+              <footer class="client-stories__footer">
+                <h3>Ted Nash</h3>
+                <p>Founder &amp; CEO @ Yenex</p>
+              </footer>
+            </article>
           </div>
         </div>
       </section>
@@ -1477,11 +1583,9 @@
           class="footer-background-video"
           id="footerBackgroundVideo"
           autoplay
-          muted
           loop
           playsinline
           preload="metadata"
-          poster="assets/images/dark-veil.png"
           tabindex="-1"
         >
           <source
@@ -1588,6 +1692,7 @@
     <script src="assets/js/reveal.js"></script>
     <script src="assets/js/featured-projects.js"></script>
     <script src="assets/js/people-showcase.js"></script>
+    <script src="assets/js/client-stories.js"></script>
     <script src="assets/js/contact-form.js"></script>
     <script src="assets/js/newsletter-form.js"></script>
   </body>
