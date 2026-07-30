@@ -766,6 +766,30 @@
   .service-development-card .service-tool-logos {
     width: 100%;
   }
+
+  .service-motion-card {
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.88fr);
+    gap: 1.25rem;
+    padding: 1.45rem;
+    border-radius: 24px;
+  }
+
+  .service-motion-card .service-copy h3 {
+    font-size: clamp(1.85rem, 4.8vw, 2.6rem);
+  }
+
+  .service-motion-card .service-feature-list {
+    gap: 0.46rem 0.6rem;
+  }
+
+  .service-motion-card .service-tool-logos {
+    width: 100%;
+  }
+
+  .service-motion-card .motion-visual {
+    min-height: 350px;
+    border-radius: 22px 46px 46px 22px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -849,6 +873,40 @@
 
   .service-development-card .code-visual {
     min-height: 285px;
+  }
+
+  .service-motion-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  .service-motion-card .service-copy {
+    padding: 0.45rem 0.2rem 0;
+  }
+
+  .service-motion-card .service-copy h3 {
+    font-size: clamp(1.7rem, 7.4vw, 2.35rem);
+    line-height: 1.02;
+  }
+
+  .service-motion-card .service-feature-list li {
+    white-space: normal;
+  }
+
+  .service-motion-card .service-tool-logos {
+    width: 100%;
+  }
+
+  .service-motion-card .service-tool-logos span {
+    min-width: 0;
+    flex: 1 1 78px;
+  }
+
+  .service-motion-card .motion-visual {
+    min-height: 285px;
+    border-radius: 20px 38px 38px 20px;
   }
 }
 
