@@ -3,6 +3,7 @@
 
   var backgroundVideos = [
     document.getElementById("heroBackgroundVideo"),
+    document.getElementById("featuredProjectsBackgroundVideo"),
     document.getElementById("footerBackgroundVideo")
   ].filter(Boolean);
   var reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");

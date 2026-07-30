@@ -1003,11 +1003,13 @@
     background: url("../images/dark-veil.png") center center / cover no-repeat;
   }
 
-  .footer-video-background {
+  .footer-video-background,
+  .fp-showcase__bg {
     background: url("../images/dark-veil.png") center center / cover no-repeat;
   }
 
   .hero-background-video,
+  .fp-showcase__video,
   .footer-background-video {
     visibility: hidden;
   }

@@ -48,8 +48,8 @@
           <div class="collapse navbar-collapse main-menu" id="mainNavigation">
             <ul class="navbar-nav nav-list nav-list-left align-items-lg-center">
               <li class="nav-item"><a class="nav-link active" aria-current="location" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#work">Work</a></li>
               <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#featured-projects">Project</a></li>
             </ul>
 
             <a class="btn btn-header header-cta nav-start-project" href="#contact">
@@ -520,6 +520,281 @@
 
               <div class="service-visual object-visual" aria-hidden="true">
                 <div class="service-empty-media"></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects Section -->
+      <section class="fp-showcase" id="featured-projects" aria-labelledby="featured-projects-title">
+        <div class="fp-showcase__inner">
+          <div class="fp-showcase__bg" aria-hidden="true">
+            <video
+              class="fp-showcase__video"
+              id="featuredProjectsBackgroundVideo"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              poster="assets/images/dark-veil.png"
+              tabindex="-1"
+            >
+              <source
+                src="assets/videos/dark-veil.webm"
+                type="video/webm"
+              >
+              <source
+                src="assets/videos/dark-veil.mp4"
+                type="video/mp4"
+              >
+            </video>
+            <div class="fp-showcase__video-overlay"></div>
+          </div>
+          <div class="fp-showcase__heading scroll-reveal">
+            <p class="fp-showcase__label">Featured Projects</p>
+            <h2 class="fp-showcase__title" id="featured-projects-title">
+              Selected <span>Projects</span> we designed to help <span>Brands</span> stand out.
+            </h2>
+          </div>
+
+          <div class="fp-showcase__tabs scroll-reveal" role="tablist" aria-label="Project categories">
+            <button class="fp-showcase__tab fp-showcase__tab--active" type="button" role="tab" aria-selected="true" data-fp-filter="uiux">UI/UX</button>
+            <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false" data-fp-filter="branding">Branding</button>
+            <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false" data-fp-filter="motion">Motion</button>
+            <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false" data-fp-filter="website">Website</button>
+            <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false" data-fp-filter="case-study">Case Study</button>
+          </div>
+
+          <div class="fp-showcase__grid" aria-live="polite">
+            <article class="fp-showcase__card" data-fp-category="uiux">
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1011/720/900" alt="Restaurant Website Dashboard">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Restaurant Website Dashboard">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Restaurant Website Dashboard</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="uiux">
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1015/720/900" alt="Finance App Interface">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Finance App Interface">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Finance App Interface</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="uiux">
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1025/720/900" alt="Travel Booking Experience">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Travel Booking Experience">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Travel Booking Experience</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="uiux">
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1035/720/900" alt="SaaS Analytics Dashboard">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: SaaS Analytics Dashboard">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">SaaS Analytics Dashboard</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="uiux">
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1043/720/900" alt="Healthcare Mobile Flow">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Healthcare Mobile Flow">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Healthcare Mobile Flow</a></h3>
+              </div>
+            </article>
+
+            <article class="fp-showcase__card" data-fp-category="branding" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1050/720/900" alt="Boutique Brand Identity">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Boutique Brand Identity">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Boutique Brand Identity</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="branding" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1062/720/900" alt="Coffee Packaging System">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Coffee Packaging System">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Coffee Packaging System</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="branding" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1067/720/900" alt="Studio Visual Language">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Studio Visual Language">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Studio Visual Language</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="branding" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1076/720/900" alt="Fashion Label Refresh">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Fashion Label Refresh">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Fashion Label Refresh</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="branding" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1080/720/900" alt="Wellness Brand Launch">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Wellness Brand Launch">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Wellness Brand Launch</a></h3>
+              </div>
+            </article>
+
+            <article class="fp-showcase__card" data-fp-category="motion" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1084/720/900" alt="Launch Film Motion System">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Launch Film Motion System">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Launch Film Motion System</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="motion" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1081/720/900" alt="Logo Animation Package">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Logo Animation Package">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Logo Animation Package</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="motion" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1074/720/900" alt="Social Motion Campaign">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Social Motion Campaign">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Social Motion Campaign</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="motion" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1069/720/900" alt="Product Teaser Animation">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Product Teaser Animation">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Product Teaser Animation</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="motion" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1057/720/900" alt="Event Intro Visuals">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Event Intro Visuals">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Event Intro Visuals</a></h3>
+              </div>
+            </article>
+
+            <article class="fp-showcase__card" data-fp-category="website" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1056/720/900" alt="Architecture Studio Website">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Architecture Studio Website">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Architecture Studio Website</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="website" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1059/720/900" alt="Ecommerce Product Landing">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Ecommerce Product Landing">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Ecommerce Product Landing</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="website" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1060/720/900" alt="Creative Portfolio Website">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Creative Portfolio Website">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Creative Portfolio Website</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="website" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1068/720/900" alt="SaaS Marketing Website">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: SaaS Marketing Website">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">SaaS Marketing Website</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="website" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1071/720/900" alt="Agency Web Experience">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Agency Web Experience">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Agency Web Experience</a></h3>
+              </div>
+            </article>
+
+            <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1077/720/900" alt="Restaurant Growth Case Study">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Restaurant Growth Case Study">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Restaurant Growth Case Study</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1082/720/900" alt="Retail Brand Case Study">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Retail Brand Case Study">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Retail Brand Case Study</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1083/720/900" alt="App Redesign Case Study">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: App Redesign Case Study">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">App Redesign Case Study</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1085/720/900" alt="Campaign Launch Case Study">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Campaign Launch Case Study">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Campaign Launch Case Study</a></h3>
+              </div>
+            </article>
+            <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+              <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1087/720/900" alt="Product Launch Case Study">
+              <div class="fp-showcase__overlay">
+                <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener" aria-label="Open project: Product Launch Case Study">
+                  <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+                </a>
+                <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Product Launch Case Study</a></h3>
               </div>
             </article>
           </div>
@@ -1162,6 +1437,7 @@
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/background-video.js"></script>
     <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/featured-projects.js"></script>
     <script src="assets/js/contact-form.js"></script>
     <script src="assets/js/newsletter-form.js"></script>
   </body>
