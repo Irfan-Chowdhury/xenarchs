@@ -203,7 +203,7 @@
     }
 
     root.classList.remove("client-stories--auto-paused");
-    storyAutoTimer = window.setInterval(slideStoryCardsLeft, 3000);
+    storyAutoTimer = window.setInterval(slideStoryCardsLeft, 2000);
   }
 
   cards.forEach(function (card) {
