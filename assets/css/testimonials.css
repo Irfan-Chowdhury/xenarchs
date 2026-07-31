@@ -346,6 +346,163 @@
   transform: translateY(-1px);
 }
 
+.client-written {
+  position: relative;
+  margin-top: clamp(3rem, 5vw, 4.25rem);
+  padding: 0 clamp(3.25rem, 4.8vw, 4.75rem);
+}
+
+.client-written__viewport {
+  overflow: hidden;
+  padding: 0 0.12rem 0.9rem;
+}
+
+.client-written__track {
+  --client-written-gap: clamp(0.85rem, 1.2vw, 1.05rem);
+  display: flex;
+  gap: var(--client-written-gap);
+  overflow-x: auto;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.client-written__track::-webkit-scrollbar {
+  display: none;
+}
+
+.client-written__card {
+  position: relative;
+  display: flex;
+  flex: 0 0 calc((100% - (var(--client-written-gap) * 4)) / 5);
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0.35rem;
+  min-width: 0;
+  min-height: 255px;
+  padding: clamp(1rem, 1.45vw, 1.18rem);
+  border-top: 1.5px solid var(--color-accent);
+  border-right: 1.5px solid #7d57d8;
+  border-bottom: 1.5px solid #7d57d8;
+  border-left: 1.5px solid var(--color-accent);
+  border-radius: 18px;
+  background: #062326;
+  color: #fff;
+  scroll-snap-align: start;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.client-written__card:hover {
+  border-top-color: #33f0ec;
+  border-left-color: #33f0ec;
+  box-shadow: 0 0 28px rgba(25, 213, 209, 0.2), 8px 8px 0 rgba(125, 87, 216, 0.2);
+  transform: translateY(-3px);
+}
+
+.client-written__stars {
+  display: flex;
+  align-items: center;
+  gap: 0.16rem;
+  margin-bottom: 0.95rem;
+  color: #f5c542;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.client-written__card blockquote {
+  flex: 1;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.78rem, 0.84vw, 0.9rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.68;
+}
+
+.client-written__card footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.68rem;
+  margin-top: 1.4rem;
+  text-align: right;
+}
+
+.client-written__card cite {
+  display: block;
+  color: var(--color-accent);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1rem, 1.05vw, 1.12rem);
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.client-written__card footer p {
+  margin: 0.22rem 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.client-written__avatar {
+  display: block;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  border: 2px solid rgba(25, 213, 209, 0.72);
+  border-radius: 50%;
+  background: var(--color-accent);
+  object-fit: cover;
+}
+
+.client-written__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(25, 213, 209, 0.6);
+  border-radius: 50%;
+  background: #050d10;
+  color: var(--color-accent);
+  font: inherit;
+  font-size: 1.08rem;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 180ms ease, color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.client-written__arrow:hover,
+.client-written__arrow:focus {
+  background: var(--color-accent);
+  color: #031014;
+  transform: translateY(-50%) scale(1.04);
+}
+
+.client-written__arrow:disabled {
+  cursor: default;
+  opacity: 0.35;
+  transform: translateY(-50%);
+}
+
+.client-written__arrow--prev {
+  left: 0;
+}
+
+.client-written__arrow--next {
+  right: 0;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
   .client-stories__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -353,6 +510,15 @@
 
   .client-stories__subtitle {
     font-size: clamp(1.25rem, 3.2vw, 1.7rem);
+  }
+
+  .client-written {
+    padding: 0 3rem;
+  }
+
+  .client-written__card {
+    flex-basis: min(42vw, 300px);
+    min-height: 245px;
   }
 }
 
@@ -379,5 +545,22 @@
   .client-stories__card {
     border-radius: 24px;
     box-shadow: 7px 7px 0 #7d57d8;
+  }
+
+  .client-written {
+    margin-top: 2rem;
+    padding: 0 2.55rem;
+  }
+
+  .client-written__card {
+    flex-basis: min(82vw, 292px);
+    min-height: 238px;
+    padding: 1rem;
+  }
+
+  .client-written__arrow {
+    width: 38px;
+    height: 38px;
+    font-size: 0.98rem;
   }
 }

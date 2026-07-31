@@ -159,4 +159,64 @@
 
     syncControls(card);
   });
+
+  var writtenTrack = root.querySelector(".client-written__track");
+  var writtenControls = Array.prototype.slice.call(root.querySelectorAll("[data-written-scroll]"));
+
+  function getWrittenStep() {
+    var firstCard = writtenTrack ? writtenTrack.querySelector(".client-written__card") : null;
+    var gap = 0;
+
+    if (!writtenTrack || !firstCard) {
+      return 0;
+    }
+
+    if (window.getComputedStyle) {
+      gap = parseFloat(window.getComputedStyle(writtenTrack).columnGap) || 0;
+    }
+
+    return firstCard.getBoundingClientRect().width + gap;
+  }
+
+  function syncWrittenControls() {
+    var maxScroll;
+    var currentScroll;
+
+    if (!writtenTrack || !writtenControls.length) {
+      return;
+    }
+
+    maxScroll = writtenTrack.scrollWidth - writtenTrack.clientWidth;
+    currentScroll = writtenTrack.scrollLeft;
+
+    writtenControls.forEach(function (button) {
+      var direction = button.getAttribute("data-written-scroll");
+
+      if (direction === "prev") {
+        button.disabled = currentScroll <= 2;
+      }
+
+      if (direction === "next") {
+        button.disabled = currentScroll >= maxScroll - 2;
+      }
+    });
+  }
+
+  if (writtenTrack && writtenControls.length) {
+    writtenControls.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var direction = button.getAttribute("data-written-scroll") === "prev" ? -1 : 1;
+        var step = getWrittenStep();
+
+        writtenTrack.scrollBy({
+          left: step * direction,
+          behavior: "smooth"
+        });
+      });
+    });
+
+    writtenTrack.addEventListener("scroll", syncWrittenControls);
+    window.addEventListener("resize", syncWrittenControls);
+    syncWrittenControls();
+  }
 })();
