@@ -99,12 +99,27 @@
 .client-stories {
   position: relative;
   overflow: hidden;
-  background: #02090d;
+  background: var(--color-paper);
   color: #fff;
   isolation: isolate;
 }
 
 .client-stories::before {
+  content: none;
+}
+
+.client-stories__panel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: clamp(2.5rem, 6vw, 5.5rem);
+  border-radius: 30px;
+  background: #041013;
+  color: #fff;
+  isolation: isolate;
+}
+
+.client-stories__panel::before {
   position: absolute;
   inset: 0;
   content: "";
@@ -113,7 +128,37 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 64px 64px;
   opacity: 0.06;
-  z-index: -2;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.client-stories__video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.client-stories__background-video {
+  position: absolute;
+  inset: 0;
+  width: 200%;
+  height: 120%;
+  min-width: 100%;
+  min-height: 120%;
+  object-fit: cover;
+  object-position: center center;
+  filter: brightness(1.22) contrast(1) saturate(0.96);
+}
+
+.client-stories__video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 34%, rgba(2, 9, 13, 0) 0%, rgba(2, 9, 13, 0.16) 48%, rgba(2, 9, 13, 0.72) 100%),
+    linear-gradient(180deg, rgba(2, 9, 13, 0.34) 0%, rgba(2, 9, 13, 0.16) 45%, rgba(2, 9, 13, 0.68) 100%);
 }
 
 .client-stories__glow {
@@ -122,19 +167,20 @@
   pointer-events: none;
   background:
     radial-gradient(circle at 50% 18%, rgba(25, 213, 209, 0.2), transparent 32rem),
-    radial-gradient(circle at 12% 70%, rgba(25, 213, 209, 0.1), transparent 22rem),
-    linear-gradient(180deg, #02090d 0%, #061114 100%);
-  z-index: -3;
+    radial-gradient(circle at 12% 70%, rgba(25, 213, 209, 0.1), transparent 22rem);
+  z-index: 1;
 }
 
 .client-stories__container {
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: clamp(5rem, 8vw, 7rem) clamp(1.5rem, 4vw, 4.5rem) clamp(5rem, 8vw, 7rem);
+  padding: 0 clamp(1.5rem, 4vw, 4.5rem) clamp(5rem, 8vw, 7rem);
 }
 
 .client-stories__heading {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -198,6 +244,8 @@
 }
 
 .client-stories__grid {
+  position: relative;
+  z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(1rem, 2vw, 1.35rem);
@@ -348,6 +396,7 @@
 
 .client-written {
   position: relative;
+  z-index: 2;
   margin-top: clamp(3rem, 5vw, 4.25rem);
   padding: 0 clamp(3.25rem, 4.8vw, 4.75rem);
 }
@@ -526,6 +575,11 @@
   .client-stories__container {
     padding-right: 1.25rem;
     padding-left: 1.25rem;
+  }
+
+  .client-stories__panel {
+    padding: 2rem 1.2rem;
+    border-radius: 24px;
   }
 
   .client-stories__title {
