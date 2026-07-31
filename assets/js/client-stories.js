@@ -7,6 +7,11 @@
 
   var cards = Array.prototype.slice.call(root.querySelectorAll(".client-stories__card"));
   var canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var storyGrid = root.querySelector(".client-stories__grid");
+  var storyAutoTimer = null;
+  var storyAutoRequestedPlay = false;
+  var storyAutoSliding = false;
 
   root.classList.toggle("client-stories--can-hover", canHover);
 
@@ -57,6 +62,7 @@
 
     card.classList.remove("is-playing", "needs-audio-click");
     syncControls(card);
+    resumeStoryAutoSlide();
   }
 
   function pauseOthers(activeCard) {
@@ -75,6 +81,8 @@
       return;
     }
 
+    storyAutoRequestedPlay = true;
+    pauseStoryAutoSlide();
     pauseOthers(card);
     video.muted = userMuted;
 
@@ -82,10 +90,13 @@
 
     if (playPromise && typeof playPromise.then === "function") {
       playPromise.then(function () {
+        storyAutoRequestedPlay = false;
         card.classList.add("is-playing");
         card.classList.remove("needs-audio-click");
+        pauseStoryAutoSlide();
         syncControls(card);
       }).catch(function () {
+        storyAutoRequestedPlay = false;
         card.classList.add("needs-audio-click");
         pauseCard(card, false);
       });
@@ -93,8 +104,106 @@
       return;
     }
 
+    storyAutoRequestedPlay = false;
     card.classList.add("is-playing");
+    pauseStoryAutoSlide();
     syncControls(card);
+  }
+
+  function hasPlayingStoryVideo() {
+    return cards.some(function (card) {
+      return card.classList.contains("is-playing");
+    });
+  }
+
+  function pauseStoryAutoSlide() {
+    if (storyAutoTimer) {
+      window.clearInterval(storyAutoTimer);
+      storyAutoTimer = null;
+    }
+
+    root.classList.add("client-stories--auto-paused");
+  }
+
+  function resumeStoryAutoSlide() {
+    if (storyAutoRequestedPlay || hasPlayingStoryVideo()) {
+      return;
+    }
+
+    startStoryAutoSlide();
+  }
+
+  function getStorySlideDistance() {
+    var firstCard = storyGrid ? storyGrid.querySelector(".client-stories__card") : null;
+    var gap = 0;
+
+    if (!storyGrid || !firstCard) {
+      return 0;
+    }
+
+    if (window.getComputedStyle) {
+      gap = parseFloat(window.getComputedStyle(storyGrid).columnGap) || 0;
+    }
+
+    return firstCard.getBoundingClientRect().width + gap;
+  }
+
+  function slideStoryCardsLeft() {
+    var firstCard;
+    var cloneCard;
+    var distance;
+
+    if (!storyGrid || storyAutoSliding || hasPlayingStoryVideo()) {
+      return;
+    }
+
+    firstCard = storyGrid.querySelector(".client-stories__card");
+
+    if (!firstCard || cards.length < 2) {
+      return;
+    }
+
+    distance = getStorySlideDistance();
+
+    if (!distance) {
+      return;
+    }
+
+    cloneCard = firstCard.cloneNode(true);
+    cloneCard.setAttribute("aria-hidden", "true");
+    cloneCard.querySelectorAll("video").forEach(function (video) {
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    storyAutoSliding = true;
+    storyGrid.appendChild(cloneCard);
+    storyGrid.style.setProperty("--client-story-slide-distance", distance + "px");
+    storyGrid.classList.add("is-auto-sliding");
+
+    window.setTimeout(function () {
+      storyGrid.classList.remove("is-auto-sliding");
+      storyGrid.style.setProperty("--client-story-slide-distance", "0px");
+
+      if (cloneCard.parentNode === storyGrid) {
+        storyGrid.removeChild(cloneCard);
+      }
+
+      if (firstCard.parentNode === storyGrid) {
+        storyGrid.appendChild(firstCard);
+      }
+
+      storyAutoSliding = false;
+    }, 880);
+  }
+
+  function startStoryAutoSlide() {
+    if (!storyGrid || storyAutoTimer || reduceMotion || hasPlayingStoryVideo() || cards.length < 2) {
+      return;
+    }
+
+    root.classList.remove("client-stories--auto-paused");
+    storyAutoTimer = window.setInterval(slideStoryCardsLeft, 3000);
   }
 
   cards.forEach(function (card) {
@@ -219,4 +328,6 @@
     window.addEventListener("resize", syncWrittenControls);
     syncWrittenControls();
   }
+
+  startStoryAutoSlide();
 })();
