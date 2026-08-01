@@ -87,8 +87,9 @@
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
   gap: clamp(1.25rem, 3vw, 2.25rem);
-  min-height: 520px;
-  padding: clamp(1.25rem, 4vw, 3.5rem);
+  min-height: 480px;
+  padding-block: clamp(1.15rem, 3.2vw, 2.75rem);
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
   overflow: hidden;
   border: 1px solid rgba(13, 23, 25, 0.1);
   border-radius: 18px;
@@ -318,8 +319,9 @@
 .service-branding-card {
   grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  min-height: 520px;
-  padding: clamp(1.5rem, 3.6vw, 3.25rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
   border: 1px solid rgba(25, 213, 209, 0.62);
   border-radius: 30px;
   background: #e4fbf8;
@@ -487,8 +489,9 @@
 .service-development-card {
   grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  min-height: 520px;
-  padding: clamp(1.5rem, 3.6vw, 3.25rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
   border: 1px solid rgba(13, 23, 25, 0.72);
   border-radius: 30px;
   background: #e7f6d8;
@@ -638,8 +641,9 @@
   grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
   align-items: stretch;
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  min-height: 520px;
-  padding: clamp(1.5rem, 3.6vw, 3.25rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
   border: 1px solid rgba(13, 23, 25, 0.82);
   border-radius: 30px;
   background: #f4f0c9;
@@ -801,8 +805,9 @@
   grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
   align-items: stretch;
   gap: clamp(1.5rem, 3vw, 2.5rem);
-  min-height: 520px;
-  padding: clamp(1.5rem, 3.6vw, 3.25rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
   border-radius: 30px;
   box-shadow: none;
 }
@@ -1380,7 +1385,7 @@
 /* =========================================================
    Sticky Stacking Cards (Design Monks "Industry Wins")
    Each service panel is `position: sticky` just below the fixed
-   header. Each subsequent card sticks `peek` (50px) lower than
+   header. Each subsequent card sticks one responsive `peek` lower than
    the previous one, so a thin strip of the previous card stays
    visible at the top of the stack as the user scrolls.
 
@@ -1400,6 +1405,7 @@
   position: relative;
   display: block;
   isolation: isolate;
+  --service-stack-peek: clamp(46px, 4vw, 50px);
 }
 
 /* All panels: sticky. The first panel sticks at the header; every
@@ -1410,7 +1416,7 @@
   top: calc(var(--header-height, 80px) + 12px);
   z-index: 1;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: clamp(0.85rem, 1.6vw, 1.4rem);
   /* No transform / no transition on the sticky element itself.
      The subtle scale is applied to a child wrapper below. */
   background-clip: padding-box;
@@ -1430,15 +1436,15 @@
 }
 
 /* Each panel sticks `peek` lower than the previous one so the previous
-   card keeps a visible strip at the top. */
+   card keeps its service-number visible at the top of the stack. */
 .services-stack .service-panel:nth-child(1) { z-index: 2; top: calc(var(--header-height, 80px) + 12px); }
-.services-stack .service-panel:nth-child(2) { z-index: 3; top: calc(var(--header-height, 80px) + 12px + 50px); }
-.services-stack .service-panel:nth-child(3) { z-index: 4; top: calc(var(--header-height, 80px) + 12px + 100px); }
-.services-stack .service-panel:nth-child(4) { z-index: 5; top: calc(var(--header-height, 80px) + 12px + 150px); }
-.services-stack .service-panel:nth-child(5) { z-index: 6; top: calc(var(--header-height, 80px) + 12px + 200px); }
-.services-stack .service-panel:nth-child(6) { z-index: 7; top: calc(var(--header-height, 80px) + 12px + 250px); }
-.services-stack .service-panel:nth-child(7) { z-index: 8; top: calc(var(--header-height, 80px) + 12px + 300px); }
-.services-stack .service-panel:nth-child(8) { z-index: 9; top: calc(var(--header-height, 80px) + 12px + 350px); }
+.services-stack .service-panel:nth-child(2) { z-index: 3; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(3) { z-index: 4; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(4) { z-index: 5; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(5) { z-index: 6; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(6) { z-index: 7; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(7) { z-index: 8; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(8) { z-index: 9; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
 
 /* The final card stays on top of the stack so it scrolls away last,
    without trapping the page. Its z-index is the highest so all earlier
@@ -1477,6 +1483,210 @@
 .has-scroll-reveal .services-stack .service-panel.scroll-reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+@media (min-width: 768px) {
+  .services-stack .service-panel {
+    height: 420px;
+    min-height: 420px;
+    padding-block: clamp(0.95rem, 2vw, 1.55rem);
+  }
+
+  .services-stack .service-copy,
+  .services-stack .service-cyan .service-copy,
+  .services-stack .service-branding-card .service-copy,
+  .services-stack .service-development-card .service-copy,
+  .services-stack .service-motion-card .service-copy,
+  .services-stack .service-marketing-card .service-copy,
+  .services-stack .service-product-card .service-copy {
+    justify-content: flex-start;
+  }
+
+  .services-stack .service-number,
+  .services-stack .service-cyan .service-number,
+  .services-stack .service-branding-card .service-number,
+  .services-stack .service-development-card .service-number,
+  .services-stack .service-motion-card .service-number,
+  .services-stack .service-marketing-card .service-number,
+  .services-stack .service-product-card .service-number {
+    margin-bottom: 0.5rem;
+    font-size: 0.74rem;
+    line-height: 1.1;
+  }
+
+  .services-stack .service-copy h3,
+  .services-stack .service-cyan .service-copy h3,
+  .services-stack .service-branding-card .service-copy h3,
+  .services-stack .service-development-card .service-copy h3,
+  .services-stack .service-motion-card .service-copy h3,
+  .services-stack .service-marketing-card .service-copy h3,
+  .services-stack .service-product-card .service-copy h3 {
+    margin-bottom: 0.55rem;
+    font-size: clamp(1.75rem, 2.55vw, 2.75rem);
+    line-height: 1.04;
+  }
+
+  .services-stack .service-copy > p:not(.service-number),
+  .services-stack .service-cyan .service-copy > p:not(.service-number),
+  .services-stack .service-branding-card .service-copy > p:not(.service-number),
+  .services-stack .service-development-card .service-copy > p:not(.service-number),
+  .services-stack .service-motion-card .service-copy > p:not(.service-number),
+  .services-stack .service-marketing-card .service-copy > p:not(.service-number),
+  .services-stack .service-product-card .service-copy > p:not(.service-number) {
+    font-size: clamp(0.82rem, 0.82vw, 0.92rem);
+    line-height: 1.42;
+  }
+
+  .services-stack .service-subheading,
+  .services-stack .service-branding-card .service-subheading,
+  .services-stack .service-development-card .service-subheading,
+  .services-stack .service-motion-card .service-subheading,
+  .services-stack .service-marketing-card .service-subheading,
+  .services-stack .service-product-card .service-subheading {
+    margin: 0.68rem 0 0.38rem;
+    font-size: clamp(0.98rem, 1.12vw, 1.16rem);
+  }
+
+  .services-stack .service-list,
+  .services-stack .service-cyan .service-feature-list,
+  .services-stack .service-mint .service-feature-list,
+  .services-stack .service-branding-card .service-feature-list,
+  .services-stack .service-development-card .service-feature-list,
+  .services-stack .service-motion-card .service-feature-list,
+  .services-stack .service-marketing-card .service-feature-list,
+  .services-stack .service-product-card .service-feature-list {
+    gap: 0.28rem 0.48rem;
+    margin-bottom: 0.72rem;
+    font-size: clamp(0.62rem, 0.68vw, 0.72rem);
+    line-height: 1.14;
+  }
+
+  .services-stack .service-tool-logos,
+  .services-stack .service-cyan .service-tool-logos,
+  .services-stack .service-mint .service-tool-logos,
+  .services-stack .service-branding-card .service-tool-logos,
+  .services-stack .service-development-card .service-tool-logos,
+  .services-stack .service-motion-card .service-tool-logos,
+  .services-stack .service-marketing-card .service-tool-logos,
+  .services-stack .service-product-card .service-tool-logos {
+    gap: 0.44rem;
+    padding: 0.48rem;
+    border-radius: 14px;
+  }
+
+  .services-stack .service-tool-logos span,
+  .services-stack .service-cyan .service-tool-logos span,
+  .services-stack .service-mint .service-tool-logos span,
+  .services-stack .service-branding-card .service-tool-logos span,
+  .services-stack .service-development-card .service-tool-logos span,
+  .services-stack .service-motion-card .service-tool-logos span,
+  .services-stack .service-marketing-card .service-tool-logos span,
+  .services-stack .service-product-card .service-tool-logos span {
+    gap: 0.24rem;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0.38rem 0.46rem;
+    border-radius: 11px;
+  }
+
+  .services-stack .service-tool-logos img,
+  .services-stack .service-cyan .service-tool-logos img,
+  .services-stack .service-mint .service-tool-logos img,
+  .services-stack .service-branding-card .service-tool-logos img,
+  .services-stack .service-development-card .service-tool-logos img,
+  .services-stack .service-motion-card .service-tool-logos img,
+  .services-stack .service-marketing-card .service-tool-logos img,
+  .services-stack .service-product-card .service-tool-logos img {
+    width: 28px;
+    height: 28px;
+    padding: 0.28rem;
+    border-radius: 10px;
+  }
+
+  .services-stack .service-tool-logos b,
+  .services-stack .service-cyan .service-tool-logos b,
+  .services-stack .service-mint .service-tool-logos b,
+  .services-stack .service-branding-card .service-tool-logos b,
+  .services-stack .service-development-card .service-tool-logos b,
+  .services-stack .service-motion-card .service-tool-logos b,
+  .services-stack .service-marketing-card .service-tool-logos b,
+  .services-stack .service-product-card .service-tool-logos b {
+    max-width: 58px;
+    font-size: 0.56rem;
+    line-height: 1.05;
+  }
+
+  .services-stack .service-visual,
+  .services-stack .service-branding-card .brand-visual,
+  .services-stack .service-development-card .code-visual,
+  .services-stack .service-motion-card .motion-visual,
+  .services-stack .service-marketing-card .data-visual,
+  .services-stack .service-product-card .object-visual {
+    min-height: 300px;
+  }
+
+  .services-stack .ui-layout {
+    min-height: 185px;
+  }
+
+  .services-stack .brand-card-a {
+    width: 30%;
+    height: 54%;
+    font-size: clamp(3.4rem, 4.6vw, 5.25rem);
+  }
+
+  .services-stack .brand-card-b {
+    width: 44%;
+    height: 28%;
+    font-size: 1rem;
+  }
+
+  .services-stack .brand-card-c {
+    width: 44%;
+    height: 32%;
+  }
+
+  .services-stack .code-panel {
+    padding: 0.95rem;
+    font-size: 0.64rem;
+    line-height: 1.7;
+  }
+
+  .services-stack .browser-hero {
+    height: 56px;
+  }
+
+  .services-stack .browser-blocks i {
+    height: 24px;
+  }
+
+  .services-stack .data-card {
+    padding: 1.25rem;
+  }
+
+  .services-stack .data-card strong {
+    font-size: 2.1rem;
+  }
+
+  .services-stack .data-bars {
+    height: 76px;
+    margin-top: 1rem;
+  }
+
+  .services-stack .object-cube {
+    width: 130px;
+    height: 165px;
+  }
+
+  .services-stack .object-shadow {
+    width: 170px;
+    height: 34px;
+  }
+
+  .services-stack .object-orbit {
+    width: 245px;
+    height: 98px;
+  }
 }
 
 /* Mobile: disable the stacking entirely so cards stack vertically with
