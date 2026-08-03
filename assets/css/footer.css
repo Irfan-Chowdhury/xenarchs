@@ -3,7 +3,7 @@
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  padding: clamp(4.75rem, 8vw, 5.5rem) 0 2rem;
+  padding: clamp(3rem, 6vw, 4rem) 0 1.5rem;
   background-color: #02090d;
   color: #fff;
 }
@@ -76,7 +76,7 @@
   display: grid;
   grid-template-columns: minmax(260px, 1fr) minmax(300px, 1fr) minmax(420px, 1.3fr);
   align-items: start;
-  gap: clamp(2.5rem, 5vw, 4rem);
+  gap: clamp(1.75rem, 3.5vw, 3rem);
   width: 100%;
 }
 
@@ -86,7 +86,7 @@
   width: clamp(74px, 8vw, 112px);
   height: clamp(64px, 7vw, 98px);
   aspect-ratio: 97.04 / 84.52;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: transparent;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .footer-brand-column .footer-location {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .footer-info-grid {
@@ -198,7 +198,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
 .site-footer .footer-social-link {
@@ -230,8 +230,8 @@
   align-items: flex-end;
   justify-content: space-between;
   gap: 1.5rem;
-  margin-top: clamp(3rem, 6vw, 4rem);
-  padding-top: 1.5rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.42);
   font-size: 0.75rem;
