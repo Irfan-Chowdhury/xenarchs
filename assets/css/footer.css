@@ -173,6 +173,10 @@
   max-width: 190px;
 }
 
+.footer-brand-column .footer-location {
+  margin-top: 1.5rem;
+}
+
 .footer-info-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -183,6 +187,11 @@
 
 .footer-info-column {
   min-width: 0;
+}
+
+.footer-info-grid .footer-info-column h2 {
+  color: #fff;
+  font-weight: 800;
 }
 
 .social-row {
