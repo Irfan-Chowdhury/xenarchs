@@ -255,6 +255,10 @@
     padding-bottom: 4.75rem;
   }
 
+  .services-container {
+    padding-bottom: 0;
+  }
+
   .project-grid {
     grid-template-columns: 1fr;
   }
