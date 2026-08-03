@@ -113,7 +113,7 @@
   width: 100%;
   overflow: hidden;
   padding: clamp(2.5rem, 6vw, 5.5rem);
-  border-radius: 30px;
+  border-radius: 0;
   background: #041013;
   color: #fff;
   isolation: isolate;
@@ -175,7 +175,7 @@
   width: 100%;
   max-width: none;
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 4.5rem) clamp(5rem, 8vw, 7rem);
+  padding: 0;
 }
 
 .client-stories__heading {
@@ -582,13 +582,13 @@
 
 @media (max-width: 767.98px) {
   .client-stories__container {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   .client-stories__panel {
     padding: 2rem 1.2rem;
-    border-radius: 24px;
+    border-radius: 0;
   }
 
   .client-stories__title {
