@@ -979,8 +979,14 @@
               </p>
             </div>
 
-          <div class="client-stories__grid">
-            <article class="client-stories__card scroll-reveal">
+          <div class="client-stories__carousel">
+            <button class="client-stories__arrow client-stories__arrow--prev" type="button" aria-label="Show previous video testimonial" data-story-scroll="prev">
+              <i class="bi bi-arrow-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="client-stories__viewport">
+              <div class="client-stories__grid">
+                <article class="client-stories__card scroll-reveal">
               <div class="client-stories__media">
                 <video
                   class="client-stories__video"
@@ -1001,9 +1007,9 @@
                 <h3>Sebastian Hale</h3>
                 <p>Founder @ Salesgo</p>
               </footer>
-            </article>
+                </article>
 
-            <article class="client-stories__card scroll-reveal">
+                <article class="client-stories__card scroll-reveal">
               <div class="client-stories__media">
                 <video
                   class="client-stories__video"
@@ -1024,9 +1030,9 @@
                 <h3>David Morgan</h3>
                 <p>CEO @ Externalize It</p>
               </footer>
-            </article>
+                </article>
 
-            <article class="client-stories__card scroll-reveal">
+                <article class="client-stories__card scroll-reveal">
               <div class="client-stories__media">
                 <video
                   class="client-stories__video"
@@ -1047,9 +1053,9 @@
                 <h3>Jenna Carvalho</h3>
                 <p>Principal @ Guardian Estate</p>
               </footer>
-            </article>
+                </article>
 
-            <article class="client-stories__card scroll-reveal">
+                <article class="client-stories__card scroll-reveal">
               <div class="client-stories__media">
                 <video
                   class="client-stories__video"
@@ -1070,14 +1076,16 @@
                 <h3>Ted Nash</h3>
                 <p>Founder &amp; CEO @ Yenex</p>
               </footer>
-            </article>
+                </article>
+              </div>
+            </div>
+
+            <button class="client-stories__arrow client-stories__arrow--next" type="button" aria-label="Show next video testimonial" data-story-scroll="next">
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </button>
           </div>
 
           <section class="client-written" aria-label="Written client testimonials">
-            <button class="client-written__arrow client-written__arrow--prev" type="button" aria-label="Show previous written testimonial" data-written-scroll="prev">
-              <i class="bi bi-arrow-left" aria-hidden="true"></i>
-            </button>
-
             <div class="client-written__viewport">
               <div class="client-written__track">
                 <article class="client-written__card">
@@ -1262,9 +1270,6 @@
               </div>
             </div>
 
-            <button class="client-written__arrow client-written__arrow--next" type="button" aria-label="Show next written testimonial" data-written-scroll="next">
-              <i class="bi bi-arrow-right" aria-hidden="true"></i>
-            </button>
             </section>
           </div>
         </div>

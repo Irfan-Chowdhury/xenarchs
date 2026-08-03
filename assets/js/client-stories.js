@@ -9,9 +9,13 @@
   var canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var storyGrid = root.querySelector(".client-stories__grid");
-  var storyAutoTimer = null;
-  var storyAutoRequestedPlay = false;
-  var storyAutoSliding = false;
+  var storyControls = Array.prototype.slice.call(root.querySelectorAll("[data-story-scroll]"));
+  var storySliding = false;
+  var writtenTrack = root.querySelector(".client-written__track");
+  var writtenCards = Array.prototype.slice.call(root.querySelectorAll(".client-written__card"));
+  var writtenAutoTimer = null;
+  var writtenAutoSliding = false;
+  var slideDuration = 850;
 
   root.classList.toggle("client-stories--can-hover", canHover);
 
@@ -62,7 +66,6 @@
 
     card.classList.remove("is-playing", "needs-audio-click");
     syncControls(card);
-    resumeStoryAutoSlide();
   }
 
   function pauseOthers(activeCard) {
@@ -81,8 +84,6 @@
       return;
     }
 
-    storyAutoRequestedPlay = true;
-    pauseStoryAutoSlide();
     pauseOthers(card);
     video.muted = userMuted;
 
@@ -90,13 +91,10 @@
 
     if (playPromise && typeof playPromise.then === "function") {
       playPromise.then(function () {
-        storyAutoRequestedPlay = false;
         card.classList.add("is-playing");
         card.classList.remove("needs-audio-click");
-        pauseStoryAutoSlide();
         syncControls(card);
       }).catch(function () {
-        storyAutoRequestedPlay = false;
         card.classList.add("needs-audio-click");
         pauseCard(card, false);
       });
@@ -104,85 +102,106 @@
       return;
     }
 
-    storyAutoRequestedPlay = false;
     card.classList.add("is-playing");
-    pauseStoryAutoSlide();
     syncControls(card);
   }
 
-  function hasPlayingStoryVideo() {
-    return cards.some(function (card) {
-      return card.classList.contains("is-playing");
+  function pauseAllStoryVideos(reset) {
+    cards.forEach(function (card) {
+      pauseCard(card, reset);
     });
   }
 
-  function pauseStoryAutoSlide() {
-    if (storyAutoTimer) {
-      window.clearInterval(storyAutoTimer);
-      storyAutoTimer = null;
-    }
-
-    root.classList.add("client-stories--auto-paused");
-  }
-
-  function resumeStoryAutoSlide() {
-    if (storyAutoRequestedPlay || hasPlayingStoryVideo()) {
-      return;
-    }
-
-    startStoryAutoSlide();
-  }
-
-  function getStorySlideDistance() {
-    var firstCard = storyGrid ? storyGrid.querySelector(".client-stories__card") : null;
+  function getSlideDistance(track, selector) {
+    var firstCard = track ? track.querySelector(selector) : null;
     var gap = 0;
 
-    if (!storyGrid || !firstCard) {
+    if (!track || !firstCard) {
       return 0;
     }
 
     if (window.getComputedStyle) {
-      gap = parseFloat(window.getComputedStyle(storyGrid).columnGap) || 0;
+      gap = parseFloat(window.getComputedStyle(track).columnGap) || 0;
     }
 
     return firstCard.getBoundingClientRect().width + gap;
   }
 
-  function slideStoryCardsLeft() {
+  function pauseCloneMedia(clone) {
+    clone.querySelectorAll("video").forEach(function (video) {
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+
+  function slideStoryCards(direction) {
     var firstCard;
+    var lastCard;
     var cloneCard;
     var distance;
 
-    if (!storyGrid || storyAutoSliding || hasPlayingStoryVideo()) {
+    if (!storyGrid || storySliding || cards.length < 2) {
       return;
     }
 
     firstCard = storyGrid.querySelector(".client-stories__card");
+    lastCard = storyGrid.querySelector(".client-stories__card:last-child");
 
-    if (!firstCard || cards.length < 2) {
+    if (!firstCard || !lastCard) {
       return;
     }
 
-    distance = getStorySlideDistance();
+    distance = getSlideDistance(storyGrid, ".client-stories__card");
 
     if (!distance) {
       return;
     }
 
+    pauseAllStoryVideos(true);
+    storySliding = true;
+
+    storyGrid.style.setProperty("--client-story-slide-distance", distance + "px");
+
+    if (direction === "prev") {
+      cloneCard = lastCard.cloneNode(true);
+      cloneCard.setAttribute("aria-hidden", "true");
+      pauseCloneMedia(cloneCard);
+      storyGrid.insertBefore(cloneCard, firstCard);
+      storyGrid.style.transition = "none";
+      storyGrid.style.transform = "translate3d(" + (distance * -1) + "px, 0, 0)";
+      storyGrid.offsetHeight;
+
+      window.requestAnimationFrame(function () {
+        storyGrid.style.transition = "transform " + slideDuration + "ms cubic-bezier(0.22, 1, 0.36, 1)";
+        storyGrid.style.transform = "translate3d(0, 0, 0)";
+      });
+
+      window.setTimeout(function () {
+        if (cloneCard.parentNode === storyGrid) {
+          storyGrid.removeChild(cloneCard);
+        }
+
+        if (lastCard.parentNode === storyGrid) {
+          storyGrid.insertBefore(lastCard, firstCard);
+        }
+
+        storyGrid.style.transition = "";
+        storyGrid.style.transform = "";
+        storyGrid.style.setProperty("--client-story-slide-distance", "0px");
+        storySliding = false;
+      }, slideDuration + 30);
+
+      return;
+    }
+
     cloneCard = firstCard.cloneNode(true);
     cloneCard.setAttribute("aria-hidden", "true");
-    cloneCard.querySelectorAll("video").forEach(function (video) {
-      video.pause();
-      video.currentTime = 0;
-    });
-
-    storyAutoSliding = true;
+    pauseCloneMedia(cloneCard);
     storyGrid.appendChild(cloneCard);
-    storyGrid.style.setProperty("--client-story-slide-distance", distance + "px");
-    storyGrid.classList.add("is-auto-sliding");
+    storyGrid.classList.add("is-sliding-next");
 
     window.setTimeout(function () {
-      storyGrid.classList.remove("is-auto-sliding");
+      storyGrid.classList.remove("is-sliding-next");
       storyGrid.style.setProperty("--client-story-slide-distance", "0px");
 
       if (cloneCard.parentNode === storyGrid) {
@@ -193,17 +212,72 @@
         storyGrid.appendChild(firstCard);
       }
 
-      storyAutoSliding = false;
-    }, 880);
+      storySliding = false;
+    }, slideDuration + 30);
   }
 
-  function startStoryAutoSlide() {
-    if (!storyGrid || storyAutoTimer || reduceMotion || hasPlayingStoryVideo() || cards.length < 2) {
+  function slideWrittenCardsLeft() {
+    var firstCard;
+    var cloneCard;
+    var distance;
+    var currentWrittenCards;
+
+    if (!writtenTrack || writtenAutoSliding) {
       return;
     }
 
-    root.classList.remove("client-stories--auto-paused");
-    storyAutoTimer = window.setInterval(slideStoryCardsLeft, 2000);
+    currentWrittenCards = writtenTrack.querySelectorAll(".client-written__card");
+    firstCard = writtenTrack.querySelector(".client-written__card");
+
+    if (!firstCard || currentWrittenCards.length < 2) {
+      return;
+    }
+
+    distance = getSlideDistance(writtenTrack, ".client-written__card");
+
+    if (!distance) {
+      return;
+    }
+
+    cloneCard = firstCard.cloneNode(true);
+    cloneCard.setAttribute("aria-hidden", "true");
+
+    writtenAutoSliding = true;
+    writtenTrack.appendChild(cloneCard);
+    writtenTrack.style.setProperty("--client-written-slide-distance", distance + "px");
+    writtenTrack.classList.add("is-auto-sliding");
+
+    window.setTimeout(function () {
+      writtenTrack.classList.remove("is-auto-sliding");
+      writtenTrack.style.setProperty("--client-written-slide-distance", "0px");
+
+      if (cloneCard.parentNode === writtenTrack) {
+        writtenTrack.removeChild(cloneCard);
+      }
+
+      if (firstCard.parentNode === writtenTrack) {
+        writtenTrack.appendChild(firstCard);
+      }
+
+      writtenAutoSliding = false;
+    }, slideDuration + 30);
+  }
+
+  function startWrittenAutoSlide() {
+    if (!writtenTrack || writtenAutoTimer || reduceMotion) {
+      return;
+    }
+
+    writtenAutoTimer = window.setInterval(slideWrittenCardsLeft, 2000);
+  }
+
+  function pauseWrittenAutoSlide() {
+    if (!writtenAutoTimer) {
+      return;
+    }
+
+    window.clearInterval(writtenAutoTimer);
+    writtenAutoTimer = null;
   }
 
   cards.forEach(function (card) {
@@ -269,65 +343,22 @@
     syncControls(card);
   });
 
-  var writtenTrack = root.querySelector(".client-written__track");
-  var writtenControls = Array.prototype.slice.call(root.querySelectorAll("[data-written-scroll]"));
-
-  function getWrittenStep() {
-    var firstCard = writtenTrack ? writtenTrack.querySelector(".client-written__card") : null;
-    var gap = 0;
-
-    if (!writtenTrack || !firstCard) {
-      return 0;
-    }
-
-    if (window.getComputedStyle) {
-      gap = parseFloat(window.getComputedStyle(writtenTrack).columnGap) || 0;
-    }
-
-    return firstCard.getBoundingClientRect().width + gap;
-  }
-
-  function syncWrittenControls() {
-    var maxScroll;
-    var currentScroll;
-
-    if (!writtenTrack || !writtenControls.length) {
-      return;
-    }
-
-    maxScroll = writtenTrack.scrollWidth - writtenTrack.clientWidth;
-    currentScroll = writtenTrack.scrollLeft;
-
-    writtenControls.forEach(function (button) {
-      var direction = button.getAttribute("data-written-scroll");
-
-      if (direction === "prev") {
-        button.disabled = currentScroll <= 2;
-      }
-
-      if (direction === "next") {
-        button.disabled = currentScroll >= maxScroll - 2;
-      }
-    });
-  }
-
-  if (writtenTrack && writtenControls.length) {
-    writtenControls.forEach(function (button) {
+  if (storyGrid && storyControls.length) {
+    storyControls.forEach(function (button) {
       button.addEventListener("click", function () {
-        var direction = button.getAttribute("data-written-scroll") === "prev" ? -1 : 1;
-        var step = getWrittenStep();
+        var direction = button.getAttribute("data-story-scroll") === "prev" ? "prev" : "next";
 
-        writtenTrack.scrollBy({
-          left: step * direction,
-          behavior: "smooth"
-        });
+        slideStoryCards(direction);
       });
     });
-
-    writtenTrack.addEventListener("scroll", syncWrittenControls);
-    window.addEventListener("resize", syncWrittenControls);
-    syncWrittenControls();
   }
 
-  startStoryAutoSlide();
+  writtenCards.forEach(function (card) {
+    card.addEventListener("mouseenter", pauseWrittenAutoSlide);
+    card.addEventListener("mouseleave", startWrittenAutoSlide);
+    card.addEventListener("focusin", pauseWrittenAutoSlide);
+    card.addEventListener("focusout", startWrittenAutoSlide);
+  });
+
+  startWrittenAutoSlide();
 })();
