@@ -1,17 +1,23 @@
 /* Work */
 .fp-showcase {
+  --fp-scroll-height: 100vh;
+  --fp-track-x: 0px;
   position: relative;
   width: 100%;
-  overflow: hidden;
+  height: var(--fp-scroll-height);
+  min-height: var(--fp-scroll-height);
+  overflow: visible;
   padding: clamp(5rem, 8vw, 7rem) 0 0;
   background: var(--color-paper);
   color: #f5f7f7;
 }
 
 .fp-showcase__inner {
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   max-width: none;
+  min-height: 100svh;
   margin: 0 auto;
   overflow: hidden;
   padding: clamp(2.5rem, 6vw, 5.5rem);
@@ -173,17 +179,23 @@
 }
 
 .fp-showcase__grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex;
+  align-items: stretch;
   gap: clamp(0.8rem, 1.45vw, 1.2rem);
-  width: 100%;
+  width: max-content;
+  max-width: none;
   min-width: 0;
+  transform: translate3d(var(--fp-track-x), 0, 0);
+  transition: transform 80ms linear;
+  will-change: transform;
 }
 
 .fp-showcase__card {
   position: relative;
   display: block;
-  min-width: 0;
+  flex: 0 0 clamp(260px, 27vw, 380px);
+  width: clamp(260px, 27vw, 380px);
+  min-width: clamp(260px, 27vw, 380px);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
@@ -287,8 +299,10 @@
     padding: clamp(2.25rem, 5vw, 3.5rem);
   }
 
-  .fp-showcase__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .fp-showcase__card {
+    flex-basis: min(42vw, 340px);
+    width: min(42vw, 340px);
+    min-width: min(42vw, 340px);
   }
 }
 
@@ -300,6 +314,7 @@
   }
 
   .fp-showcase__inner {
+    min-height: 100svh;
     padding: 2rem 1.2rem;
     border-radius: 0;
   }
@@ -322,13 +337,37 @@
     padding-left: 1.2rem;
   }
 
+  .fp-showcase__card {
+    flex-basis: min(82vw, 340px);
+    width: min(82vw, 340px);
+    min-width: min(82vw, 340px);
+    border-radius: 20px;
+    aspect-ratio: 1.08 / 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fp-showcase {
+    height: auto;
+    min-height: auto;
+  }
+
+  .fp-showcase__inner {
+    position: relative;
+    min-height: 0;
+  }
+
   .fp-showcase__grid {
-    grid-template-columns: 1fr;
+    width: 100%;
+    transform: none !important;
+    transition: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
   }
 
   .fp-showcase__card {
-    border-radius: 20px;
-    aspect-ratio: 1.08 / 1;
+    scroll-snap-align: start;
   }
 }
 
