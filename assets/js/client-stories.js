@@ -13,8 +13,6 @@
   var storySliding = false;
   var writtenTrack = root.querySelector(".client-written__track");
   var writtenCards = Array.prototype.slice.call(root.querySelectorAll(".client-written__card"));
-  var writtenAutoTimer = null;
-  var writtenAutoSliding = false;
   var slideDuration = 850;
 
   root.classList.toggle("client-stories--can-hover", canHover);
@@ -216,68 +214,56 @@
     }, slideDuration + 30);
   }
 
-  function slideWrittenCardsLeft() {
-    var firstCard;
-    var cloneCard;
-    var distance;
-    var currentWrittenCards;
+  function updateWrittenLoopDistance() {
+    var firstOriginal = writtenCards[0];
+    var firstClone = writtenTrack ? writtenTrack.querySelector(".client-written__card[data-marquee-clone='true']") : null;
+    var distance = 0;
 
-    if (!writtenTrack || writtenAutoSliding) {
+    if (!writtenTrack || !firstOriginal || !firstClone) {
       return;
     }
 
-    currentWrittenCards = writtenTrack.querySelectorAll(".client-written__card");
-    firstCard = writtenTrack.querySelector(".client-written__card");
+    distance = firstClone.offsetLeft - firstOriginal.offsetLeft;
 
-    if (!firstCard || currentWrittenCards.length < 2) {
-      return;
+    if (distance > 0) {
+      writtenTrack.style.setProperty("--client-written-loop-distance", distance + "px");
     }
-
-    distance = getSlideDistance(writtenTrack, ".client-written__card");
-
-    if (!distance) {
-      return;
-    }
-
-    cloneCard = firstCard.cloneNode(true);
-    cloneCard.setAttribute("aria-hidden", "true");
-
-    writtenAutoSliding = true;
-    writtenTrack.appendChild(cloneCard);
-    writtenTrack.style.setProperty("--client-written-slide-distance", distance + "px");
-    writtenTrack.classList.add("is-auto-sliding");
-
-    window.setTimeout(function () {
-      writtenTrack.classList.remove("is-auto-sliding");
-      writtenTrack.style.setProperty("--client-written-slide-distance", "0px");
-
-      if (cloneCard.parentNode === writtenTrack) {
-        writtenTrack.removeChild(cloneCard);
-      }
-
-      if (firstCard.parentNode === writtenTrack) {
-        writtenTrack.appendChild(firstCard);
-      }
-
-      writtenAutoSliding = false;
-    }, slideDuration + 30);
   }
 
-  function startWrittenAutoSlide() {
-    if (!writtenTrack || writtenAutoTimer || reduceMotion) {
+  function setupWrittenMarquee() {
+    if (!writtenTrack || writtenCards.length < 2) {
       return;
     }
 
-    writtenAutoTimer = window.setInterval(slideWrittenCardsLeft, 2000);
-  }
+    writtenCards.forEach(function (card) {
+      var clone = card.cloneNode(true);
 
-  function pauseWrittenAutoSlide() {
-    if (!writtenAutoTimer) {
-      return;
+      clone.setAttribute("aria-hidden", "true");
+      clone.setAttribute("data-marquee-clone", "true");
+      clone.querySelectorAll("a, button, input, select, textarea, [tabindex]").forEach(function (focusable) {
+        focusable.setAttribute("tabindex", "-1");
+      });
+      writtenTrack.appendChild(clone);
+    });
+
+    updateWrittenLoopDistance();
+
+    if (!reduceMotion) {
+      writtenTrack.classList.add("is-marquee-ready");
     }
 
-    window.clearInterval(writtenAutoTimer);
-    writtenAutoTimer = null;
+    window.addEventListener("resize", function () {
+      writtenTrack.classList.remove("is-marquee-ready");
+      window.requestAnimationFrame(function () {
+        updateWrittenLoopDistance();
+
+        if (!reduceMotion) {
+          writtenTrack.classList.add("is-marquee-ready");
+        }
+      });
+    });
+
+    window.addEventListener("load", updateWrittenLoopDistance);
   }
 
   cards.forEach(function (card) {
@@ -353,12 +339,5 @@
     });
   }
 
-  writtenCards.forEach(function (card) {
-    card.addEventListener("mouseenter", pauseWrittenAutoSlide);
-    card.addEventListener("mouseleave", startWrittenAutoSlide);
-    card.addEventListener("focusin", pauseWrittenAutoSlide);
-    card.addEventListener("focusout", startWrittenAutoSlide);
-  });
-
-  startWrittenAutoSlide();
+  setupWrittenMarquee();
 })();
