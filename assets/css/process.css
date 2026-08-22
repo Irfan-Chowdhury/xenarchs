@@ -162,7 +162,7 @@
 .process-timeline {
   position: relative;
   display: flex;
-  min-height: 112px;
+  min-height: calc(clamp(68px, 5.4vw, 76px) + 4.85rem);
   align-items: center;
   flex-direction: column;
 }
@@ -223,16 +223,32 @@
 
 .process-icon-circle::after {
   position: absolute;
-  top: calc(100% + 9px);
+  top: 100%;
   left: 50%;
-  width: 1px;
-  height: 24px;
+  width: 2px;
+  height: 28px;
   content: "";
-  background: linear-gradient(180deg, rgba(25, 213, 209, 0.62), transparent);
+  background: rgba(25, 213, 209, 0.72);
+  box-shadow: 0 0 7px rgba(25, 213, 209, 0.2);
+  transform: translateX(-50%);
+}
+
+.process-icon-circle::before {
+  position: absolute;
+  top: calc(100% + 28px);
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border: 2px solid rgba(25, 213, 209, 0.72);
+  border-radius: 50%;
+  content: "";
+  background: transparent;
+  box-shadow: 0 0 8px rgba(25, 213, 209, 0.22);
+  transform: translate(-50%, -50%);
 }
 
 .process-stage-content {
-  padding-top: 1.35rem;
+  padding-top: 0;
 }
 
 .process-stage-content h3 {
@@ -430,6 +446,7 @@
     font-size: 1.12rem;
   }
 
+  .process-icon-circle::before,
   .process-icon-circle::after {
     display: none;
   }
