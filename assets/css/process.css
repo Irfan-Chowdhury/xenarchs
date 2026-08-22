@@ -162,10 +162,9 @@
 .process-timeline {
   position: relative;
   display: flex;
-  min-height: 150px;
+  min-height: 112px;
   align-items: center;
   flex-direction: column;
-  overflow: visible;
 }
 
 .process-timeline::before,
@@ -220,39 +219,20 @@
   color: var(--color-accent);
   box-shadow: 0 0 24px rgba(25, 213, 209, 0.16);
   font-size: 1.48rem;
-  overflow: visible;
 }
 
 .process-icon-circle::after {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 9px);
   left: 50%;
   width: 1px;
-  height: 28px;
+  height: 24px;
   content: "";
-  background: rgba(25, 213, 209, 0.88);
-  box-shadow: 0 0 8px rgba(25, 213, 209, 0.22);
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.process-icon-circle::before {
-  position: absolute;
-  top: calc(100% + 28px);
-  left: 50%;
-  width: 6px;
-  height: 6px;
-  border: 1.5px solid rgba(25, 213, 209, 0.94);
-  border-radius: 50%;
-  content: "";
-  background: #031b2a;
-  box-shadow: 0 0 10px rgba(25, 213, 209, 0.26);
-  transform: translate(-50%, -1px);
-  z-index: 3;
+  background: linear-gradient(180deg, rgba(25, 213, 209, 0.62), transparent);
 }
 
 .process-stage-content {
-  padding-top: 0.55rem;
+  padding-top: 1.35rem;
 }
 
 .process-stage-content h3 {
@@ -450,7 +430,6 @@
     font-size: 1.12rem;
   }
 
-  .process-icon-circle::before,
   .process-icon-circle::after {
     display: none;
   }
