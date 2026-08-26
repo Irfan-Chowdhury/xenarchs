@@ -18,7 +18,7 @@
   pointer-events: none;
 }
 
-.footer-video-background > *,
+.footer-video-background>*,
 .footer-video-background canvas,
 .footer-video-background .darkveil-canvas,
 .footer-video-background .darkveil-container,
@@ -48,18 +48,14 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(
-      circle at 50% 18%,
+    radial-gradient(circle at 50% 18%,
       rgba(2, 9, 13, 0.12) 0%,
       rgba(2, 9, 13, 0.38) 44%,
-      rgba(2, 9, 13, 0.88) 100%
-    ),
-    linear-gradient(
-      180deg,
+      rgba(2, 9, 13, 0.88) 100%),
+    linear-gradient(180deg,
       rgba(2, 9, 13, 0.76) 0%,
       rgba(2, 9, 13, 0.38) 42%,
-      rgba(2, 9, 13, 0.82) 100%
-    );
+      rgba(2, 9, 13, 0.82) 100%);
 }
 
 .footer-container {
@@ -247,8 +243,10 @@
 }
 
 .footer-info-grid .footer-info-column h2 {
-  color: #fff;
+  color: #18d8dd;
   font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .social-row {
@@ -290,9 +288,51 @@
   margin-top: clamp(2rem, 4vw, 3rem);
   padding-top: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.42);
-  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.footer-bottom-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footer-legal-row-1,
+.footer-legal-row-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-rights {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.footer-legal-row-2 a {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+.footer-legal-row-2 a:hover,
+.footer-legal-row-2 a:focus {
+  color: #18d8dd;
+}
+
+.footer-legal-row-2 .footer-dot {
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1;
+  margin: 0 0.15rem;
 }
 
 .footer-bottom a {
@@ -315,7 +355,7 @@
 }
 
 .newsletter-label {
-  color: rgba(246, 241, 235, 0.66);
+  color: #18d8dd;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.12em;

@@ -55,21 +55,42 @@
 
 .xenarchs-faq-layout {
   width: 100%;
-  max-width: 1320px;
+  max-width: 100%;
   margin-right: auto;
   margin-left: auto;
   align-items: flex-start;
-  gap: clamp(2.5rem, 5vw, 5.5rem) 0;
+}
+
+@media (min-width: 992px) {
+  .xenarchs-faq-layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .xenarchs-faq-intro {
+    flex: 0 0 34%;
+    max-width: 34%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .xenarchs-faq-column {
+    flex: 0 0 54%;
+    max-width: 54%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .xenarchs-faq-intro {
-  padding-right: clamp(1rem, 4vw, 3rem);
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .xenarchs-faq-heading {
   margin: 0;
-  letter-spacing: -0.055em;
-  line-height: 0.94;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
 }
 
 .xenarchs-faq-heading span,
@@ -79,18 +100,18 @@
 
 .xenarchs-faq-heading span {
   color: var(--color-accent);
-  font-size: clamp(4rem, 5.5vw, 4.85rem);
+  font-size: clamp(3.4rem, 4.5vw, 4.2rem);
   font-style: normal;
   font-weight: 800;
 }
 
 .xenarchs-faq-heading em {
-  margin-top: 0.18rem;
+  margin-top: 0.25rem;
   color: #fff9f0;
   font-family: "Cormorant Garamond", "Playfair Display", Georgia, serif;
-  font-size: clamp(3.35rem, 4.65vw, 4rem);
+  font-size: clamp(2.6rem, 3.5vw, 3.2rem);
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0;
   white-space: nowrap;
 }
@@ -207,7 +228,7 @@
 .xenarchs-faq .faq-trigger {
   display: grid;
   width: 100%;
-  min-height: 78px;
+  min-height: 72px;
   align-items: center;
   grid-template-columns: 54px 1px minmax(0, 1fr) 34px;
   gap: clamp(0.9rem, 2vw, 1.35rem);
@@ -218,9 +239,17 @@
   font: inherit;
   text-align: left;
   cursor: pointer;
+  box-sizing: border-box;
+}
+
+.xenarchs-faq .faq-trigger > * {
+  align-self: center;
 }
 
 .xenarchs-faq .faq-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--color-accent);
   font-size: clamp(1.55rem, 2.2vw, 1.85rem);
   font-weight: 800;
@@ -232,6 +261,7 @@
   width: 1px;
   height: 32px;
   background: rgba(25, 213, 209, 0.28);
+  justify-self: center;
 }
 
 .xenarchs-faq .faq-question-text {
@@ -241,6 +271,8 @@
   font-weight: 800;
   letter-spacing: -0.015em;
   line-height: 1.35;
+  display: flex;
+  align-items: center;
 }
 
 .xenarchs-faq .faq-control {
@@ -295,10 +327,10 @@
   min-height: 0;
   margin: 0;
   overflow: hidden;
-  padding: 0 clamp(1rem, 2.3vw, 1.35rem) 1.55rem calc(clamp(1rem, 2.3vw, 1.35rem) + 54px + 1px + clamp(1.8rem, 4vw, 2.7rem));
+  padding: 0 clamp(1rem, 2.3vw, 1.35rem) 0.95rem calc(clamp(1rem, 2.3vw, 1.35rem) + 54px + 1px + clamp(1.8rem, 4vw, 2.7rem));
   color: rgba(245, 247, 247, 0.66);
   font-size: clamp(0.98rem, 1.25vw, 1.05rem);
-  line-height: 1.72;
+  line-height: 1.68;
 }
 
 @media (max-width: 991.98px) {
@@ -333,11 +365,12 @@
   }
 
   .xenarchs-faq-heading span {
-    font-size: clamp(2.65rem, 12vw, 3rem);
+    font-size: clamp(2.8rem, 11vw, 3.3rem);
   }
 
   .xenarchs-faq-heading em {
-    font-size: clamp(2.35rem, 10.5vw, 2.75rem);
+    font-size: clamp(2.2rem, 9vw, 2.6rem);
+    font-weight: 400;
   }
 
   .xenarchs-faq-contact-card {
@@ -345,10 +378,10 @@
   }
 
   .xenarchs-faq .faq-trigger {
-    min-height: 72px;
+    min-height: 0;
     grid-template-columns: 38px 1px minmax(0, 1fr) 31px;
     gap: 0.78rem;
-    padding: 0.95rem;
+    padding: 0.75rem 0.95rem;
   }
 
   .xenarchs-faq .faq-number {
@@ -360,7 +393,7 @@
   }
 
   .xenarchs-faq .faq-answer p {
-    padding: 0 0.95rem 1.25rem calc(0.95rem + 38px + 1px + 1.56rem);
+    padding: 0 0.95rem 0.85rem calc(0.95rem + 38px + 1px + 1.56rem);
     font-size: 0.92rem;
   }
 }
