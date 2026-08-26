@@ -193,6 +193,172 @@
   text-align: center;
 }
 
+/* Hero Customers Ribbon Marquee */
+.hero-customers {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 980px;
+  height: 52px;
+  margin: clamp(2rem, 3.2vw, 2.75rem) auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.hero-customers-banner {
+  flex: 0 0 30%;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+  padding-right: 1.5rem;
+  background: linear-gradient(135deg, #18d8dd 0%, #0e9aa2 100%);
+  clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.hero-customers-banner span {
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.72rem, 0.88vw, 0.84rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-customers-marquee {
+  flex: 0 0 70%;
+  width: 70%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.hero-customers-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 3.5vw, 3.25rem);
+  width: max-content;
+  animation: heroMarquee 22s linear infinite;
+}
+
+.hero-customers-track:hover {
+  animation-play-state: paused;
+}
+
+.hero-customer-item {
+  flex: 0 0 auto;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  line-height: 1;
+  white-space: nowrap;
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.hero-customer-item:hover {
+  color: #18d8dd;
+}
+
+/* Brand Wordmark Styling Variations */
+.brand-garamond {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.brand-inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.brand-playfair {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.12em;
+  letter-spacing: 0.04em;
+}
+
+.brand-manrope {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.brand-cormorant {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.15em;
+  letter-spacing: 0.08em;
+}
+
+.brand-inter-light {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+}
+
+.brand-playfair-bold {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.brand-manrope-heavy {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+@keyframes heroMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-customers {
+    flex-direction: column;
+    height: auto;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .hero-customers-banner {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 38px;
+    justify-content: center;
+    padding-inline: 1rem;
+    clip-path: none;
+  }
+
+  .hero-customers-marquee {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 42px;
+    padding-inline: 0.5rem;
+  }
+}
+
 .scroll-indicator {
   position: absolute;
   right: 0;
