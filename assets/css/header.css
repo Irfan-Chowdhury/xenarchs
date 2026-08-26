@@ -14,10 +14,17 @@
   left: 0;
 }
 
-.site-header.header-scrolled,
+.site-header,
+.site-header.header-scrolled {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
 .site-header.menu-open {
   border-color: transparent;
-  background: rgba(2, 9, 13, 0.58);
+  background: rgba(2, 9, 13, 0.92);
   box-shadow: 0 14px 42px rgba(0, 0, 0, 0.16);
   backdrop-filter: blur(14px);
 }
