@@ -1,0 +1,16 @@
+{
+    "name": "irfan/simple_routing_system",
+    "description": "This is simple task by ollyo",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Irfan Chowdhury",
+            "email": "irfanchowdhury80@gmail.com"
+        }
+    ],
+    "require": {}
+}
