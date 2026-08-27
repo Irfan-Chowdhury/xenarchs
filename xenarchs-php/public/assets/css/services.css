@@ -1,0 +1,1725 @@
+/* Services */
+.services-section {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.services-container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: clamp(1.75rem, 3vw, 2.25rem) clamp(1.5rem, 4vw, 4.5rem) 0;
+}
+
+.services-section-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.85rem, 1.4vw, 1.15rem);
+  max-width: 1180px;
+  margin-right: auto;
+  margin-bottom: clamp(2.5rem, 4.5vw, 3.5rem);
+  margin-left: auto;
+  padding-top: 0;
+  text-align: center;
+}
+
+.services-section-kicker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.38rem 1.05rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background:
+    linear-gradient(var(--color-paper), var(--color-paper)) padding-box,
+    linear-gradient(110deg, rgba(25, 161, 178, 0.92), rgba(146, 94, 224, 0.88)) border-box;
+  color: #07546b;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.82rem, 1vw, 0.95rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.services-section-title {
+  max-width: 100%;
+  margin: 0;
+  color: #004d63;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.35rem, 2.5vw, 3.45rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+}
+
+.services-section-title-script {
+  color: inherit;
+  font-family: "Playfair Display", serif;
+  font-size: 1.08em;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+@media (min-width: 1200px) {
+  .services-section-title {
+    white-space: nowrap;
+  }
+}
+
+.services-lead {
+  max-width: 420px;
+  margin: 0 0 0 auto;
+  color: var(--color-ink-muted);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.services-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.service-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  gap: clamp(1.25rem, 3vw, 2.25rem);
+  min-height: 480px;
+  padding-block: clamp(1.15rem, 3.2vw, 2.75rem);
+  padding-inline: clamp(1.25rem, 4vw, 3.5rem);
+  overflow: hidden;
+  border: 1px solid rgba(13, 23, 25, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(13, 23, 25, 0.055);
+}
+
+.service-cyan {
+  grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.85fr);
+  border-color: rgba(13, 23, 25, 0.72);
+  border-radius: 28px;
+  background: #d9f8f5;
+}
+
+.service-mint {
+  background: #d7eed8;
+}
+
+.service-green {
+  background: #dcefd6;
+}
+
+.service-yellow {
+  background: #f0edc9;
+}
+
+.service-violet {
+  background: #e2dbf6;
+}
+
+.service-pink {
+  background: #ead5eb;
+}
+
+.service-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.service-number {
+  margin: 0 0 1rem;
+  color: #1a7776;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.service-copy h3 {
+  max-width: 690px;
+  margin: 0 0 1rem;
+  color: var(--color-ink);
+  font-size: clamp(2.125rem, 4.35vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.96;
+}
+
+.service-cyan .service-copy {
+  justify-content: center;
+  padding-right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.service-cyan .service-number {
+  margin-bottom: 0.95rem;
+  color: #163538;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.service-cyan .service-copy h3 {
+  margin-bottom: 1.1rem;
+  color: var(--color-ink);
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.55rem, 4.8vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 1.20;
+}
+
+.service-cyan .service-copy h3 span,
+.service-mint .service-copy h3 span {
+  display: block;
+}
+
+.service-cyan .service-title-accent,
+.service-mint .service-title-accent {
+  color: var(--color-accent);
+}
+
+.service-cyan .service-copy > p:not(.service-number) {
+  max-width: 760px;
+  color: #334447;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.service-subheading {
+  margin: 1.35rem 0 0.75rem;
+  color: var(--color-accent);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.service-copy > p:not(.service-number) {
+  max-width: 620px;
+  margin: 0;
+  color: #415052;
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.service-list {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.15rem 0 1.5rem;
+  padding: 0;
+  color: #293638;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+  list-style: none;
+}
+
+.service-list li {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.service-list li::before {
+  flex: 0 0 auto;
+  content: "↗";
+  color: var(--color-accent-dark);
+}
+
+.service-cyan .service-feature-list,
+.service-mint .service-feature-list {
+  grid-template-columns: repeat(4, max-content);
+  gap: 0.55rem 0.65rem;
+  margin: 0 0 1.35rem;
+  color: #182b2e;
+  font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.service-cyan .service-feature-list li,
+.service-mint .service-feature-list li {
+  align-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.service-cyan .service-feature-list li::before,
+.service-mint .service-feature-list li::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: var(--color-accent);
+}
+
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-row span {
+  min-height: 32px;
+  padding: 0.5rem 0.68rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.48);
+  color: #243235;
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.service-cyan .service-tool-logos,
+.service-mint .service-tool-logos {
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 18px;
+  background: rgba(17, 170, 174, 0.12);
+}
+
+.service-cyan .service-tool-logos span,
+.service-mint .service-tool-logos span {
+  display: grid;
+  place-items: center;
+  gap: 0.42rem;
+  min-width: 76px;
+  min-height: 82px;
+  padding: 0.64rem 0.72rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #243235;
+}
+
+.service-cyan .service-tool-logos img,
+.service-mint .service-tool-logos img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.service-cyan .service-tool-logos b,
+.service-mint .service-tool-logos b {
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.service-branding-card {
+  grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
+  border: 1px solid rgba(25, 213, 209, 0.62);
+  border-radius: 30px;
+  background: #e4fbf8;
+  box-shadow: 0 20px 58px rgba(13, 23, 25, 0.06);
+}
+
+.service-branding-card .service-copy {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: clamp(0.25rem, 1.6vw, 1rem);
+}
+
+.service-branding-card .service-number {
+  margin-bottom: 0.9rem;
+  color: #138b89;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.service-branding-card .service-copy h3 {
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  color: #061314;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.45rem);
+  font-weight: 500;
+  letter-spacing: -0.058em;
+  line-height: 1.2;
+}
+
+.service-branding-card .service-copy h3 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.service-branding-card .service-title-accent {
+  color: var(--color-accent);
+}
+
+.service-branding-card .service-copy > p:not(.service-number) {
+  max-width: 720px;
+  color: #2e4244;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.72;
+}
+
+.service-branding-card .service-subheading {
+  margin: 1.35rem 0 0.72rem;
+  color: var(--color-accent);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.18rem, 1.7vw, 1.48rem);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.service-branding-card .service-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.52rem 0.72rem;
+  margin: 0 0 1.35rem;
+  color: #172d30;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.74rem, 0.82vw, 0.84rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.service-branding-card .service-feature-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  white-space: nowrap;
+}
+
+.service-branding-card .service-feature-list li::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: var(--color-accent);
+}
+
+.service-branding-card .service-tool-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.74rem;
+  padding: 0.72rem;
+  border: 1px solid rgba(25, 213, 209, 0.18);
+  border-radius: 18px;
+  background: rgba(25, 213, 209, 0.13);
+}
+
+.service-branding-card .service-tool-logos span {
+  display: grid;
+  place-items: center;
+  gap: 0.4rem;
+  min-width: 76px;
+  min-height: 82px;
+  padding: 0.62rem 0.7rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  color: #243235;
+  font-family: "Inter", sans-serif;
+}
+
+.service-branding-card .service-tool-logos img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.service-branding-card .service-tool-logos b {
+  font-size: 0.7rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.service-branding-card .brand-visual {
+  width: 80%;
+  height: 100%;
+  min-height: 420px;
+  border-color: rgba(13, 23, 25, 0.08);
+  border-radius: 24px;
+  margin-left: 87px;
+  background: #fff;
+}
+
+.service-branding-card .brand-visual::before {
+  display: none;
+}
+
+.service-branding-card .brand-card-a {
+  top: 11%;
+  left: 9%;
+  width: 34%;
+  height: 58%;
+  font-size: clamp(4.5rem, 6vw, 7rem);
+}
+
+.service-branding-card .brand-card-b {
+  top: 16%;
+  right: 8%;
+  width: 48%;
+  height: 30%;
+}
+
+.service-branding-card .brand-card-c {
+  right: 12%;
+  bottom: 10%;
+  width: 48%;
+  height: 36%;
+}
+
+.service-development-card {
+  grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
+  border: 1px solid rgba(13, 23, 25, 0.72);
+  border-radius: 30px;
+  background: #e7f6d8;
+  box-shadow: 0 20px 58px rgba(13, 23, 25, 0.06);
+}
+
+.service-development-card .service-copy {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: clamp(0.25rem, 1.6vw, 1rem);
+}
+
+.service-development-card .service-number {
+  margin-bottom: 0.9rem;
+  color: #36864c;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.service-development-card .service-copy h3 {
+  width: max-content;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  color: #061314;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.2rem, 3.4vw, 3.45rem);
+  font-weight: 500;
+  letter-spacing: -0.058em;
+  line-height: 1.2;
+}
+
+.service-development-card .service-copy h3 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.service-development-card .service-title-accent {
+  color: #1f9d5c;
+}
+
+.service-development-card .service-copy > p:not(.service-number) {
+  max-width: 720px;
+  color: #2e4244;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.98rem, 1.15vw, 1.08rem);
+  font-weight: 400;
+  line-height: 1.72;
+}
+
+.service-development-card .service-subheading {
+  margin: 1.35rem 0 0.72rem;
+  color: #1f9d5c;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.18rem, 1.7vw, 1.48rem);
+  font-style: italic;
+  font-weight: 700;
+}
+
+.service-development-card .service-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.48rem 0.68rem;
+  margin: 0 0 1.35rem;
+  color: #172d30;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.74rem, 0.82vw, 0.84rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.service-development-card .service-feature-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  white-space: nowrap;
+}
+
+.service-development-card .service-feature-list li::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: #1f9d5c;
+}
+
+.service-development-card .service-tool-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: 0.68rem;
+  padding: 0.72rem;
+  border: 1px solid rgba(31, 157, 92, 0.16);
+  border-radius: 18px;
+  background: rgba(100, 185, 93, 0.14);
+}
+
+.service-development-card .service-tool-logos span {
+  display: grid;
+  place-items: center;
+  gap: 0.36rem;
+  min-width: 64px;
+  min-height: 68px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #243235;
+  font-family: "Inter", sans-serif;
+}
+
+.service-development-card .service-tool-logos img {
+  width: 44px;
+  height: 44px;
+  padding: 0.48rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  object-fit: contain;
+}
+
+.service-development-card .service-tool-logos b {
+  font-size: 0.66rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.service-development-card .code-visual {
+  width: 80%;
+  height: 100%;
+  min-height: 420px;
+  border-color: rgba(13, 23, 25, 0.08);
+  border-radius: 24px;
+  background: #fff;
+  margin-left: 77px;
+}
+
+.service-development-card .code-visual::before {
+  display: none;
+}
+
+.service-motion-card {
+  grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
+  align-items: stretch;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
+  border: 1px solid rgba(13, 23, 25, 0.82);
+  border-radius: 30px;
+  background: #f4f0c9;
+  box-shadow: none;
+}
+
+.service-motion-card .service-copy {
+  justify-content: center;
+  padding: clamp(0.25rem, 1.2vw, 0.7rem) 0;
+}
+
+.service-motion-card .service-number {
+  margin-bottom: 0.82rem;
+  color: #8b842c;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.service-motion-card .service-copy h3 {
+  max-width: 670px;
+  margin-bottom: 1rem;
+  color: #061314;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.35rem, 3.6vw, 3.65rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.service-motion-card .service-copy h3 span {
+  display: block;
+}
+
+.service-motion-card .service-title-accent {
+  color: #9a8d27;
+}
+
+.service-motion-card .service-copy > p:not(.service-number) {
+  max-width: 700px;
+  color: #101817;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.94rem, 1vw, 1rem);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.service-motion-card .service-subheading {
+  margin: 1.28rem 0 0.7rem;
+  color: #9a8d27;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.18rem, 1.55vw, 1.42rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.service-motion-card .service-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.68rem;
+  max-width: 740px;
+  margin: 0 0 1.32rem;
+  color: #111a18;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.74rem, 0.82vw, 0.84rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.service-motion-card .service-feature-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.service-motion-card .service-feature-list li::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: #9a8d27;
+}
+
+.service-motion-card .service-tool-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: clamp(0.52rem, 0.9vw, 0.74rem);
+  padding: 0.72rem;
+  border: 1px solid rgba(112, 106, 35, 0.13);
+  border-radius: 18px;
+  background: #e4dfa7;
+}
+
+.service-motion-card .service-tool-logos span {
+  display: grid;
+  place-items: center;
+  gap: 0.36rem;
+  min-width: 64px;
+  min-height: 69px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1e2927;
+  font-family: "Inter", sans-serif;
+}
+
+.service-motion-card .service-tool-logos img {
+  width: 44px;
+  height: 44px;
+  padding: 0.48rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  object-fit: contain;
+}
+
+.service-motion-card .service-tool-logos b {
+  max-width: 68px;
+  color: #1e2927;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.08;
+  text-align: center;
+}
+
+.service-motion-card .motion-visual {
+  align-self: stretch;
+  width: 80%;
+  height: 100%;
+  min-height: 420px;
+  margin-left: 77px;
+  border: 0;
+  border-radius: 26px 54px 54px 26px;
+  background: #fff;
+}
+
+.service-motion-card .motion-visual::before {
+  display: none;
+}
+
+.motion-media-panel {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border-radius: inherit;
+  background: #fff;
+}
+
+.service-marketing-card,
+.service-product-card {
+  grid-template-columns: minmax(0, 1.38fr) minmax(320px, 1fr);
+  align-items: stretch;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 480px;
+  padding-block: clamp(1.2rem, 2.8vw, 2.65rem);
+  padding-inline: clamp(1.5rem, 3.6vw, 3.25rem);
+  border-radius: 30px;
+  box-shadow: none;
+}
+
+.service-marketing-card {
+  border: 1px solid #3f8cff;
+  background: #ece7fb;
+}
+
+.service-product-card {
+  border: 1px solid rgba(13, 23, 25, 0.82);
+  background: #f0ddea;
+}
+
+.service-marketing-card .service-copy,
+.service-product-card .service-copy {
+  justify-content: center;
+  padding: clamp(0.25rem, 1.2vw, 0.7rem) 0;
+}
+
+.service-marketing-card .service-number,
+.service-product-card .service-number {
+  margin-bottom: 0.82rem;
+  color: #7450b8;
+  font-family: "Inter", sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.service-marketing-card .service-copy h3,
+.service-product-card .service-copy h3 {
+  max-width: 700px;
+  margin-bottom: 1rem;
+  color: #061314;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2.35rem, 3.6vw, 3.65rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+}
+
+.service-marketing-card .service-copy h3 span,
+.service-product-card .service-copy h3 span {
+  display: block;
+}
+
+.service-marketing-card .service-title-accent,
+.service-product-card .service-title-accent {
+  color: #7450b8;
+}
+
+.service-marketing-card .service-copy > p:not(.service-number),
+.service-product-card .service-copy > p:not(.service-number) {
+  max-width: 720px;
+  color: #101817;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.94rem, 1vw, 1rem);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.service-marketing-card .service-subheading,
+.service-product-card .service-subheading {
+  margin: 1.28rem 0 0.7rem;
+  color: #7450b8;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.18rem, 1.55vw, 1.42rem);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.service-marketing-card .service-feature-list,
+.service-product-card .service-feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.68rem;
+  max-width: 760px;
+  margin: 0 0 1.32rem;
+  color: #111a18;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.74rem, 0.82vw, 0.84rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.service-marketing-card .service-feature-list li,
+.service-product-card .service-feature-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.service-marketing-card .service-feature-list li::before,
+.service-product-card .service-feature-list li::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  content: "";
+  background: #7450b8;
+}
+
+.service-marketing-card .service-tool-logos,
+.service-product-card .service-tool-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  gap: clamp(0.52rem, 0.9vw, 0.74rem);
+  padding: 0.72rem;
+  border-radius: 18px;
+}
+
+.service-marketing-card .service-tool-logos {
+  border: 1px solid rgba(91, 67, 159, 0.13);
+  background: #d8cff3;
+}
+
+.service-product-card .service-tool-logos {
+  border: 1px solid rgba(117, 67, 135, 0.13);
+  background: #dfc1d7;
+}
+
+.service-marketing-card .service-tool-logos span,
+.service-product-card .service-tool-logos span {
+  display: grid;
+  place-items: center;
+  gap: 0.36rem;
+  min-width: 64px;
+  min-height: 69px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #1e2927;
+  font-family: "Inter", sans-serif;
+}
+
+.service-marketing-card .service-tool-logos img,
+.service-product-card .service-tool-logos img {
+  width: 44px;
+  height: 44px;
+  padding: 0.48rem;
+  border: 1px solid rgba(13, 23, 25, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.82);
+  object-fit: contain;
+}
+
+.service-marketing-card .service-tool-logos b,
+.service-product-card .service-tool-logos b {
+  max-width: 68px;
+  color: #1e2927;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.08;
+  text-align: center;
+}
+
+.service-marketing-card .data-visual,
+.service-product-card .object-visual {
+  align-self: stretch;
+  width: 80%;
+  height: 100%;
+  min-height: 420px;
+  margin-left: 77px;
+  border: 0;
+  border-radius: 26px 54px 54px 26px;
+  background: #fff;
+}
+
+.service-marketing-card .data-visual::before,
+.service-product-card .object-visual::before {
+  display: none;
+}
+
+.service-empty-media {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  border-radius: inherit;
+  background: #fff;
+}
+
+.service-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.service-visual::before {
+  position: absolute;
+  inset: 14%;
+  content: "";
+  border-radius: 999px;
+  background: rgba(25, 213, 209, 0.14);
+  filter: blur(38px);
+}
+
+.service-panel:hover .ui-window,
+.service-panel:hover .brand-card,
+.service-panel:hover .code-panel,
+.service-panel:hover .browser-card,
+.service-panel:hover .motion-card,
+.service-panel:hover .data-card,
+.service-panel:hover .object-cube {
+  transform: translateY(-2px) rotate(var(--visual-rotate, 0deg));
+}
+
+.ui-window {
+  position: relative;
+  width: min(84%, 430px);
+  overflow: hidden;
+  border: 1px solid rgba(13, 23, 25, 0.1);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.14);
+  transform: rotate(-2deg);
+  transition: transform 220ms ease;
+  --visual-rotate: -2deg;
+  z-index: 1;
+}
+
+.ui-window-bar {
+  display: flex;
+  gap: 5px;
+  padding: 12px;
+  border-bottom: 1px solid #e8eeee;
+}
+
+.ui-window-bar i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ccd9da;
+}
+
+.ui-layout {
+  display: grid;
+  grid-template-columns: 22% 78%;
+  min-height: 230px;
+}
+
+.ui-layout aside {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 16px;
+  background: #0d2428;
+}
+
+.ui-layout aside b {
+  height: 7px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ui-main {
+  padding: 28px;
+}
+
+.ui-pill,
+.ui-title-line,
+.ui-text-line {
+  display: block;
+  border-radius: 99px;
+}
+
+.ui-pill {
+  width: 70px;
+  height: 9px;
+  background: var(--color-accent);
+}
+
+.ui-title-line {
+  width: 68%;
+  height: 22px;
+  margin-top: 22px;
+  background: #173b3f;
+}
+
+.ui-text-line {
+  width: 90%;
+  height: 8px;
+  margin-top: 12px;
+  background: #d8e4e4;
+}
+
+.ui-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.ui-cards i {
+  height: 64px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d6f3ef, #f5fbfb);
+}
+
+.brand-visual {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.4));
+}
+
+.brand-card {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.14);
+  transition: transform 220ms ease;
+  z-index: 1;
+}
+
+.brand-card-a {
+  top: 18%;
+  left: 14%;
+  width: 175px;
+  height: 220px;
+  background: #0d282a;
+  color: #e9faf8;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 7rem;
+  transform: rotate(-8deg);
+  --visual-rotate: -8deg;
+}
+
+.brand-card-b {
+  top: 22%;
+  right: 10%;
+  width: 240px;
+  height: 120px;
+  background: #fff;
+  color: #0a2628;
+  font-size: 1.35rem;
+  font-weight: 800;
+  transform: rotate(6deg);
+  --visual-rotate: 6deg;
+}
+
+.brand-card-c {
+  right: 18%;
+  bottom: 12%;
+  width: 220px;
+  height: 140px;
+  background: linear-gradient(135deg, #1cd2ca 0 45%, #f2e3b7 45% 72%, #173236 72%);
+  transform: rotate(-4deg);
+  --visual-rotate: -4deg;
+}
+
+.code-visual {
+  background: #0a171a;
+}
+
+.code-panel {
+  position: absolute;
+  top: 13%;
+  left: 7%;
+  width: 72%;
+  padding: 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  background: #061012;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.18);
+  color: #a8c5c7;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  line-height: 2;
+  transition: transform 220ms ease;
+  z-index: 1;
+}
+
+.code-panel span {
+  margin-right: 0.8rem;
+  color: #50686b;
+}
+
+.code-panel b {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.code-panel em {
+  color: #f1d47a;
+  font-style: normal;
+}
+
+.browser-card {
+  position: absolute;
+  right: 7%;
+  bottom: 10%;
+  width: 68%;
+  padding: 12px;
+  border-radius: 15px;
+  background: #eff9f7;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.14);
+  transform: rotate(-3deg);
+  transition: transform 220ms ease;
+  --visual-rotate: -3deg;
+  z-index: 2;
+}
+
+.browser-top {
+  width: 40%;
+  height: 9px;
+  border-radius: 99px;
+  background: #b9d7d5;
+}
+
+.browser-hero {
+  height: 80px;
+  margin-top: 14px;
+  border-radius: 9px;
+  background: linear-gradient(120deg, #20cac3, #113a3d);
+}
+
+.browser-blocks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.browser-blocks i {
+  height: 36px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.motion-visual {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.45));
+}
+
+.motion-ring {
+  width: 250px;
+  height: 250px;
+  border: 28px solid #efbc3f;
+  border-left-color: #142b2e;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}
+
+.motion-card {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 105px;
+  border-radius: 18px;
+  background: #0e282b;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.14);
+  color: #fff;
+  font-size: 2.2rem;
+  transform: rotate(7deg);
+  transition: transform 220ms ease;
+  --visual-rotate: 7deg;
+}
+
+.motion-dots {
+  position: absolute;
+  width: 320px;
+  height: 150px;
+  border-top: 2px dashed rgba(13, 23, 25, 0.26);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+
+.data-visual {
+  background: linear-gradient(145deg, #f9f6ff, #e7ddff);
+}
+
+.data-card {
+  position: relative;
+  width: min(78%, 360px);
+  padding: 2rem;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 30px 90px rgba(2, 9, 13, 0.14);
+  transform: rotate(2deg);
+  transition: transform 220ms ease;
+  --visual-rotate: 2deg;
+  z-index: 1;
+}
+
+.data-card p {
+  margin: 0;
+  color: #6f7180;
+  font-weight: 800;
+}
+
+.data-card strong {
+  display: block;
+  margin: 0.4rem 0 0;
+  color: #171b22;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.data-card small {
+  color: #7c5bd6;
+  font-weight: 800;
+}
+
+.data-bars {
+  display: flex;
+  align-items: end;
+  gap: 9px;
+  height: 110px;
+  margin-top: 1.5rem;
+}
+
+.data-bars i {
+  flex: 1;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(#7a52dc, #c4b2f4);
+}
+
+.data-bars i:nth-child(1) { height: 38%; }
+.data-bars i:nth-child(2) { height: 58%; }
+.data-bars i:nth-child(3) { height: 46%; }
+.data-bars i:nth-child(4) { height: 72%; }
+.data-bars i:nth-child(5) { height: 82%; }
+.data-bars i:nth-child(6) { height: 100%; }
+
+.object-visual {
+  perspective: 700px;
+  background: radial-gradient(circle at center, #fff, #efdff1);
+}
+
+.object-cube {
+  position: relative;
+  width: 170px;
+  height: 210px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #1cd4cc, #173c40 65%, #0c1719);
+  box-shadow: inset -25px -30px 55px rgba(0, 0, 0, 0.3), 0 30px 90px rgba(2, 9, 13, 0.14);
+  transform: rotate(-13deg) rotateY(-18deg);
+  transition: transform 220ms ease;
+  z-index: 2;
+}
+
+.service-panel:hover .object-cube {
+  transform: translateY(-2px) rotate(-13deg) rotateY(-18deg);
+}
+
+.object-shadow {
+  position: absolute;
+  bottom: 18%;
+  width: 220px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(27, 22, 30, 0.22);
+  filter: blur(18px);
+}
+
+.object-orbit {
+  position: absolute;
+  width: 320px;
+  height: 130px;
+  border: 2px solid rgba(108, 47, 118, 0.3);
+  border-radius: 50%;
+  transform: rotate(-16deg);
+}
+
+/* =========================================================
+   Sticky Stacking Cards (Design Monks "Industry Wins")
+   Each service panel is `position: sticky` just below the fixed
+   header. Each subsequent card sticks one responsive `peek` lower than
+   the previous one, so a thin strip of the previous card stays
+   visible at the top of the stack as the user scrolls.
+
+   Cards keep their natural flow positions (no negative top
+   margin) so the user sees the deck assemble card-by-card in
+   both scroll directions, matching the Design Monks reference.
+
+   -- IMPORTANT ---------------------------------------------------------
+   Sticky elements can break if we apply `transform` or `transition`
+   to them (Chromium and Safari both create a new containing block).
+   To keep the deck effect reliable, we keep the sticky panel itself
+   transform-free and apply the lift on hover to a child wrapper.
+   --------------------------------------------------------------------- */
+
+/* Establish a stacking context so child z-index is local. */
+.services-stack {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  --service-stack-peek: clamp(46px, 4vw, 50px);
+}
+
+/* All panels: sticky. The first panel sticks at the header; every
+   subsequent panel sticks `peek` px below the previous one so a small
+   strip of the previous card stays visible at the top. */
+.services-stack .service-panel {
+  position: sticky;
+  top: calc(var(--header-height, 80px) + 12px);
+  z-index: 1;
+  margin-top: 0;
+  margin-bottom: clamp(0.85rem, 1.6vw, 1.4rem);
+  /* No transform / no transition on the sticky element itself.
+     The subtle scale is applied to a child wrapper below. */
+  background-clip: padding-box;
+}
+
+/* The stack effect relies entirely on `position: sticky` with incremental
+   `top` values per card (see nth-child rules below). JS no longer pulls
+   cards up with a negative margin; each card sits at its natural flow
+   position and starts sticking as the previous card scrolls past. This
+   way the user visibly sees each card slide over the previous one as
+   they scroll, instead of arriving at a fully-stacked state at once. */
+.services-stack .service-panel:not(:first-child) {
+  /* No negative margin. Each card sits at its natural flow position;
+     it slides up and sticks once the previous card scrolls past its
+     sticky threshold. */
+  margin-top: 0;
+}
+
+/* Each panel sticks `peek` lower than the previous one so the previous
+   card keeps its service-number visible at the top of the stack. */
+.services-stack .service-panel:nth-child(1) { z-index: 2; top: calc(var(--header-height, 80px) + 12px); }
+.services-stack .service-panel:nth-child(2) { z-index: 3; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(3) { z-index: 4; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(4) { z-index: 5; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(5) { z-index: 6; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(6) { z-index: 7; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(7) { z-index: 8; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+.services-stack .service-panel:nth-child(8) { z-index: 9; top: calc(var(--header-height, 80px) + 12px + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek) + var(--service-stack-peek)); }
+
+/* The final card stays on top of the stack so it scrolls away last,
+   without trapping the page. Its z-index is the highest so all earlier
+   cards keep their peek visible until the very end. */
+.services-stack .service-panel:last-child {
+  z-index: 10;
+  margin-bottom: 0;
+}
+
+/* Subtle scale on stacked (non-first) cards. We apply
+   this to a child wrapper so the sticky element itself stays transform-
+   free, which is critical for sticky positioning to work reliably. */
+.services-stack .service-panel:not(:first-child) > * {
+  transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: scale(0.985);
+  transform-origin: top center;
+  border-radius: inherit;
+}
+
+/* Lift the currently-visible card on hover without changing color or shadow. */
+.services-stack .service-panel:hover > * {
+  transform: translateY(-2px);
+}
+
+.services-stack .service-panel:not(:first-child):hover > * {
+  transform: scale(0.985) translateY(-2px);
+}
+
+/* Avoid the scroll-reveal translateY fighting with the sticky transform.
+   On stacked panels we keep only opacity-based reveal. */
+.has-scroll-reveal .services-stack .service-panel.scroll-reveal {
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.has-scroll-reveal .services-stack .service-panel.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (min-width: 768px) {
+  .services-stack .service-panel {
+    height: 420px;
+    min-height: 420px;
+    padding-block: clamp(0.95rem, 2vw, 1.55rem);
+  }
+
+  .services-stack .service-copy,
+  .services-stack .service-cyan .service-copy,
+  .services-stack .service-branding-card .service-copy,
+  .services-stack .service-development-card .service-copy,
+  .services-stack .service-motion-card .service-copy,
+  .services-stack .service-marketing-card .service-copy,
+  .services-stack .service-product-card .service-copy {
+    justify-content: flex-start;
+  }
+
+  .services-stack .service-number,
+  .services-stack .service-cyan .service-number,
+  .services-stack .service-branding-card .service-number,
+  .services-stack .service-development-card .service-number,
+  .services-stack .service-motion-card .service-number,
+  .services-stack .service-marketing-card .service-number,
+  .services-stack .service-product-card .service-number {
+    margin-bottom: 0.5rem;
+    font-size: 0.74rem;
+    line-height: 1.1;
+  }
+
+  .services-stack .service-copy h3,
+  .services-stack .service-cyan .service-copy h3,
+  .services-stack .service-branding-card .service-copy h3,
+  .services-stack .service-development-card .service-copy h3,
+  .services-stack .service-motion-card .service-copy h3,
+  .services-stack .service-marketing-card .service-copy h3,
+  .services-stack .service-product-card .service-copy h3 {
+    margin-bottom: 0.55rem;
+    font-size: clamp(1.75rem, 2.55vw, 2.75rem);
+    line-height: 1.04;
+  }
+
+  .services-stack .service-copy > p:not(.service-number),
+  .services-stack .service-cyan .service-copy > p:not(.service-number),
+  .services-stack .service-branding-card .service-copy > p:not(.service-number),
+  .services-stack .service-development-card .service-copy > p:not(.service-number),
+  .services-stack .service-motion-card .service-copy > p:not(.service-number),
+  .services-stack .service-marketing-card .service-copy > p:not(.service-number),
+  .services-stack .service-product-card .service-copy > p:not(.service-number) {
+    font-size: clamp(0.82rem, 0.82vw, 0.92rem);
+    line-height: 1.42;
+  }
+
+  .services-stack .service-subheading,
+  .services-stack .service-branding-card .service-subheading,
+  .services-stack .service-development-card .service-subheading,
+  .services-stack .service-motion-card .service-subheading,
+  .services-stack .service-marketing-card .service-subheading,
+  .services-stack .service-product-card .service-subheading {
+    margin: 0.68rem 0 0.38rem;
+    font-size: clamp(0.98rem, 1.12vw, 1.16rem);
+  }
+
+  .services-stack .service-list,
+  .services-stack .service-cyan .service-feature-list,
+  .services-stack .service-mint .service-feature-list,
+  .services-stack .service-branding-card .service-feature-list,
+  .services-stack .service-development-card .service-feature-list,
+  .services-stack .service-motion-card .service-feature-list,
+  .services-stack .service-marketing-card .service-feature-list,
+  .services-stack .service-product-card .service-feature-list {
+    gap: 0.28rem 0.48rem;
+    margin-bottom: 0.72rem;
+    font-size: clamp(0.62rem, 0.68vw, 0.72rem);
+    line-height: 1.14;
+  }
+
+  .services-stack .service-tool-logos,
+  .services-stack .service-cyan .service-tool-logos,
+  .services-stack .service-mint .service-tool-logos,
+  .services-stack .service-branding-card .service-tool-logos,
+  .services-stack .service-development-card .service-tool-logos,
+  .services-stack .service-motion-card .service-tool-logos,
+  .services-stack .service-marketing-card .service-tool-logos,
+  .services-stack .service-product-card .service-tool-logos {
+    gap: 0.44rem;
+    padding: 0.48rem;
+    border-radius: 14px;
+  }
+
+  .services-stack .service-tool-logos span,
+  .services-stack .service-cyan .service-tool-logos span,
+  .services-stack .service-mint .service-tool-logos span,
+  .services-stack .service-branding-card .service-tool-logos span,
+  .services-stack .service-development-card .service-tool-logos span,
+  .services-stack .service-motion-card .service-tool-logos span,
+  .services-stack .service-marketing-card .service-tool-logos span,
+  .services-stack .service-product-card .service-tool-logos span {
+    gap: 0.24rem;
+    min-width: 52px;
+    min-height: 52px;
+    padding: 0.38rem 0.46rem;
+    border-radius: 11px;
+  }
+
+  .services-stack .service-tool-logos img,
+  .services-stack .service-cyan .service-tool-logos img,
+  .services-stack .service-mint .service-tool-logos img,
+  .services-stack .service-branding-card .service-tool-logos img,
+  .services-stack .service-development-card .service-tool-logos img,
+  .services-stack .service-motion-card .service-tool-logos img,
+  .services-stack .service-marketing-card .service-tool-logos img,
+  .services-stack .service-product-card .service-tool-logos img {
+    width: 28px;
+    height: 28px;
+    padding: 0.28rem;
+    border-radius: 10px;
+  }
+
+  .services-stack .service-tool-logos b,
+  .services-stack .service-cyan .service-tool-logos b,
+  .services-stack .service-mint .service-tool-logos b,
+  .services-stack .service-branding-card .service-tool-logos b,
+  .services-stack .service-development-card .service-tool-logos b,
+  .services-stack .service-motion-card .service-tool-logos b,
+  .services-stack .service-marketing-card .service-tool-logos b,
+  .services-stack .service-product-card .service-tool-logos b {
+    max-width: 58px;
+    font-size: 0.56rem;
+    line-height: 1.05;
+  }
+
+  .services-stack .service-visual,
+  .services-stack .service-branding-card .brand-visual,
+  .services-stack .service-development-card .code-visual,
+  .services-stack .service-motion-card .motion-visual,
+  .services-stack .service-marketing-card .data-visual,
+  .services-stack .service-product-card .object-visual {
+    min-height: 300px;
+  }
+
+  .services-stack .ui-layout {
+    min-height: 185px;
+  }
+
+  .services-stack .brand-card-a {
+    width: 30%;
+    height: 54%;
+    font-size: clamp(3.4rem, 4.6vw, 5.25rem);
+  }
+
+  .services-stack .brand-card-b {
+    width: 44%;
+    height: 28%;
+    font-size: 1rem;
+  }
+
+  .services-stack .brand-card-c {
+    width: 44%;
+    height: 32%;
+  }
+
+  .services-stack .code-panel {
+    padding: 0.95rem;
+    font-size: 0.64rem;
+    line-height: 1.7;
+  }
+
+  .services-stack .browser-hero {
+    height: 56px;
+  }
+
+  .services-stack .browser-blocks i {
+    height: 24px;
+  }
+
+  .services-stack .data-card {
+    padding: 1.25rem;
+  }
+
+  .services-stack .data-card strong {
+    font-size: 2.1rem;
+  }
+
+  .services-stack .data-bars {
+    height: 76px;
+    margin-top: 1rem;
+  }
+
+  .services-stack .object-cube {
+    width: 130px;
+    height: 165px;
+  }
+
+  .services-stack .object-shadow {
+    width: 170px;
+    height: 34px;
+  }
+
+  .services-stack .object-orbit {
+    width: 245px;
+    height: 98px;
+  }
+}
+
+/* Mobile: disable the stacking entirely so cards stack vertically with
+   normal flow. */
+@media (max-width: 767.98px) {
+  .services-stack {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .services-stack .service-panel,
+  .services-stack .service-panel:nth-child(n) {
+    position: static;
+    top: auto;
+    z-index: auto;
+    margin-top: 0;
+    transform: none;
+  }
+
+  .services-stack .service-panel > * {
+    transform: none;
+  }
+
+  .services-stack .service-panel:hover > * {
+    transform: translateY(-2px);
+  }
+}
+
+/* Respect reduced motion: disable transforms/animations on stacked cards. */
+@media (prefers-reduced-motion: reduce) {
+  .services-stack .service-panel > *,
+  .services-stack .service-panel:hover > * {
+    transform: none !important;
+    transition: none !important;
+  }
+}

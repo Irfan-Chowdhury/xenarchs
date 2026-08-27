@@ -17,9 +17,8 @@ class BaseController
     {
         extract($data);
 
-        include __DIR__ . '/../Views/layouts/header.php';
-        include __DIR__ . '/../Views/' . $view . '.php';
-        include __DIR__ . '/../Views/layouts/footer.php';
+        $viewPath = __DIR__ . '/../Views/' . $view . '.php';
+        include __DIR__ . '/../Views/layouts/master.php';
     }
 
 

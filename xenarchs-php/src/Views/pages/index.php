@@ -1,0 +1,1864 @@
+<main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="home" aria-labelledby="hero-title">
+      <div class="hero-video-background" aria-hidden="true">
+        <video class="hero-background-video" id="heroBackgroundVideo" autoplay loop playsinline preload="metadata"
+          tabindex="-1">
+          <source src="assets/videos/dark-veil.webm" type="video/webm">
+          <source src="assets/videos/dark-veil.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-video-overlay"></div>
+      </div>
+
+      <div class="container-xl hero-container">
+        <div class="hero-content">
+          <div class="hero-badge reveal-up">
+            <span class="hero-badge-year">2026</span>
+            <span class="hero-badge-text">Future-Ready Digital Studio</span>
+          </div>
+
+          <h1 class="hero-title reveal-up" id="hero-title">
+            <span class="hero-title-line">
+              We Build <em>Brands</em>
+            </span>
+            <span class="hero-title-line">
+              That Feel Ahead of
+            </span>
+            <span class="hero-title-line hero-title-line-icons">
+              <span>Their</span>
+              <img src="assets/images/logos/hero-Icons.svg" alt="" aria-hidden="true">
+              <em>Time</em>
+            </span>
+          </h1>
+
+          <p class="hero-copy reveal-up">
+            From branding to web experiences, we help ambitious brands grow through modern design, strategy, and
+            creativity.
+          </p>
+
+          <div class="hero-customers reveal-up" aria-label="Our Valued Customers">
+            <div class="hero-customers-banner">
+              <span>Our Valued Customers</span>
+            </div>
+            <div class="hero-customers-marquee">
+              <div class="hero-customers-track">
+                <span class="hero-customer-item brand-garamond">NORTHSTAR</span>
+                <span class="hero-customer-item brand-inter">ARCADIA</span>
+                <span class="hero-customer-item brand-playfair">Vanta</span>
+                <span class="hero-customer-item brand-manrope">MONOCLE</span>
+                <span class="hero-customer-item brand-cormorant">Solace</span>
+                <span class="hero-customer-item brand-inter-light">FIELDNOTE</span>
+                <span class="hero-customer-item brand-playfair-bold">APEX</span>
+                <span class="hero-customer-item brand-manrope-heavy">PULSE</span>
+                <span class="hero-customer-item brand-garamond" aria-hidden="true">NORTHSTAR</span>
+                <span class="hero-customer-item brand-inter" aria-hidden="true">ARCADIA</span>
+                <span class="hero-customer-item brand-playfair" aria-hidden="true">Vanta</span>
+                <span class="hero-customer-item brand-manrope" aria-hidden="true">MONOCLE</span>
+                <span class="hero-customer-item brand-cormorant" aria-hidden="true">Solace</span>
+                <span class="hero-customer-item brand-inter-light" aria-hidden="true">FIELDNOTE</span>
+                <span class="hero-customer-item brand-playfair-bold" aria-hidden="true">APEX</span>
+                <span class="hero-customer-item brand-manrope-heavy" aria-hidden="true">PULSE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services" aria-labelledby="services-title">
+      <div class="container-xl services-container">
+        <div class="services-section-heading scroll-reveal">
+          <span class="services-section-kicker">What We Do</span>
+
+          <h2 class="services-section-title" id="services-title">
+            We Create
+            <em class="services-section-title-script">Experiences</em>
+            Built For Modern
+            <em class="services-section-title-script">Brands</em>
+          </h2>
+        </div>
+
+        <!-- --service-stack-peek: clamp(90px, 8.5vw, 90px); -->
+        <div class="services-stack">
+          <!-- Sticky Stacking Cards target: lines 162–523. Do not rename or remove .services-stack; it drives the scroll-stacking effect in assets/css/services.css and assets/js/reveal.js. -->
+          <article class="service-panel service-cyan scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">UI/UX Design</p>
+              <h3>
+                <span>Designing Interfaces</span>
+                <span class="service-title-accent">Users Actually Enjoy</span>
+              </h3>
+              <p>We create intuitive, user-centered digital experiences that combine modern aesthetics, seamless
+                usability, and strategic design to drive engagement and meaningful results.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>User-Centered Design</li>
+                <li>Responsive Layouts</li>
+                <li>Conversion-Focused UI</li>
+                <li>Scalable Design Systems</li>
+                <li>Seamless User Flow</li>
+                <li>Modern Visual Design</li>
+                <li>Interactive Prototyping</li>
+                <li>Performance Optimization</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="UI and UX tools">
+                <span>
+                  <img src="assets/images/logos/figma.svg" alt="" aria-hidden="true">
+                  <b>Figma</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/framer.svg" alt="" aria-hidden="true">
+                  <b>Framer</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/webflow.svg" alt="" aria-hidden="true">
+                  <b>Webflow</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/photoshop.svg" alt="" aria-hidden="true">
+                  <b>Photoshop</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/spline.svg" alt="" aria-hidden="true">
+                  <b>Spline</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/rive.svg" alt="" aria-hidden="true">
+                  <b>Rive</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/xd.svg" alt="" aria-hidden="true">
+                  <b>Adobe Xd</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual" aria-hidden="true">
+              <div class="ui-window">
+                <div class="ui-window-bar"><i></i><i></i><i></i></div>
+                <div class="ui-layout">
+                  <aside><b></b><b></b><b></b><b></b></aside>
+                  <div class="ui-main">
+                    <span class="ui-pill"></span>
+                    <span class="ui-title-line"></span>
+                    <span class="ui-text-line"></span>
+                    <div class="ui-cards"><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-panel service-mint service-branding-card scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">Branding Design</p>
+              <h3>
+                <span>Designing Visual Identities</span>
+                <span class="service-title-accent">That Stand Out Everywhere</span>
+              </h3>
+              <p>We craft strategic brand identities that combine visual consistency, storytelling, and modern
+                aesthetics to help businesses stand out and build lasting recognition.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>Logo Design</li>
+                <li>Brand Strategy</li>
+                <li>Visual Identity Design</li>
+                <li>Print &amp; Marketing Assets</li>
+                <li>Packaging Design</li>
+                <li>Social Media Design</li>
+                <li>Brand Guidelines</li>
+                <li>Merchandise Design</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="Branding tools">
+                <span>
+                  <img src="assets/images/logos/ai.svg" alt="" aria-hidden="true">
+                  <b>Illustrator</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/photoshop.svg" alt="" aria-hidden="true">
+                  <b>Photoshop</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/id.svg" alt="" aria-hidden="true">
+                  <b>InDesign</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/canva.svg" alt="" aria-hidden="true">
+                  <b>Canva</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/midjourney.svg" alt="" aria-hidden="true">
+                  <b>Midjourney</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/chatgpt.svg" alt="" aria-hidden="true">
+                  <b>ChatGPT</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual brand-visual" aria-hidden="true">
+              <div class="brand-card brand-card-a">X</div>
+              <div class="brand-card brand-card-b">xenarchs</div>
+              <div class="brand-card brand-card-c"></div>
+            </div>
+          </article>
+
+          <article class="service-panel service-green service-development-card scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">Web Development</p>
+              <h3>
+                <span>Building Websites</span>
+                <span class="service-title-accent">That Drive Results</span>
+              </h3>
+              <p>We develop fast, scalable, and modern websites that combine seamless performance, responsive design,
+                and user-focused functionality to help brands grow online.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>Custom Development</li>
+                <li>Responsive Design</li>
+                <li>Landing Pages</li>
+                <li>E-Commerce Stores</li>
+                <li>CMS Integration</li>
+                <li>Speed Optimization</li>
+                <li>Backend Integration</li>
+                <li>Frontend Development</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="Development tools">
+                <span>
+                  <img src="assets/images/logos/figma.svg" alt="" aria-hidden="true">
+                  <b>Figma</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/framer.svg" alt="" aria-hidden="true">
+                  <b>Framer</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/webflow.svg" alt="" aria-hidden="true">
+                  <b>Webflow</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/wordpress.svg" alt="" aria-hidden="true">
+                  <b>WordPress</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/react.svg" alt="" aria-hidden="true">
+                  <b>React</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/visual-studio.svg" alt="" aria-hidden="true">
+                  <b>Visual Studio</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/gitHub.svg" alt="" aria-hidden="true">
+                  <b>GitHub</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual code-visual" aria-hidden="true">
+              <div class="code-panel">
+                <div><span>01</span><b>&lt;section</b> class=<em>"future"</em>&gt;</div>
+                <div><span>02</span>&nbsp;&nbsp;&lt;h1&gt;Build boldly&lt;/h1&gt;</div>
+                <div><span>03</span>&nbsp;&nbsp;&lt;p&gt;Design that performs.&lt;/p&gt;</div>
+                <div><span>04</span><b>&lt;/section&gt;</b></div>
+              </div>
+              <div class="browser-card">
+                <div class="browser-top"></div>
+                <div class="browser-hero"></div>
+                <div class="browser-blocks"><i></i><i></i><i></i></div>
+              </div>
+            </div>
+          </article>
+          <article class="service-panel service-motion-card scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">Motion &amp; Animation</p>
+              <h3>
+                <span>Creating Motion Visuals</span>
+                <span class="service-title-accent">That Capture Attention</span>
+              </h3>
+              <p>We create modern motion graphics and animated visuals that combine storytelling, movement, and
+                creativity to help brands feel more dynamic, engaging, and memorable.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>Motion Graphics</li>
+                <li>3D Visuals</li>
+                <li>Logo Animation</li>
+                <li>Social Media Motion</li>
+                <li>Intro &amp; Outro Animation</li>
+                <li>UI Motion Design</li>
+                <li>Product Animation</li>
+                <li>Promotional Videos</li>
+                <li>Visual Effects</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="Motion and animation tools">
+                <span>
+                  <img src="assets/images/logos/pr.svg" alt="" aria-hidden="true">
+                  <b>Premiere Pro</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/ae.svg" alt="" aria-hidden="true">
+                  <b>After Effects</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/capcut.svg" alt="" aria-hidden="true">
+                  <b>CapCut</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/photoshop.svg" alt="" aria-hidden="true">
+                  <b>Photoshop</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/cinema4D.svg" alt="" aria-hidden="true">
+                  <b>Cinema 4D</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/rive.svg" alt="" aria-hidden="true">
+                  <b>Rive</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/blender.svg" alt="" aria-hidden="true">
+                  <b>Blender</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual motion-visual" aria-hidden="true">
+              <div class="motion-media-panel"></div>
+            </div>
+          </article>
+          <article class="service-panel service-violet service-marketing-card scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">Digital Marketing</p>
+              <h3>
+                <span>Creating Campaigns</span>
+                <span class="service-title-accent">That Drive Growth</span>
+              </h3>
+              <p>We create strategic digital marketing campaigns that combine creativity, audience targeting, and
+                performance-driven content to help brands increase visibility, engagement, and conversions.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>Email Marketing</li>
+                <li>Brand Campaigns</li>
+                <li>Marketing Strategy</li>
+                <li>Content Creation</li>
+                <li>Analytics &amp; Reporting</li>
+                <li>Social Media Marketing</li>
+                <li>SEO Optimization</li>
+                <li>Paid Advertising</li>
+                <li>Lead Generation</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="Digital marketing tools">
+                <span>
+                  <img src="assets/images/logos/gAnalytics.svg" alt="" aria-hidden="true">
+                  <b>Analytics</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/googleAds.svg" alt="" aria-hidden="true">
+                  <b>Google Ads</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/ahRefs.svg" alt="" aria-hidden="true">
+                  <b>Ahrefs</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/mailChimp.svg" alt="" aria-hidden="true">
+                  <b>Mailchimp</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/yoast.svg" alt="" aria-hidden="true">
+                  <b>Yoast</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/hubSpot.svg" alt="" aria-hidden="true">
+                  <b>HubSpot</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual data-visual" aria-hidden="true">
+              <div class="service-empty-media"></div>
+            </div>
+          </article>
+
+          <article class="service-panel service-pink service-product-card scroll-reveal">
+            <div class="service-copy">
+              <p class="service-number">3D Product Design</p>
+              <h3>
+                <span>Bringing Products to Life</span>
+                <span class="service-title-accent">With Stunning 3D Visuals</span>
+              </h3>
+              <p>We create high-quality 3D product renders and visuals that showcase your products with realism,
+                creativity, and modern presentation styles to help brands attract attention and increase sales.</p>
+
+              <h4 class="service-subheading">Feature:</h4>
+              <ul class="service-list service-feature-list">
+                <li>3D Product Rendering</li>
+                <li>Packaging Visualization</li>
+                <li>Product Mockups</li>
+                <li>E-commerce Visuals</li>
+                <li>Scene Composition</li>
+                <li>Lighting &amp; Texturing</li>
+                <li>Product Animation</li>
+                <li>360&deg; Product Showcase</li>
+              </ul>
+
+              <h4 class="service-subheading">Tools Used:</h4>
+              <div class="tool-row service-tool-logos" aria-label="3D product design tools">
+                <span>
+                  <img src="assets/images/logos/pr.svg" alt="" aria-hidden="true">
+                  <b>Premiere Pro</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/ae.svg" alt="" aria-hidden="true">
+                  <b>After Effects</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/cinema4D.svg" alt="" aria-hidden="true">
+                  <b>Cinema 4D</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/blender.svg" alt="" aria-hidden="true">
+                  <b>Blender</b>
+                </span>
+                <span>
+                  <img src="assets/images/logos/dn.svg" alt="" aria-hidden="true">
+                  <b>Dimension</b>
+                </span>
+              </div>
+            </div>
+
+            <div class="service-visual object-visual" aria-hidden="true">
+              <div class="service-empty-media"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section class="fp-showcase" id="featured-projects" aria-labelledby="featured-projects-title">
+      <div class="fp-showcase__inner">
+        <div class="fp-showcase__bg" aria-hidden="true">
+          <video class="fp-showcase__video" id="featuredProjectsBackgroundVideo" autoplay loop playsinline
+            preload="metadata" tabindex="-1">
+            <source src="assets/videos/dark-veil.webm" type="video/webm">
+            <source src="assets/videos/dark-veil.mp4" type="video/mp4">
+          </video>
+          <div class="fp-showcase__video-overlay"></div>
+        </div>
+        <div class="fp-showcase__heading scroll-reveal">
+          <p class="fp-showcase__label">Featured Projects</p>
+          <h2 class="fp-showcase__title" id="featured-projects-title">
+            Selected <span>Projects</span> we designed to help <span>Brands</span> stand out.
+          </h2>
+        </div>
+
+        <div class="fp-showcase__tabs scroll-reveal" role="tablist" aria-label="Project categories">
+          <button class="fp-showcase__tab fp-showcase__tab--active" type="button" role="tab" aria-selected="true"
+            data-fp-filter="uiux">UI/UX</button>
+          <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false"
+            data-fp-filter="branding">Branding</button>
+          <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false"
+            data-fp-filter="motion">Motion</button>
+          <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false"
+            data-fp-filter="website">Website</button>
+          <button class="fp-showcase__tab" type="button" role="tab" aria-selected="false"
+            data-fp-filter="case-study">Case Study</button>
+        </div>
+
+        <div class="fp-showcase__grid" aria-live="polite">
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1011/720/900"
+              alt="Restaurant Website Dashboard">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Restaurant Website Dashboard">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Restaurant Website Dashboard</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1015/720/900"
+              alt="Finance App Interface">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Finance App Interface">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Finance
+                  App Interface</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1025/720/900"
+              alt="Travel Booking Experience">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Travel Booking Experience">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Travel
+                  Booking Experience</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1035/720/900"
+              alt="SaaS Analytics Dashboard">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: SaaS Analytics Dashboard">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">SaaS
+                  Analytics Dashboard</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1043/720/900"
+              alt="Healthcare Mobile Flow">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Healthcare Mobile Flow">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Healthcare Mobile Flow</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/180/720/900"
+              alt="AI Workspace Product Dashboard">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: AI Workspace Product Dashboard">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">AI
+                  Workspace Product Dashboard</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/201/720/900"
+              alt="Real Estate Listing App">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Real Estate Listing App">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Real
+                  Estate Listing App</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/366/720/900"
+              alt="Learning Platform Course Flow">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Learning Platform Course Flow">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Learning
+                  Platform Course Flow</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="uiux">
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/431/720/900"
+              alt="Event Booking Mobile Interface">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Event Booking Mobile Interface">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Event
+                  Booking Mobile Interface</a></h3>
+            </div>
+          </article>
+
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1050/720/900"
+              alt="Boutique Brand Identity">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Boutique Brand Identity">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Boutique
+                  Brand Identity</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1062/720/900"
+              alt="Coffee Packaging System">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Coffee Packaging System">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Coffee
+                  Packaging System</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1067/720/900"
+              alt="Studio Visual Language">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Studio Visual Language">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Studio
+                  Visual Language</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1076/720/900"
+              alt="Fashion Label Refresh">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Fashion Label Refresh">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Fashion
+                  Label Refresh</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1080/720/900"
+              alt="Wellness Brand Launch">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Wellness Brand Launch">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Wellness
+                  Brand Launch</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/106/720/900"
+              alt="Luxury Hotel Brand System">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Luxury Hotel Brand System">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Luxury
+                  Hotel Brand System</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/292/720/900"
+              alt="Organic Food Packaging Identity">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Organic Food Packaging Identity">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Organic
+                  Food Packaging Identity</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/493/720/900"
+              alt="Tech Startup Visual Identity">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Tech Startup Visual Identity">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Tech
+                  Startup Visual Identity</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="branding" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/534/720/900"
+              alt="Editorial Magazine Brand Refresh">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Editorial Magazine Brand Refresh">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Editorial Magazine Brand Refresh</a></h3>
+            </div>
+          </article>
+
+          <article class="fp-showcase__card" data-fp-category="motion" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1084/720/900"
+              alt="Launch Film Motion System">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Launch Film Motion System">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Launch
+                  Film Motion System</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="motion" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1081/720/900"
+              alt="Logo Animation Package">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Logo Animation Package">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Logo
+                  Animation Package</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="motion" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1074/720/900"
+              alt="Social Motion Campaign">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Social Motion Campaign">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Social
+                  Motion Campaign</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="motion" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1069/720/900"
+              alt="Product Teaser Animation">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Product Teaser Animation">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Product
+                  Teaser Animation</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="motion" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1057/720/900"
+              alt="Event Intro Visuals">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Event Intro Visuals">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Event
+                  Intro Visuals</a></h3>
+            </div>
+          </article>
+
+          <article class="fp-showcase__card" data-fp-category="website" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1056/720/900"
+              alt="Architecture Studio Website">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Architecture Studio Website">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Architecture Studio Website</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="website" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1059/720/900"
+              alt="Ecommerce Product Landing">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Ecommerce Product Landing">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Ecommerce Product Landing</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="website" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1060/720/900"
+              alt="Creative Portfolio Website">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Creative Portfolio Website">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Creative
+                  Portfolio Website</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="website" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1068/720/900"
+              alt="SaaS Marketing Website">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: SaaS Marketing Website">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">SaaS
+                  Marketing Website</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="website" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1071/720/900"
+              alt="Agency Web Experience">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Agency Web Experience">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Agency
+                  Web Experience</a></h3>
+            </div>
+          </article>
+
+          <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1077/720/900"
+              alt="Restaurant Growth Case Study">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Restaurant Growth Case Study">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank"
+                  rel="noopener">Restaurant Growth Case Study</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1082/720/900"
+              alt="Retail Brand Case Study">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Retail Brand Case Study">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Retail
+                  Brand Case Study</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1083/720/900"
+              alt="App Redesign Case Study">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: App Redesign Case Study">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">App
+                  Redesign Case Study</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1085/720/900"
+              alt="Campaign Launch Case Study">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Campaign Launch Case Study">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Campaign
+                  Launch Case Study</a></h3>
+            </div>
+          </article>
+          <article class="fp-showcase__card" data-fp-category="case-study" hidden>
+            <img loading="lazy" decoding="async" width="720" height="900" src="https://picsum.photos/id/1087/720/900"
+              alt="Product Launch Case Study">
+            <div class="fp-showcase__overlay">
+              <a class="fp-showcase__link fp-showcase__link--icon" href="#" target="_blank" rel="noopener"
+                aria-label="Open project: Product Launch Case Study">
+                <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </a>
+              <h3><a class="fp-showcase__link fp-showcase__link--title" href="#" target="_blank" rel="noopener">Product
+                  Launch Case Study</a></h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Showcase Section -->
+    <section class="people-showcase" id="team" aria-labelledby="people-showcase-title">
+      <div class="container-xl people-showcase__container">
+        <div class="people-showcase__panel">
+          <div class="people-showcase__heading scroll-reveal">
+            <p class="people-showcase__label">Meet The People Behind</p>
+            <h2 class="people-showcase__title" id="people-showcase-title">
+              We bring a Wealth of <span>Skills</span> and <span>Experience</span> from a wide range of Backgrounds.
+            </h2>
+            <p class="people-showcase__subtitle">
+              Our diverse team combines creativity, strategy, and innovation to craft meaningful experiences that
+              inspire and elevate modern brands.
+            </p>
+          </div>
+
+          <div class="people-showcase__carousel">
+            <button class="people-showcase__arrow people-showcase__arrow--prev" type="button"
+              aria-label="Show previous team member" data-people-scroll="prev">
+              <i class="bi bi-arrow-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="people-showcase__viewport">
+              <div class="people-showcase__grid" id="peopleShowcaseTrack">
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Amina Rahman" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Amina Rahman</h3>
+                    <p>UI/UX Designer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Daniel Kim" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Daniel Kim</h3>
+                    <p>Brand Designer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Noor Ahmed" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Noor Ahmed</h3>
+                    <p>Motion Designer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Leo Martins" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Leo Martins</h3>
+                    <p>Web Developer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Maya Chen" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Maya Chen</h3>
+                    <p>Creative Strategist</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Omar Hassan" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Omar Hassan</h3>
+                    <p>Frontend Engineer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Priya Shah" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Priya Shah</h3>
+                    <p>Product Designer</p>
+                  </div>
+                </article>
+
+                <article class="people-showcase__card">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+                    alt="Portrait of Ethan Brooks" loading="lazy" decoding="async" width="900" height="1125">
+                  <div class="people-showcase__overlay">
+                    <h3>Ethan Brooks</h3>
+                    <p>3D Visual Artist</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button class="people-showcase__arrow people-showcase__arrow--next" type="button"
+              aria-label="Show next team member" data-people-scroll="next">
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Stories Section -->
+    <section class="client-stories" id="testimonials" aria-labelledby="client-stories-title">
+      <div class="container-xl client-stories__container">
+        <div class="client-stories__panel">
+          <div class="client-stories__video-bg" aria-hidden="true">
+            <video class="client-stories__background-video" autoplay muted loop playsinline preload="auto">
+              <source src="assets/videos/dark-veil.webm" type="video/webm">
+              <source src="assets/videos/dark-veil.mp4" type="video/mp4">
+            </video>
+            <div class="client-stories__video-overlay"></div>
+          </div>
+          <div class="client-stories__glow" aria-hidden="true"></div>
+          <div class="client-stories__heading scroll-reveal">
+            <p class="client-stories__label">Client Stories</p>
+            <h2 class="client-stories__title" id="client-stories-title">
+              Hear From the <span>Clients</span> Who Matter Most
+            </h2>
+            <p class="client-stories__subtitle">
+              Real <span>Experiences</span> From Brands We&rsquo;ve Helped <span>Build, Grow, and Elevate</span>
+            </p>
+          </div>
+
+          <div class="client-stories__carousel">
+            <button class="client-stories__arrow client-stories__arrow--prev" type="button"
+              aria-label="Show previous video testimonial" data-story-scroll="prev">
+              <i class="bi bi-arrow-left" aria-hidden="true"></i>
+            </button>
+
+            <div class="client-stories__viewport">
+              <div class="client-stories__grid">
+                <article class="client-stories__card scroll-reveal">
+                  <div class="client-stories__media">
+                    <video class="client-stories__video" loop playsinline preload="metadata">
+                      <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Austin_DM.mp4" type="video/mp4">
+                    </video>
+                    <button class="client-stories__play" type="button" aria-label="Play client story">
+                      <i class="bi bi-play-fill" aria-hidden="true"></i>
+                    </button>
+                    <button class="client-stories__mute" type="button" aria-label="Mute client story"
+                      aria-pressed="false">
+                      <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <footer class="client-stories__footer">
+                    <h3>Sebastian Hale</h3>
+                    <p>Founder @ Salesgo</p>
+                  </footer>
+                </article>
+
+                <article class="client-stories__card scroll-reveal">
+                  <div class="client-stories__media">
+                    <video class="client-stories__video" loop playsinline preload="metadata">
+                      <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Emran_DM.mp4" type="video/mp4">
+                    </video>
+                    <button class="client-stories__play" type="button" aria-label="Play client story">
+                      <i class="bi bi-play-fill" aria-hidden="true"></i>
+                    </button>
+                    <button class="client-stories__mute" type="button" aria-label="Mute client story"
+                      aria-pressed="false">
+                      <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <footer class="client-stories__footer">
+                    <h3>David Morgan</h3>
+                    <p>CEO @ Externalize It</p>
+                  </footer>
+                </article>
+
+                <article class="client-stories__card scroll-reveal">
+                  <div class="client-stories__media">
+                    <video class="client-stories__video" loop playsinline preload="metadata">
+                      <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Radif%20DM.mp4" type="video/mp4">
+                    </video>
+                    <button class="client-stories__play" type="button" aria-label="Play client story">
+                      <i class="bi bi-play-fill" aria-hidden="true"></i>
+                    </button>
+                    <button class="client-stories__mute" type="button" aria-label="Mute client story"
+                      aria-pressed="false">
+                      <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <footer class="client-stories__footer">
+                    <h3>Jenna Carvalho</h3>
+                    <p>Principal @ Guardian Estate</p>
+                  </footer>
+                </article>
+
+                <article class="client-stories__card scroll-reveal">
+                  <div class="client-stories__media">
+                    <video class="client-stories__video" loop playsinline preload="metadata">
+                      <source src="https://designmonks.b-cdn.net/Client%20Testimonials/Arvin_DM.mp4" type="video/mp4">
+                    </video>
+                    <button class="client-stories__play" type="button" aria-label="Play client story">
+                      <i class="bi bi-play-fill" aria-hidden="true"></i>
+                    </button>
+                    <button class="client-stories__mute" type="button" aria-label="Mute client story"
+                      aria-pressed="false">
+                      <i class="bi bi-volume-up-fill" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                  <footer class="client-stories__footer">
+                    <h3>Ted Nash</h3>
+                    <p>Founder &amp; CEO @ Yenex</p>
+                  </footer>
+                </article>
+              </div>
+            </div>
+
+            <button class="client-stories__arrow client-stories__arrow--next" type="button"
+              aria-label="Show next video testimonial" data-story-scroll="next">
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <section class="client-written" aria-label="Written client testimonials">
+            <div class="client-written__viewport">
+              <div class="client-written__track">
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;The Xenarchs team made our brand feel sharper, more confident, and ready for the
+                    market we wanted to reach.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Amina Hart</cite>
+                      <p>Brand Director @ Northpay</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;Their design process was clear from day one. Every detail felt intentional, useful,
+                    and beautifully handled.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>David Ross</cite>
+                      <p>Founder @ Formhive</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;We needed a website that could sell the story quickly. They gave us something
+                    elegant, fast, and memorable.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Maya Chen</cite>
+                      <p>Marketing Lead @ Solace</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;The final identity system helped our team show up consistently across every channel
+                    without slowing us down.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Jon Bell</cite>
+                      <p>Creative Director @ Tableo</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;They brought structure to a messy launch and turned our product visuals into
+                    something customers understood instantly.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Priya Shah</cite>
+                      <p>Product Manager @ Yenex</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;Fast, collaborative, and surprisingly strategic. The work gave our sales team a
+                    much stronger first impression.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Omar Hassan</cite>
+                      <p>Growth Lead @ Ventura</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;The animations and landing page gave our campaign the energy it needed without
+                    making the brand feel noisy.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Noor Ahmed</cite>
+                      <p>Studio Director @ Arcstudio</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;They understood our audience quickly and translated that into a brand system our
+                    team actually enjoys using.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Lena Brooks</cite>
+                      <p>Brand Manager @ Marketly</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;Every screen felt considered. The new user experience reduced confusion and made
+                    our product feel premium.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Rafiq Alam</cite>
+                      <p>Product Lead @ Pixora</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+
+                <article class="client-written__card">
+                  <div class="client-written__stars" aria-label="5 star rating">
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  </div>
+                  <blockquote>&ldquo;A rare mix of taste and execution. They pushed the concept while keeping the final
+                    system practical for growth.&rdquo;</blockquote>
+                  <footer>
+                    <div>
+                      <cite>Sara Mitchell</cite>
+                      <p>CEO @ Brandwave</p>
+                    </div>
+                    <img class="client-written__avatar"
+                      src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?auto=format&amp;fit=crop&amp;w=120&amp;h=120&amp;q=80"
+                      alt="" loading="lazy" decoding="async" width="76" height="76">
+                  </footer>
+                </article>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="how-we-work-section" id="how-we-work" aria-labelledby="how-we-work-title" data-how-we-work>
+      <div class="how-we-work-decor how-we-work-decor-rings" aria-hidden="true"></div>
+      <div class="how-we-work-decor how-we-work-decor-dots" aria-hidden="true"></div>
+      <div class="how-we-work-decor how-we-work-decor-glow how-we-work-decor-glow-a" aria-hidden="true"></div>
+      <div class="how-we-work-decor how-we-work-decor-glow how-we-work-decor-glow-b" aria-hidden="true"></div>
+
+      <div class="container-xl mx-auto how-we-work-container">
+        <header class="how-we-work-header text-center scroll-reveal">
+          <p class="how-we-work-kicker"><i class="bi bi-gear" aria-hidden="true"></i> HOW WE WORK</p>
+          <h2 class="how-we-work-title" id="how-we-work-title">
+            <span>From First Idea</span>
+            <span>To Something <em>Remarkable.</em></span>
+          </h2>
+          <p class="how-we-work-subtitle">
+            Our proven process keeps things clear, collaborative and focused
+            on what truly matters — your success.
+          </p>
+          <svg class="how-we-work-swoosh" width="136" height="24" viewBox="0 0 136 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 15.5C27 5.5 45.5 5.5 64 13.5C84 22 101 21.5 132 5" stroke="currentColor" stroke-width="3"
+              stroke-linecap="round" />
+          </svg>
+        </header>
+
+        <div class="process-panel mx-auto scroll-reveal" aria-label="Xenarchs process stages">
+          <div class="process-stages">
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">01</span>
+                <span class="process-icon-circle"><i class="bi bi-chat-dots" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Discover</h3>
+                <p>We get to know your idea,<br>goals, audience and<br>challenges in depth.</p>
+                <ul>
+                  <li>Research</li>
+                  <li>Goals &amp; Needs</li>
+                  <li>Understanding</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">02</span>
+                <span class="process-icon-circle"><i class="bi bi-compass" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Define</h3>
+                <p>We turn insights into a<br>clear strategy and creative<br>direction.</p>
+                <ul>
+                  <li>Strategy</li>
+                  <li>Positioning</li>
+                  <li>Roadmap</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">03</span>
+                <span class="process-icon-circle"><i class="bi bi-box" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Design</h3>
+                <p>We craft visual identities<br>and experiences that<br>communicate and connect.</p>
+                <ul>
+                  <li>Branding</li>
+                  <li>UI/UX Design</li>
+                  <li>Prototyping</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">04</span>
+                <span class="process-icon-circle"><i class="bi bi-code-slash" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Build</h3>
+                <p>We build fast, responsive<br>and high-performance<br>digital experiences.</p>
+                <ul>
+                  <li>Development</li>
+                  <li>Integrations</li>
+                  <li>AI &amp; Motion</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">05</span>
+                <span class="process-icon-circle"><i class="bi bi-stars" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Refine</h3>
+                <p>We test, review and refine<br>every detail to ensure<br>quality and impact.</p>
+                <ul>
+                  <li>Testing</li>
+                  <li>Feedback</li>
+                  <li>Optimization</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="process-stage text-center">
+              <div class="process-timeline">
+                <span class="process-stage-number">06</span>
+                <span class="process-icon-circle"><i class="bi bi-rocket-takeoff" aria-hidden="true"></i></span>
+              </div>
+              <div class="process-stage-content text-center">
+                <h3>Launch &amp; Grow</h3>
+                <p>We launch with confidence<br>and help you evolve<br>and grow over time.</p>
+                <ul>
+                  <li>Launch</li>
+                  <li>Analytics</li>
+                  <li>Growth Support</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="process-benefits mx-auto scroll-reveal" aria-label="Process benefits">
+          <article class="process-benefit">
+            <span class="process-benefit-icon"><i class="bi bi-people" aria-hidden="true"></i></span>
+            <div>
+              <h3>Clear Communication</h3>
+              <p>You’ll always know what’s<br>happening and what’s next.</p>
+            </div>
+          </article>
+          <article class="process-benefit">
+            <span class="process-benefit-icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></span>
+            <div>
+              <h3>Strategic Thinking</h3>
+              <p>Every decision we make<br>is intentional and impactful.</p>
+            </div>
+          </article>
+          <article class="process-benefit">
+            <span class="process-benefit-icon"><i class="bi bi-person-hearts" aria-hidden="true"></i></span>
+            <div>
+              <h3>Collaborative By Design</h3>
+              <p>Your insights drive the process.<br>We build together.</p>
+            </div>
+          </article>
+          <article class="process-benefit">
+            <span class="process-benefit-icon"><i class="bi bi-stars" aria-hidden="true"></i></span>
+            <div>
+              <h3>Built To Evolve</h3>
+              <p>We create solutions that grow<br>with your brand.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="xenarchs-faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="xenarchs-faq-bg-glow" aria-hidden="true"></div>
+      <div class="container-xl mx-auto xenarchs-faq-container">
+        <div class="xenarchs-faq-top-label-wrap scroll-reveal">
+          <p class="xenarchs-faq-top-label">Frequently Asked Questions</p>
+        </div>
+
+        <div class="row justify-content-between xenarchs-faq-layout">
+          <div class="col-12 col-lg-4 xenarchs-faq-intro scroll-reveal">
+            <h2 class="xenarchs-faq-heading" id="faq-title">
+              <span>Questions?</span>
+              <em>We’ve Got Answers.</em>
+            </h2>
+            <span class="xenarchs-faq-divider" aria-hidden="true"></span>
+            <p class="xenarchs-faq-copy">
+              Everything you need to know about<br>
+              working with Xenarchs.
+            </p>
+            <p class="xenarchs-faq-copy">
+              Can’t find your answer?<br>
+              <a href="#contact">Let’s talk.</a>
+            </p>
+
+            <article class="xenarchs-faq-contact-card">
+              <span class="xenarchs-faq-contact-icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span>
+              <div>
+                <h3>Still have questions?</h3>
+                <p>We’re here to help you bring<br>your ideas to life.</p>
+                <a href="#contact">Contact Us <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-lg-7 xenarchs-faq-column">
+            <div class="xenarchs-faq scroll-reveal" data-xenarchs-faq>
+              <article class="faq-item is-active">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-1" aria-expanded="true"
+                    aria-controls="faq-answer-1">
+                    <span class="faq-number">01</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">How do I start a project with Xenarchs?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-trigger-1"
+                  aria-hidden="false">
+                  <p>Just tell us about your idea through our contact form. You don’t need everything figured out —
+                    share what you have, and we’ll help shape the direction from there.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-2" aria-expanded="false"
+                    aria-controls="faq-answer-2">
+                    <span class="faq-number">02</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">What types of projects do you work on?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-trigger-2"
+                  aria-hidden="true">
+                  <p>We work across branding, websites, UI/UX, digital products, product visuals, motion, and creative
+                    digital experiences. If you have an idea that needs a strong visual or digital direction, we’d love
+                    to hear it.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-3" aria-expanded="false"
+                    aria-controls="faq-answer-3">
+                    <span class="faq-number">03</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">Do you work with startups or established brands?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-trigger-3"
+                  aria-hidden="true">
+                  <p>Both. We work with ambitious startups, growing businesses, and established brands looking to evolve
+                    their identity or digital presence. The size of the brand matters less than the ambition behind the
+                    project.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-4" aria-expanded="false"
+                    aria-controls="faq-answer-4">
+                    <span class="faq-number">04</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">How long does a project take?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-trigger-4"
+                  aria-hidden="true">
+                  <p>It depends on the scope, complexity, and what we’re building. Smaller creative projects can move
+                    quickly, while branding, websites, and larger digital experiences may take several weeks. Once we
+                    understand your project, we’ll give you a clear timeline.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-5" aria-expanded="false"
+                    aria-controls="faq-answer-5">
+                    <span class="faq-number">05</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">Can I hire Xenarchs for just one service?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-trigger-5"
+                  aria-hidden="true">
+                  <p>Absolutely. You can work with us for a single service or bring us in for a complete creative
+                    project. Whether you need a brand identity, website, UI/UX design, or a specific visual, we can
+                    tailor the engagement around what you actually need.</p>
+                </div>
+              </article>
+
+              <article class="faq-item">
+                <h3 class="faq-question">
+                  <button class="faq-trigger" type="button" id="faq-trigger-6" aria-expanded="false"
+                    aria-controls="faq-answer-6">
+                    <span class="faq-number">06</span>
+                    <span class="faq-question-separator" aria-hidden="true"></span>
+                    <span class="faq-question-text">What happens after I contact you?</span>
+                    <span class="faq-control" aria-hidden="true"></span>
+                  </button>
+                </h3>
+                <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-trigger-6"
+                  aria-hidden="true">
+                  <p>We’ll start with a conversation about your goals, ideas, and what you’re trying to achieve. From
+                    there, we’ll discuss the right approach, scope, timeline, and next steps — so you know exactly where
+                    things are heading before we begin.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Xenarchs Journal Section -->
+    <section class="journal-section" id="insights" aria-labelledby="journal-title">
+      <div class="container-xl journal-container">
+        <!-- Header -->
+        <div class="journal-header scroll-reveal">
+          <span class="journal-badge">Xenarchs Journal</span>
+          <h2 class="journal-title" id="journal-title">
+            Ideas, perspectives <em class="journal-title-script">and</em> stories shaping what&rsquo;s <em class="journal-title-script">next.</em>
+          </h2>
+          <p class="journal-subtitle">
+            Explore our thoughts on design, technology, branding, digital experiences, and the ideas moving modern businesses forward.
+          </p>
+        </div>
+
+        <!-- 2-Column Content Grid -->
+        <div class="row g-4 g-lg-5 journal-grid scroll-reveal">
+          <!-- Left Column: Featured Article -->
+          <div class="col-lg-6 journal-featured-col">
+            <article class="journal-featured-card">
+              <a href="#" class="journal-featured-img-wrap" aria-label="Read Timesheets: A Guide For Service Businesses">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" alt="Team discussing business strategy" class="journal-featured-img" loading="lazy">
+              </a>
+              <div class="journal-featured-content">
+                <span class="journal-category">BUSINESS GROWTH</span>
+                <h3 class="journal-featured-title">
+                  <a href="#">Timesheets: A Guide For Service Businesses</a>
+                </h3>
+                <p class="journal-featured-excerpt">
+                  Discover how effective time tracking and resource management can transform service margins, project clarity, and team productivity.
+                </p>
+                <div class="journal-meta">
+                  <div class="journal-author">
+                    <span class="journal-avatar">
+                      <img src="assets/images/logos/logo-2.svg" alt="Xenarchs Studio" class="journal-avatar-img">
+                    </span>
+                    <span class="journal-author-name">Xenarchs Team</span>
+                  </div>
+                  <span class="journal-meta-dot" aria-hidden="true">&bull;</span>
+                  <div class="journal-read-time">
+                    <i class="bi bi-clock" aria-hidden="true"></i>
+                    <span>8 min read</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Right Column: Article List (4 Rows) -->
+          <div class="col-lg-6 journal-list-col">
+            <div class="journal-article-list">
+              <!-- Item 1 -->
+              <article class="journal-article-item">
+                <a href="#" class="journal-article-thumb-wrap" aria-label="Read With Hindsight: Toggl Plan’s Quarter 3, 2022">
+                  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="Product news thumbnail" class="journal-article-thumb" loading="lazy">
+                </a>
+                <div class="journal-article-body">
+                  <h3 class="journal-article-title">
+                    <a href="#">With Hindsight: Toggl Plan&rsquo;s Quarter 3, 2022</a>
+                  </h3>
+                  <div class="journal-meta">
+                    <span class="journal-category">PRODUCT NEWS</span>
+                    <div class="journal-read-time">
+                      <i class="bi bi-clock" aria-hidden="true"></i>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 2 -->
+              <article class="journal-article-item">
+                <a href="#" class="journal-article-thumb-wrap" aria-label="Read The Complete Guide To Creative Project Management">
+                  <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=400&q=80" alt="Creative project management thumbnail" class="journal-article-thumb" loading="lazy">
+                </a>
+                <div class="journal-article-body">
+                  <h3 class="journal-article-title">
+                    <a href="#">The Complete Guide To Creative Project Management</a>
+                  </h3>
+                  <div class="journal-meta">
+                    <span class="journal-category">PROJECT MANAGEMENT</span>
+                    <div class="journal-read-time">
+                      <i class="bi bi-clock" aria-hidden="true"></i>
+                      <span>11 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 3 -->
+              <article class="journal-article-item">
+                <a href="#" class="journal-article-thumb-wrap" aria-label="Read The Smart Manager’s Guide to Low Employees Turnover Rate">
+                  <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=400&q=80" alt="Talent acquisition guide thumbnail" class="journal-article-thumb" loading="lazy">
+                </a>
+                <div class="journal-article-body">
+                  <h3 class="journal-article-title">
+                    <a href="#">The Smart Manager&rsquo;s Guide to Low Employees Turnover Rate</a>
+                  </h3>
+                  <div class="journal-meta">
+                    <span class="journal-category">TALENT ACQUISITION</span>
+                    <div class="journal-read-time">
+                      <i class="bi bi-clock" aria-hidden="true"></i>
+                      <span>11 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Item 4 -->
+              <article class="journal-article-item">
+                <a href="#" class="journal-article-thumb-wrap" aria-label="Read The 4 Best Time Tracking Apps in 2022">
+                  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80" alt="Time tracking apps thumbnail" class="journal-article-thumb" loading="lazy">
+                </a>
+                <div class="journal-article-body">
+                  <h3 class="journal-article-title">
+                    <a href="#">The 4 Best Time Tracking Apps in 2022</a>
+                  </h3>
+                  <div class="journal-meta">
+                    <span class="journal-category">TIME MANAGEMENT</span>
+                    <div class="journal-read-time">
+                      <i class="bi bi-clock" aria-hidden="true"></i>
+                      <span>20 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Action Button -->
+        <div class="journal-footer scroll-reveal">
+          <a class="journal-btn-more" href="#">
+            <span>View All Articles</span>
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container-xl contact-container">
+        <div class="contact-card">
+          <div class="contact-orb" aria-hidden="true"></div>
+          <div class="row g-5 contact-content">
+            <div class="col-lg-6 contact-intro scroll-reveal">
+              <p class="section-label">CONTACT US</p>
+              <h2 class="contact-title" id="contact-title">
+                Let's create something <span>remarkable.</span>
+              </h2>
+              <p class="contact-copy">
+                Tell us a little about your project, goals and timeline. We will review your message and get back to you
+                as soon as possible.
+              </p>
+              <a class="contact-email-link" href="mailto:hello@xenarchs.studio">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                hello@xenarchs.studio
+              </a>
+              <ul class="contact-meta-list" aria-label="Studio details">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Based in Dhaka, Bangladesh</li>
+                <li><i class="bi bi-globe2" aria-hidden="true"></i>Working with clients worldwide</li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6 contact-form-column scroll-reveal">
+              <form class="contact-form" id="contactForm" novalidate>
+                <div class="visually-hidden">
+                  <label for="companyWebsite">Company website</label>
+                  <input type="text" id="companyWebsite" name="companyWebsite" tabindex="-1" autocomplete="off">
+                </div>
+
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <label class="form-label" for="contactName">Your Name</label>
+                    <input class="form-control" type="text" id="contactName" name="name" autocomplete="name"
+                      minlength="2" maxlength="100" placeholder="Your Name" required
+                      aria-describedby="contactNameFeedback">
+                    <div class="invalid-feedback" id="contactNameFeedback">Please enter your name.</div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <label class="form-label" for="contactEmail">Your Email</label>
+                    <input class="form-control" type="email" id="contactEmail" name="email" autocomplete="email"
+                      maxlength="150" placeholder="Your Email" required aria-describedby="contactEmailFeedback">
+                    <div class="invalid-feedback" id="contactEmailFeedback">Please enter a valid email address.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="contactPhone">Phone (optional)</label>
+                    <input class="form-control" type="tel" id="contactPhone" name="phone" autocomplete="tel"
+                      maxlength="30" placeholder="Phone (optional)" aria-describedby="contactPhoneFeedback">
+                    <div class="invalid-feedback" id="contactPhoneFeedback">Please enter a valid phone number.</div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label" for="contactMessage">Your Message</label>
+                    <textarea class="form-control" id="contactMessage" name="message" rows="6" minlength="10"
+                      maxlength="2000" placeholder="Your Message" required
+                      aria-describedby="contactMessageFeedback"></textarea>
+                    <div class="invalid-feedback" id="contactMessageFeedback">Please enter a message of at least 10
+                      characters.</div>
+                  </div>
+
+                  <div class="col-12 contact-actions">
+                    <button class="btn btn-contact" type="submit">
+                      <span class="spinner-border spinner-border-sm contact-spinner" aria-hidden="true"></span>
+                      <span>Send Message</span>
+                      <i class="bi bi-send" aria-hidden="true"></i>
+                    </button>
+                    <p class="contact-status" id="contactFormStatus" aria-live="polite"></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>

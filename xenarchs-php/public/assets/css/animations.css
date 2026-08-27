@@ -1,0 +1,52 @@
+@keyframes revealUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drift {
+  to {
+    transform: translate3d(28px, -22px, 0) scale(1.04);
+  }
+}
+
+@keyframes scrollLine {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(330%);
+  }
+}
+
+@property --nav-border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes navBorderRotate {
+  to {
+    --nav-border-angle: 360deg;
+  }
+}
+
+@keyframes start-project-border-run {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes navDockIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

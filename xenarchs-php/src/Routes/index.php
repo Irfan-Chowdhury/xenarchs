@@ -9,7 +9,12 @@ $router = new Router();
 
 $router->get('/', HomeController::class, 'landingPage');
 
+$router->get('/privacy-policy', HomeController::class, 'privacyPolicy');
+
+$router->get('/terms-of-service', HomeController::class, 'termsOfService');
+
 $router->get('/about', HomeController::class, 'about');
+
 
 $router->get('/contact', ContactController::class, 'contact');
 
