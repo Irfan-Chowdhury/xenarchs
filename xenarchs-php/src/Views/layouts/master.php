@@ -24,7 +24,13 @@
 
   <?php include __DIR__ . '/partials/navbar.php'; ?>
 
-  <?php include $viewPath; ?>
+  <?php 
+    if (isset($viewPath) && file_exists($viewPath)) {
+        include $viewPath;
+    } elseif (isset($view) && file_exists(__DIR__ . '/../' . $view . '.php')) {
+        include __DIR__ . '/../' . $view . '.php';
+    }
+  ?>
 
   <?php include __DIR__ . '/partials/footer.php'; ?>
 

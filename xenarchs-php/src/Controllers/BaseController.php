@@ -15,9 +15,11 @@ class BaseController
 
     protected function render($view, $data = [])
     {
+        $viewPath = __DIR__ . '/../Views/' . $view . '.php';
+        $data['viewPath'] = $viewPath;
+        $data['view'] = $view;
         extract($data);
 
-        $viewPath = __DIR__ . '/../Views/' . $view . '.php';
         include __DIR__ . '/../Views/layouts/master.php';
     }
 
