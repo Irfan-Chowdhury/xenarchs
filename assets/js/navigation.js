@@ -4,7 +4,7 @@
   var header = document.getElementById("siteHeader");
   var menu = document.getElementById("mainNavigation");
   var toggle = document.querySelector(".menu-toggle");
-  var heroSection = document.getElementById("home");
+  var heroSection = document.getElementById("home") || document.getElementById("terms-hero") || document.querySelector(".hero-section, .terms-hero-section");
   var navLinks = document.querySelectorAll(".nav-link");
   var anchorLinks = document.querySelectorAll('a[href^="#"]');
   var isHeroVisible = true;
