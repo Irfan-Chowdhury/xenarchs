@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Controllers;
 
@@ -52,9 +52,4 @@ class HomeController extends BaseController
             'extraCss' => ['/assets/css/terms.css']
         ]);
     }
-
-
 }
-
-
-
