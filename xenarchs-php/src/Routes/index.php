@@ -9,6 +9,8 @@ $router = new Router();
 
 $router->get('/', HomeController::class, 'landingPage');
 
+$router->get('/blogs', HomeController::class, 'blogs');
+
 $router->get('/privacy-policy', HomeController::class, 'privacyPolicy');
 
 $router->get('/terms-of-service', HomeController::class, 'termsOfService');

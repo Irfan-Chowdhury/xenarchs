@@ -1774,7 +1774,7 @@
 
         <!-- Bottom Action Button -->
         <div class="journal-footer scroll-reveal">
-          <a class="journal-btn-more" href="#">
+          <a class="journal-btn-more" href="/blogs">
             <span>View All Articles</span>
             <i class="bi bi-arrow-right" aria-hidden="true"></i>
           </a>

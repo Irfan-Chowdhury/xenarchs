@@ -51,7 +51,7 @@
                       <h2>EXPLORE</h2>
                       <a href="/#featured-projects">Our Work</a>
                       <a href="/#testimonials">Testimonials</a>
-                      <a href="/#insights">Blog</a>
+                      <a href="/blogs">Blog</a>
                       <a href="/#faq">FAQ</a>
                   </div>
 

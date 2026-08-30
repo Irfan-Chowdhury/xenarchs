@@ -52,4 +52,16 @@ class HomeController extends BaseController
             'extraCss' => ['/assets/css/terms.css']
         ]);
     }
+
+    public function blogs()
+    {
+        $this->render('pages/blogs', [
+            'pageTitle' => 'Blogs | Xenarchs Studio',
+            'metaDescription' => 'Thoughts, perspectives, and stories on design, technology, branding and digital experiences.',
+            'bodyClass' => 'blog-page',
+            'activeNav' => 'blogs',
+            'extraCss' => ['/assets/css/terms.css', '/assets/css/blogs-page.css'],
+            'extraJs' => ['/assets/js/blog.js']
+        ]);
+    }
 }
