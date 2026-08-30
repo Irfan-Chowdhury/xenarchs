@@ -1,88 +1,86 @@
-/**
- * XENARCHS JOURNAL - BLOG JAVASCRIPT
- * Handles Category Filtering, Live Search, and Newsletter Subscription
- */
+(function () {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const categoryButtons = document.querySelectorAll('.category-btn');
-  const searchInput = document.querySelector('.search-input');
-  const newsletterForm = document.querySelector('.newsletter-form-row');
-  
-  // Select all filterable cards
-  const allCards = document.querySelectorAll('.main-featured-card, .small-featured-card, .dark-article-card');
+  document.addEventListener('DOMContentLoaded', function () {
+    var categoryBtns = document.querySelectorAll('.blog-cat-btn, .blog-category-btn');
+    var searchInput = document.getElementById('blogSearchInput');
+    var articleCards = document.querySelectorAll('.blog-article-card');
+    var compactDividers = document.querySelectorAll('.blog-side-divider, .blog-compact-divider');
+    var noResults = document.getElementById('blogNoResults');
+    var subscribeForm = document.getElementById('blogSubscribeForm');
 
-  let activeCategory = 'All Articles';
-  let searchQuery = '';
+    var currentCategory = 'all';
+    var currentSearchQuery = '';
 
-  // 1. CATEGORY FILTERING
-  categoryButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
+    function filterArticles() {
+      var visibleCount = 0;
 
-      // Update active state on buttons
-      categoryButtons.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
+      articleCards.forEach(function (card) {
+        var cardCategory = (card.getAttribute('data-category') || '').toLowerCase();
+        var searchText = (card.getAttribute('data-search-text') || card.textContent || '').toLowerCase();
+
+        var matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory.toLowerCase());
+        var matchesSearch = (!currentSearchQuery || searchText.indexOf(currentSearchQuery.toLowerCase()) !== -1);
+
+        if (matchesCategory && matchesSearch) {
+          card.style.display = '';
+          card.classList.remove('d-none');
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+          card.classList.add('d-none');
+        }
       });
 
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
+      // Handle dividers visibility in compact right column list
+      compactDividers.forEach(function (divider) {
+        var prevItem = divider.previousElementSibling;
+        var nextItem = divider.nextElementSibling;
+        if (prevItem && nextItem && prevItem.style.display !== 'none' && !prevItem.classList.contains('d-none') && nextItem.style.display !== 'none' && !nextItem.classList.contains('d-none')) {
+          divider.style.display = '';
+          divider.classList.remove('d-none');
+        } else {
+          divider.style.display = 'none';
+          divider.classList.add('d-none');
+        }
+      });
 
-      activeCategory = btn.textContent.trim();
-      filterArticles();
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.style.display = 'block';
+          noResults.classList.remove('d-none');
+        } else {
+          noResults.style.display = 'none';
+          noResults.classList.add('d-none');
+        }
+      }
+    }
+
+    categoryBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        categoryBtns.forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-category') || 'all';
+        filterArticles();
+      });
     });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function (e) {
+        currentSearchQuery = e.target.value.trim();
+        filterArticles();
+      });
+    }
+
+    if (subscribeForm) {
+      subscribeForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var emailInput = document.getElementById('blogSubscribeEmail');
+        if (emailInput && emailInput.value.trim() !== '') {
+          alert('Thank you for subscribing to Xenarchs Journal!');
+          emailInput.value = '';
+        }
+      });
+    }
   });
-
-  // 2. LIVE SEARCH FILTERING
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      searchQuery = e.target.value.toLowerCase().trim();
-      filterArticles();
-    });
-  }
-
-  // Combined Filter Function
-  function filterArticles() {
-    allCards.forEach(card => {
-      // Find category text inside the card
-      const categoryEl = card.querySelector('.meta-category, .dark-meta-category, .featured-label');
-      const cardCategory = categoryEl ? categoryEl.textContent.trim() : '';
-
-      // Find title and excerpt text
-      const titleEl = card.querySelector('.main-card-title, .small-card-title, .dark-card-title');
-      const excerptEl = card.querySelector('.main-card-excerpt, .small-card-excerpt, .dark-card-excerpt');
-
-      const titleText = titleEl ? titleEl.textContent.toLowerCase() : '';
-      const excerptText = excerptEl ? excerptEl.textContent.toLowerCase() : '';
-
-      // Match category
-      const matchesCategory = (activeCategory === 'All Articles') || 
-                              (cardCategory.toLowerCase() === activeCategory.toLowerCase());
-
-      // Match search
-      const matchesSearch = searchQuery === '' || 
-                            titleText.includes(searchQuery) || 
-                            excerptText.includes(searchQuery);
-
-      if (matchesCategory && matchesSearch) {
-        card.classList.remove('article-hidden');
-      } else {
-        card.classList.add('article-hidden');
-      }
-    });
-  }
-
-  // 3. NEWSLETTER SUBMISSION
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = newsletterForm.querySelector('.newsletter-email-input');
-      const emailValue = emailInput ? emailInput.value.trim() : '';
-
-      if (emailValue) {
-        alert(`Thank you for subscribing to Xenarchs Journal with ${emailValue}!`);
-        newsletterForm.reset();
-      }
-    });
-  }
-});
+})();
