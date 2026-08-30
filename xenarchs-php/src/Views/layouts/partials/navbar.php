@@ -24,7 +24,7 @@
                   <ul class="navbar-nav nav-list nav-list-right align-items-lg-center">
                       <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
                       <li class="nav-item"><a class="nav-link" href="/#testimonials">Testimonial</a></li>
-                      <li class="nav-item"><a class="nav-link <?= (isset($activeNav) && $activeNav === 'blogs') ? 'active' : '' ?>" href="/blogs">Blogs</a></li>
+                      <li class="nav-item"><a class="nav-link" href="/#insights">Insights</a></li>
                   </ul>
               </div>
           </div>
