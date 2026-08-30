@@ -64,4 +64,16 @@ class HomeController extends BaseController
             'extraJs' => ['/assets/js/blog.js']
         ]);
     }
+
+    public function careers()
+    {
+        $this->render('pages/careers', [
+            'pageTitle' => 'Careers | Xenarchs Studio',
+            'metaDescription' => 'Open Roles at Xenarchs. Find your place on our growing team.',
+            'bodyClass' => 'career-page',
+            'activeNav' => 'careers',
+            'extraCss' => ['/assets/css/terms.css', '/assets/css/careers-page.css'],
+            'extraJs' => ['/assets/js/careers.js']
+        ]);
+    }
 }

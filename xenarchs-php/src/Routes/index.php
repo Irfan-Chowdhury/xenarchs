@@ -11,6 +11,8 @@ $router->get('/', HomeController::class, 'landingPage');
 
 $router->get('/blogs', HomeController::class, 'blogs');
 
+$router->get('/careers', HomeController::class, 'careers');
+
 $router->get('/privacy-policy', HomeController::class, 'privacyPolicy');
 
 $router->get('/terms-of-service', HomeController::class, 'termsOfService');

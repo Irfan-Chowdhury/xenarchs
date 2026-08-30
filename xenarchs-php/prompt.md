@@ -1,338 +1,651 @@
-Create a new professional “Blogs” page for the existing Xenarchs website like previous. Follow the existing project structure, Bootstrap, HTML, CSS, JavaScript/jQuery, naming conventions, navbar behavior, responsive breakpoints, fonts, colors, route, method in controller and follow other exisitng structure. Footer will be same as it and add the footer part file jsut. and reusable components already used in the project. 
-
-Do not redesign the existing navbar or footer. 
-
-Remember when you designed make sure main layout, landing page, privacy-policy and term and other page should not conflict. ALL Pages should be on this same style.  use seoparate css,js files for blogs.
-
-PAGE STRUCTURE
-
-1. NAVBAR
-- Reuse the exact existing navbar/header used on the Terms of Service and Privacy Policy pages.
-- Keep all existing navbar functionality, responsive mobile menu, links, hover states and active-state behavior.
-- Add/set “Blogs” as the active navigation item where appropriate.
-
-2. BLOG HERO SECTION
-Reuse the exact same hero section structure, dimensions, background treatment, spacing and responsive behavior already used on the Terms of Service / Privacy Policy pages.
-Do not create a new hero design.
-
-Only replace the hero content with:
-
-Small outlined pill:
-XENARCHS JOURNAL
-
-Main heading:
-Exploring the ideas
-behind what comes next.
-
-- “Exploring the ideas” and “behind” should use the existing bold heading font.
-- “what comes next.” should be teal, italic/elegant serif style to create visual emphasis.
-
-Description:
-Thoughts, perspectives, and stories on design, technology, branding
-and digital experiences.
-
-Under the description add a very small decorative teal curved/wave line.
-
-Keep the hero centered and maintain the same dark/navy visual style already used on the other inner pages.
-
-3. BLOG FILTER / SEARCH SECTION
-Immediately after the hero create a light/off-white blog-content background.
-
-Use a centered Bootstrap container.
-
-At the top create a horizontal category navigation:
-
-All Articles
-Branding
-Design
-Development
-Technology
-Strategy
-Insights
-
-- “All Articles” is active initially.
-- Active item should have a teal rounded pill background with white text.
-- Other items should be simple dark text without bordered buttons.
-- Provide comfortable horizontal spacing.
-- Categories should wrap or become horizontally usable on smaller screens.
-
-On the right side place a rounded search field:
-Placeholder: Search articles...
-Search icon on the right.
-Thin subtle gray border.
-White/light transparent background.
-Approx. 200–230px width on desktop.
-
-Place a thin horizontal separator underneath this row.
-
-4. FEATURED ARTICLES AREA
-Below the filter row create a two-column desktop layout.
-
-LEFT COLUMN:
-One large featured article card taking approximately 52–55% width.
-
-Featured image area:
-- Large landscape image.
-- Approximately 16:9 proportion.
-- Top-left/top-right corners rounded.
-- Use a suitable dummy technology/design image from an online placeholder/CDN if necessary.
-
-Below the image inside the same card:
-Small teal uppercase label:
-FEATURED
-
-Heading:
-Building Digital Experiences
-That Feel Ahead of Their Time
-
-Description:
-Great digital experiences don’t happen by chance. Here’s our
-approach to building products and websites that are not only
-beautiful but also purposeful and future-ready.
-
-Bottom metadata:
-Strategy   |   clock icon  8 min read
-
-Card styling:
-- White background.
-- Very subtle gray border.
-- Border-radius around 10–12px.
-- Minimal soft shadow.
-- Generous internal spacing.
-- No excessive decoration.
-
-RIGHT COLUMN:
-Create three compact horizontal article items stacked vertically.
-
-Each item contains:
-- Thumbnail on the left, approx. 180px × 125px.
-- Text information on the right.
-- Thin divider between items.
-- Vertically centered content.
-
-Article 1:
-Title:
-The Future of AI in
-Brand Building
-
-Description:
-How AI is shaping the way brands
-connect, communicate and grow.
-
-Category: Technology
-Read time: 6 min read
-
-Article 2:
-Title:
-Designing for Clarity
-in a Noisy World
-
-Description:
-Why simplicity, clarity and focus
-are more important than ever.
-
-Category: Design
-Read time: 7 min read
-
-Article 3:
-Title:
-Brand Identity in 2024:
-What’s Changed
-
-Description:
-Key shifts in branding and how
-businesses can stay relevant.
-
-Category: Branding
-Read time: 5 min read
-
-Use teal for category text and a small outlined clock icon before read time.
-
-5. LATEST ARTICLES SECTION
-Below the featured area add generous vertical spacing.
-
-Create a large dark navy/near-black rounded container.
-
-Container:
-- Full available container width.
-- Background similar to Xenarchs dark hero/navigation theme.
-- Border radius approximately 14–16px.
-- Padding around 24–28px desktop.
-
-Heading:
-Latest Articles
-
-Use white text, approximately 20–22px.
-
-Under it create FOUR equal article cards in one row on desktop.
-
-Each card:
-- Dark/navy background matching the section.
-- Thin teal/dark-teal border.
-- Rounded 10–12px corners.
-- Overflow hidden.
-- Article image on top.
-- Content below.
-- Equal heights.
-
-CARD 1:
-Category: Development
-Read time: 10 min read
-Title:
-How Headless CMS Is
-Changing The Web
-Description:
-Why more businesses are moving
-towards headless and what it means
-for performance and flexibility.
-
-CARD 2:
-Category: Strategy
-Read time: 6 min read
-Title:
-From Idea to Impact:
-A Better Strategy
-Description:
-A practical framework to turn ideas
-into strategies that drive real results.
-
-CARD 3:
-Category: Insights
-Read time: 7 min read
-Title:
-Digital Trends Worth
-Watching in 2024
-Description:
-The technologies and trends shaping
-the next wave of digital experiences.
-
-CARD 4:
-Category: Design
-Read time: 5 min read
-Title:
-The Role of Motion in
-Modern Websites
-Description:
-How subtle motion creates emotion,
-guides users and elevates experiences.
-
-Card styling:
-- White title.
-- Light muted description.
-- Teal category.
-- Small clock icon/read time.
-- Image height consistent across all cards.
-- On hover slightly translate card upward and subtly brighten border.
-- Keep animation professional and minimal.
-
-Responsive:
-4 columns desktop
-2 columns tablet
-1 column mobile
-
-6. NEWSLETTER SECTION
-After Latest Articles create a newsletter subscription block.
-
-Use a very light teal/off-white tinted background.
-Rounded 12–14px container.
-
-Desktop layout:
-Left icon area | text area | email field | subscribe button
-
-LEFT:
-Small white rounded square containing a teal envelope icon.
-
-TEXT:
-Heading:
-Get ideas, insights & updates
-straight to your inbox.
-
-Make the “&” teal.
-
-Description:
-No spam. Just thoughtful content on design,
-technology and growth.
-
-EMAIL:
-Large rounded white input.
-Placeholder:
-Your email address
-
-BUTTON:
-Teal gradient/solid teal rounded button.
-Text:
-Subscribe
-Add right-arrow icon.
-
-Keep everything vertically centered.
-
-On mobile:
-Stack content vertically with the email field and Subscribe button becoming full width.
-
-7. FOOTER
-Reuse the EXACT existing reusable footer implementation used on other pages such as Terms of Service and Privacy Policy.
-
-Do not duplicate footer HTML unnecessarily if the project already has a shared footer/component/include.
-Do not redesign or alter footer styling.
-
-8. BLOG INTERACTION
-Implement simple client-side category filtering using JavaScript/jQuery:
-- All Articles shows everything.
-- Clicking a category filters relevant article cards/items.
-- Update active category pill.
-- Search input filters articles by title/category/description.
-- No page reload.
-
-Keep this implementation lightweight.
-
-9. RESPONSIVE REQUIREMENTS
-Desktop:
-- Featured area = large card left + three articles right.
-- Latest Articles = 4 columns.
-
-Tablet:
-- Featured area may become 55/45 or stack where necessary.
-- Latest Articles = 2 columns.
-
-Mobile:
-- All major sections stack vertically.
-- Featured article becomes full width.
-- Right-side article thumbnail/content layout should remain readable and may stack if required.
-- Latest Articles = 1 column.
-- Newsletter stacks.
-- No horizontal page overflow.
-- Maintain professional spacing approximately 20px from screen edges.
-
-10. DESIGN RULES
-- Match Xenarchs’ existing visual identity.
-- Primary dark color: existing Xenarchs dark/navy.
-- Primary accent: existing teal/cyan.
-- Main blog background: warm off-white/light cream.
-- Headings: strong black/dark navy.
-- Body text: dark gray.
-- Border colors should be subtle.
-- Use existing project fonts.
-- Maintain generous whitespace.
-- Do not use excessive gradients, shadows, animations or decorative elements.
-- Do not introduce a completely different design system.
-- Reuse existing utility/classes wherever possible.
-
-11. FILE STRUCTURE
-First inspect the existing project and follow its current architecture.
-
-Create the Blogs page using the same structure followed by Terms of Service and Privacy Policy pages.
-
-Create a dedicated blog stylesheet only if necessary, for example:
-assets/css/blog.css
-
-Reuse existing global/navbar/footer CSS instead of copying styles into blog.css.
-
-Link the Blogs page correctly from the existing navbar/footer wherever a Blogs link exists.
+Create a new Careers page for the existing website.
 
 IMPORTANT:
-- Do not modify working functionality of existing pages.
-- Do not unnecessarily duplicate CSS.
-- Do not unnecessarily duplicate navbar/footer markup if reusable implementation already exists.
-- Keep code clean and maintainable.
-- Use Bootstrap 5 grid/flex utilities where practical.
-- The final result must closely follow the specified section proportions, typography hierarchy, card arrangement, spacing and responsive behavior.
+- First inspect the existing Blogs page implementation and follow its page architecture, container width, responsive structure, CSS organization, naming conventions, shared navbar/footer usage, typography, colors and spacing conventions.
+- This is an existing website. Do not redesign or modify unrelated pages.
+- Reuse the existing navbar/header exactly.
+- Reuse the existing footer exactly.
+- Follow the same reusable inner-page architecture already established by the Blogs page.
+- Create only page-specific Careers styles where required.
+- Scope Careers-specific CSS under a `.career-page` wrapper so it cannot affect other pages.
+- Do not modify Bootstrap globally.
+- Do not change shared `.container`, `.row`, `.btn`, `h1`, `h2`, `section`, `img`, `input`, etc.
+- Preserve all existing navbar/footer/mobile-menu functionality.
+
+==================================================
+PAGE STRUCTURE
+==================================================
+
+Navbar
+↓
+Career Hero
+↓
+Job Filter + Search
+↓
+Job Cards Grid
+↓
+Open Application CTA
+↓
+Existing Footer
+
+==================================================
+1. CAREER HERO
+==================================================
+
+Use the same dark inner-page hero architecture already established for the Blogs page.
+
+The hero should have:
+- full-width dark navy / near-black background;
+- same existing Xenarchs dark background treatment;
+- centered content;
+- generous vertical spacing;
+- approximately 390–420px total desktop height including spacing;
+- no unnecessary graphics or cards.
+
+Content must be vertically and horizontally centered.
+
+TOP BADGE:
+
+Career
+
+Style:
+- compact pill;
+- transparent/dark background;
+- thin gradient/teal-to-purple border;
+- rounded 999px;
+- teal text;
+- approximately 16–18px;
+- comfortable horizontal padding.
+
+MAIN HEADING:
+
+Open Roles at Xenarchs
+Find Your Place on Our Growing Team
+
+Desktop presentation:
+
+Line 1:
+Open Roles at Xenarchs
+
+Line 2:
+Find Your Place on Our Growing Team
+
+Typography:
+- very large bold Xenarchs heading font;
+- centered;
+- approximately 48–56px desktop;
+- strong but clean line-height.
+
+Special highlighted words:
+- "Xenarchs"
+- "Growing"
+
+These two words should use the same elegant italic/serif accent treatment already used on the Blogs hero for highlighted phrases.
+
+Highlight color:
+existing Xenarchs teal/cyan.
+
+All other heading words:
+white/off-white.
+
+DESCRIPTION:
+
+We're looking for talented, curious, and driven people to join us and help create meaningful digital experiences.
+
+Style:
+- centered;
+- white/light-muted;
+- approximately 17–18px;
+- max-width around 850px;
+- margin-top approximately 24px.
+
+Do not add unnecessary decoration under the description.
+
+==================================================
+2. CAREER CONTENT BACKGROUND
+==================================================
+
+After the hero, create a full-width warm off-white/light-cream content area.
+
+Use the same light page background already established on the Blogs page.
+
+Inside it use the same centered main container width used by Blogs.
+
+Desktop:
+- max-width approximately 1180–1240px;
+- margin auto;
+- horizontal padding approximately 24px;
+- top padding around 38–44px;
+- bottom padding around 55–65px.
+
+==================================================
+3. JOB FILTER + SEARCH BAR
+==================================================
+
+Create one horizontal control row at the top of the Careers content.
+
+Desktop structure:
+
+LEFT:
+All Roles
+Design
+Development
+Creative
+Strategy
+Operations
+
+RIGHT:
+Search positions...
+
+Use:
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 30px;
+
+The category group must be horizontal.
+
+Use:
+display: flex;
+align-items: center;
+gap: approximately 42–48px;
+
+Do not make categories into large pills.
+
+ACTIVE FILTER:
+All Roles
+
+Style:
+- dark bold text;
+- approximately 15–16px;
+- teal underline;
+- underline width approximately 62px;
+- 2px line;
+- around 15px below text.
+
+Inactive filters:
+- dark navy/gray text;
+- normal weight;
+- subtle teal hover effect.
+
+SEARCH BOX:
+
+Place on far right.
+
+Approximate dimensions:
+width: 285–300px;
+height: 48px;
+
+Style:
+- rounded 999px;
+- transparent/light cream background;
+- thin subtle gray border;
+- search icon on left;
+- placeholder after icon.
+
+Placeholder:
+Search positions...
+
+Use the existing icon library already loaded by the project.
+
+Do not add another search icon library.
+
+Spacing below this row:
+approximately 32px.
+
+==================================================
+4. JOB CARDS GRID
+==================================================
+
+Create exactly TWO equal-width job cards on desktop.
+
+Use:
+
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: approximately 22px;
+
+Cards should have equal visual height.
+
+CARD STYLE:
+- white / very subtle warm-white background;
+- border: 1px solid subtle gray;
+- border-radius: approximately 10px;
+- very soft shadow;
+- padding approximately 28px 30px;
+- clean professional appearance;
+- no oversized shadows;
+- no gradient card backgrounds.
+
+Each card must have the following hierarchy:
+
+JOB TITLE
+
+EMPLOYMENT + LOCATION
+
+SHORT DESCRIPTION
+
+separator
+
+Responsibilities
+
+bullet list
+
+Requirements
+
+bullet list
+
+Apply Now button
+
+==================================================
+5. JOB CARD 1 — UI/UX DESIGNER
+==================================================
+
+Title:
+
+UI/UX Designer
+
+Style:
+- strong bold heading;
+- approximately 25–27px;
+- dark navy/black.
+
+Metadata row:
+
+Contract / Part-time    •    Chittagong, Bangladesh (remote)
+
+Use:
+- approximately 14px;
+- dark text;
+- small teal circular separator/dot;
+- horizontal layout;
+- margin-top around 10px.
+
+Description:
+
+We're looking for a creative UI/UX Designer who can craft
+beautiful, user-centered designs for web and mobile
+applications. You'll work closely with our developers and
+clients to turn ideas into visually engaging experiences.
+
+Style:
+- approximately 14–15px;
+- comfortable line-height around 1.6;
+- margin-top around 16px.
+
+Add subtle horizontal divider afterward.
+
+RESPONSIBILITIES
+
+Heading:
+Responsibilities
+
+Style:
+- teal;
+- approximately 14px;
+- medium/semi-bold.
+
+Bullets:
+
+• Design intuitive and visually stunning interfaces
+• Conduct user research and usability testing
+• Collaborate with developers to implement designs accurately
+• Maintain consistency across all brand visuals
+
+Bullet style:
+- small teal bullets;
+- dark text;
+- consistent line-height;
+- not Bootstrap's oversized default bullets.
+
+Add approximately 22px spacing.
+
+REQUIREMENTS
+
+Heading:
+Requirements
+
+Bullets:
+
+• Proficiency in Figma, Adobe XD, or similar tools
+• Strong portfolio showcasing design projects
+• Good understanding of UX principles
+• Basic knowledge of front-end design (HTML/CSS) is a plus
+
+BUTTON:
+
+Apply Now   →
+
+Style:
+- teal background;
+- white text;
+- compact rounded pill;
+- approximately 122–130px width;
+- height approximately 42px;
+- subtle teal hover effect;
+- arrow icon on right;
+- margin-top around 25px.
+
+==================================================
+6. JOB CARD 2 — MOTION DESIGNER
+==================================================
+
+Title:
+
+Motion Designer
+
+Metadata:
+
+Contract / Part-time    •    Chittagong, Bangladesh (remote)
+
+Description:
+
+SoftAura is looking for a Motion Designer who can bring concepts
+to life through engaging animations and motion graphics for
+branding, social media, and product visuals.
+
+Add the same divider.
+
+RESPONSIBILITIES
+
+• Create animated visuals for web, ads, and social platforms
+• Collaborate with the creative team for storytelling visuals
+• Deliver assets optimized for digital use
+
+REQUIREMENTS
+
+• Experience with After Effects, Premiere Pro, or similar tools
+• Strong sense of timing and visual rhythm
+• Creative approach to brand storytelling through motion
+
+BUTTON:
+
+Apply Now   →
+
+Use exactly the same styling as card 1.
+
+Keep both cards visually balanced even though content lengths differ.
+
+The buttons should appear near the bottom in approximately the same vertical position.
+
+Using flex layout inside cards is acceptable:
+
+display: flex;
+flex-direction: column;
+
+and push button area toward the bottom if necessary.
+
+==================================================
+7. OPEN APPLICATION CTA
+==================================================
+
+Below the job cards add approximately 42–46px vertical spacing.
+
+Create one full-width horizontal CTA block.
+
+Background:
+very subtle pale teal/light blue tint.
+
+Border-radius:
+approximately 10–12px.
+
+Padding:
+approximately 28px 32px.
+
+Desktop layout:
+
+[ icon ] [ text content ]                         [ Send Your Profile → ]
+
+Use:
+
+display: grid;
+grid-template-columns: auto minmax(0, 1fr) auto;
+align-items: center;
+gap: approximately 28px;
+
+LEFT ICON:
+
+Use a clean outlined user/profile icon.
+
+Place inside an approximately 65–72px square area.
+
+Icon:
+- teal outline;
+- modern minimal style.
+
+Do not create an overly decorative icon.
+
+CENTER CONTENT:
+
+Heading:
+
+Don't see your role?
+
+Style:
+- approximately 21–22px;
+- bold;
+- dark.
+
+Description:
+
+We're always open to connecting with talented people.
+Send us your profile and let's build something great together.
+
+Style:
+- approximately 14–15px;
+- dark muted text;
+- two short lines.
+
+RIGHT BUTTON:
+
+Send Your Profile   →
+
+Style:
+- transparent/light background;
+- teal border;
+- teal text;
+- rounded pill;
+- approximately 210–225px wide;
+- height approximately 48px;
+- arrow icon on right.
+
+Hover:
+- teal background;
+- white text;
+- subtle transition.
+
+==================================================
+8. FOOTER
+==================================================
+
+Reuse the exact existing reusable footer already used by the Blogs page and other Xenarchs pages.
+
+Do NOT:
+- redesign it;
+- copy unnecessary footer CSS;
+- alter its dimensions;
+- change navigation;
+- change typography;
+- modify newsletter/footer functionality;
+- create a second footer implementation.
+
+Use the existing footer component/include/markup architecture.
+
+==================================================
+9. FILTER FUNCTIONALITY
+==================================================
+
+Implement lightweight client-side filtering using existing JavaScript/jQuery conventions.
+
+Categories:
+
+All Roles
+Design
+Development
+Creative
+Strategy
+Operations
+
+Requirements:
+- clicking category changes active underline;
+- only matching jobs remain visible;
+- All Roles displays everything;
+- no page reload;
+- smooth simple behavior.
+
+Assign job categories through data attributes.
+
+Example concept:
+
+data-category="design"
+data-category="creative"
+
+Do not hardcode filtering based on visible title text.
+
+==================================================
+10. SEARCH FUNCTIONALITY
+==================================================
+
+The search box should dynamically search jobs.
+
+Match against:
+- title;
+- category;
+- location;
+- description;
+- responsibilities;
+- requirements.
+
+Filtering happens while typing.
+
+Search and category filtering must work together.
+
+Example:
+
+If "Design" is active and user searches "Motion",
+only matching Design-category results should appear.
+
+If no jobs match, show a simple centered message:
+
+No open positions found.
+
+Do not display this message by default.
+
+==================================================
+11. RESPONSIVE LAYOUT
+==================================================
+
+DESKTOP >= 992px
+
+Hero:
+- centered two-line heading.
+
+Filter:
+- categories left;
+- search right.
+
+Job cards:
+- exactly 2 columns.
+
+CTA:
+- icon + text + button horizontally.
+
+TABLET 768px–991px
+
+Hero:
+- slightly smaller heading.
+
+Filter:
+- allow categories and search to wrap cleanly.
+
+Job cards:
+- 2 columns where sufficient width exists;
+- otherwise allow safe transition to 1 column.
+
+CTA:
+- icon + text first row;
+- button may wrap if required.
+
+MOBILE < 768px
+
+Hero:
+- compact height;
+- heading approximately 34–38px;
+- natural line wrapping;
+- preserve highlighted serif words.
+
+Filters:
+- horizontal wrapping or safe horizontal category scroll;
+- search field width: 100%;
+- place search below categories.
+
+Job cards:
+- 1 column.
+
+Cards:
+- padding approximately 20–22px;
+- metadata may wrap naturally;
+- bullets remain aligned.
+
+CTA:
+- 1 column;
+- icon;
+- text;
+- button;
+- all aligned cleanly.
+
+Send Your Profile button:
+width: 100% where necessary.
+
+Never allow horizontal page overflow.
+
+Use approximately 20px mobile page-side padding.
+
+==================================================
+12. VISUAL PROPORTIONS
+==================================================
+
+The desktop page should visually follow this structure:
+
+┌──────────────────────────────────────────────────────────┐
+│                     DARK HERO                            │
+│                                                          │
+│                       Career                             │
+│                                                          │
+│              Open Roles at Xenarchs                     │
+│        Find Your Place on Our Growing Team               │
+│                                                          │
+│      We're looking for talented, curious...              │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────┐
+│                                                          │
+│ All Roles   Design   Development ...      [ Search ]     │
+│ ────────                                                 │
+│                                                          │
+│ ┌───────────────────────┐ ┌───────────────────────┐      │
+│ │ UI/UX Designer        │ │ Motion Designer       │      │
+│ │ metadata              │ │ metadata              │      │
+│ │ description           │ │ description           │      │
+│ │ --------------------- │ │ --------------------- │      │
+│ │ Responsibilities      │ │ Responsibilities      │      │
+│ │ • ...                 │ │ • ...                 │      │
+│ │ • ...                 │ │ • ...                 │      │
+│ │                       │ │                       │      │
+│ │ Requirements          │ │ Requirements          │      │
+│ │ • ...                 │ │ • ...                 │      │
+│ │ • ...                 │ │ • ...                 │      │
+│ │                       │ │                       │      │
+│ │ [ Apply Now → ]       │ │ [ Apply Now → ]       │      │
+│ └───────────────────────┘ └───────────────────────┘      │
+│                                                          │
+│ ┌──────────────────────────────────────────────────────┐ │
+│ │ [icon] Don't see your role?      [Send Profile →]   │ │
+│ │        Supporting description                       │ │
+│ └──────────────────────────────────────────────────────┘ │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+
+Footer

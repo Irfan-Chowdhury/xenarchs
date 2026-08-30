@@ -67,7 +67,7 @@
                   <div class="footer-info-column">
                       <h2>COMPANY</h2>
                       <a href="/#team">About Us</a>
-                      <a href="/#team">Careers</a>
+                      <a href="/careers">Careers</a>
                       <a href="/#contact">Contact Us</a>
                   </div>
               </div>
